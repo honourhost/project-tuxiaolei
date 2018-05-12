@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>抽奖规则</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="http://www.xiaonongding.com/tpl/Wap/default/static/css/screen.css" />
+    
+</head>
+<body class="post-template page-template page page-2-7 page-template-2-7 nav-closed">
+
+   
+<span class="nav-cover"></span>
+    <div class="site-wrapper">
+
+        <div id="app-lottery">
+<h5 class="note-title">一、抽奖时间</h5>
+<article>
+    项目结束后第二天上午8点自动执行 (如：项目15日结束，17日开奖；项目延期 则自动顺延)
+</article>
+<h5 class="note-title">二、抽奖规则</h5>
+<article>
+    根据抽奖档位认筹人数确定奖品份数 X 
+    <ul>
+        <li>满 N 人抽 1 个</li>
+        <li>每满 N 人 自动递进</li>
+    </ul>
+</article>
+<h5 class="note-title">三、抽奖算法</h5>
+<article>
+    <ul>
+        <li>
+            开奖日上一个交易日收盘时的上证指数6位数字 & 收盘时的深证成指7位数字，两组数字排列得到的13位数  
+        </li>
+        <li>
+            将此13位数整除以项目结束时总抽奖码数，得到的余数加1，即得到该项目的中奖抽奖码
+        </li>
+        <li>
+            如果项目开多个奖，则以项目公示“ 每X个参与者抽取1名中奖用户”中的X作为基数，第N个中奖抽奖码 =第一个中奖抽奖码+（N-1）*X
+        </li>
+        <li>
+            如果加值后抽奖码超过了总抽奖码个数，则将抽奖码减去总抽奖码数得到新的中奖抽奖码
+        </li>
+        <li>
+            每个抽奖码只有一次中奖机会，如果抽奖码重复中奖，则将该抽奖码+1得到新的中奖抽奖码。
+
+        </li>
+    </ul>
+</article>
+<h5 class="note-title">四、抽奖结果</h5>
+<article>
+    <ul>
+        <li>
+            我们将在开奖之后第一时间短信通知您开奖结果，同时您也可以前往您的抽奖订单查看自己的中奖情况。
+        </li>
+        <li>
+            提示:抽奖订单无法退款。
+        </li>
+    </ul>
+</article>
+</div>
+
+
+        <!--<footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://blog.kaistart.com">开始众筹</a> &copy; 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> &amp; <a href="http://www.ghostchina.com">GhostChina</a></section>
+        </footer>-->
+
+    </div>
+
+    
+
+</body>
+</html>

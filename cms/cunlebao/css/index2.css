@@ -1,0 +1,79 @@
+
+/*index.css*/
+#fullPage-nav li, .fullPage-slidesNav li{width: 30px;height: 30px;margin: 19px;}
+#fullPage-nav span, .fullPage-slidesNav span{width: 30px;height: 30px;border: 0}
+#fullPage-nav li .active span, .fullPage-slidesNav .active span{background: #c7e0ff;transition: 0.5s all}
+#fullPage-nav li span, .fullPage-slidesNav span{background: #61a2f3;transition: 0.5s all}
+
+.page1{
+	margin-top: 0px;
+}
+.page2{
+	background: #fff;
+}
+.center{width: 1000px;margin: 0 auto;}
+.col-50{width: 50%}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar{width:0px}
+
+
+/*css3动画*/
+
+
+@-webkit-keyframes circle1 {
+  	0%{ transform:rotate(0deg); opacity: 0;filter: alpha(opacity=0)}
+	100%{ transform:rotate(360deg); opacity: 1;filter: alpha(opacity=100) }
+}
+
+@keyframes circle1 {
+  	0%{ transform:rotate(0deg); opacity: 0;filter: alpha(opacity=0)}
+	100%{ transform:rotate(360deg); opacity: 1;filter: alpha(opacity=100) }
+}
+
+.circle {
+  -webkit-animation-name: circle;
+  animation-name: circle;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+.zoomIn{animation: zoomIn 2s;}
+.eol-show .eolgkpage.zoomIn{opacity: 1;filter: alpha(opacity=100)}
+.eol-show .cellphone.circle{animation: circle1 1s;opacity: 1;filter: alpha(opacity=100)}
+.eol-txt .QRcode.bounce,.eol-txt .weixin.bounce{animation: bounce 2s;}
+.fadeInLeft{animation: fadeInLeft 2s;}
+.fadeInRight{animation: fadeInLeft 2s;}
+.page5 .info{opacity: 0;filter: alpha(opacity=00);filter: alpha(opacity=100)\9}
+.page5 .info.zoomIn{opacity: 1;filter: alpha(opacity=100)}
+
+@media screen and (min-width: 1360px) {
+
+}

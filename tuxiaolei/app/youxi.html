@@ -1,0 +1,244 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>兔小蕾-思维喵</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            /*background: #888888;*/
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        @font-face {
+            font-family:"pinyin";
+            src: url("fonts/pinyin.ttf");
+        }
+        #egret-loading {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #loading {
+            width: 100%;
+            height: 100%;
+        }
+        #loading-img {
+            position: absolute;
+            top: 100px;
+            width: 225px;
+            height: 75px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" id="game" data-entry-class="Main" data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30"
+data-content-width="640" data-content-height="1136" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+<div id="egret-loading">
+    <img src="https://cdn.czbapp.com/game/public/debug/0.0.6/resource/assets/main/bg.jpg" id="loading" />
+    <img src="https://cdn.czbapp.com/game/public/debug/0.0.6/resource/assets/main/loading.gif" id="loading-img" />
+</div>
+</div>
+<script>
+
+    var wid = document.documentElement.clientWidth;
+    var hei = document.documentElement.clientHeight;
+
+    // 设置画布宽高
+    var view = window.parent.document.getElementById('game');
+    // 宽
+    view.attributes[7].value = wid;
+    // 高
+    view.attributes[8].value = hei;
+    // 设置图片宽高
+    var img = window.parent.document.getElementById('loading');
+    if (img) {
+        img.style.width = wid + `px`;
+        img.style.height = hei + `px`;
+    }
+    var loading = window.parent.document.getElementById('loading-img');
+    if (loading) {
+        loading.style.left = (wid - 225) / 2 + `px`;
+        loading.style.top = (hei - 75) / 2 + `px`;
+    }
+
+    window.IS_RELEASE = true;
+    const CDN_PATH = `https://cdn.czbapp.com/game/public/${window.IS_RELEASE ? `release` : `debug`}/0.0.7/`;
+
+    const wxFunction = (percent) => {
+        const SHARE_TITLE = `我的宝宝已超过了全国${percent}的孩子`;
+        const SHARE_URL = `https://${window.IS_RELEASE ? `www` : `test`}.czbapp.com/siweimiao/game/public/index.html`;
+        const SHARE_IMG = `https://cdn.czbapp.com/game/swm/share-public.png`;
+        const SHARE_DESC = `更多小游戏尽在《兔小蕾》`;
+        window.wx.onMenuShareAppMessage({
+            title: SHARE_TITLE, // 分享标题  
+            desc: SHARE_DESC, // 分享描述  
+            link: SHARE_URL, // 分享链接  
+            imgUrl: SHARE_IMG, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link  
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空  
+            success: function () {   
+                // 用户确认分享后执行的回调函数  
+                console.log("分享给朋友成功");  
+            },  
+            cancel: function () {   
+                // 用户取消分享后执行的回调函数  
+                console.log("分享给朋友失败");  
+            } 
+        });
+
+        wx.onMenuShareTimeline({  
+            title: SHARE_TITLE, // 分享标题  
+            link: SHARE_URL, // 分享链接  
+            imgUrl: SHARE_IMG, // 分享图标
+            success: function () {
+                console.log("分享给朋友圈成功");   
+                // 用户确认分享后执行的回调函数
+            },  
+            cancel: function () {  
+                console.log("分享给朋友圈失败");  
+                // 用户取消分享后执行的回调函数  
+            }  
+        });  
+
+        // QQ
+        wx.onMenuShareQQ({
+            title: SHARE_TITLE, // Share title
+            desc: SHARE_DESC, // Share description
+            link:  SHARE_URL, // 分享链接  
+            imgUrl: SHARE_IMG, // Share icons.
+            success: function () {
+                console.log(`分享到qq成功`);
+            },
+            cancel: function () {
+                console.log(`取消分享到qq`);
+            }
+        });
+
+        //  QQZone
+        wx.onMenuShareQZone({
+            title: SHARE_TITLE, // Share title
+            desc: SHARE_DESC, // Share description
+            link: SHARE_URL, // 分享链接  
+            imgUrl: SHARE_IMG, // Share icons
+            success: function () {
+                // The user confirm the callback function that was executed after sharing
+            },
+            cancel: function () {
+                // The user cancels the callback function that was executed after sharing
+            }
+        });
+
+        // WEIBO
+        wx.onMenuShareWeibo({
+            title: SHARE_TITLE, // Share title
+            desc: SHARE_DESC, // Share description
+            link: SHARE_URL, // 分享链接  
+            imgUrl: SHARE_IMG, // Share icons.
+            success: function () {
+                // The user confirms the callback function that was executed after sharing
+            },
+            cancel: function () {
+                // The user cancels the callback function that was executed after sharing
+            }
+        });
+    }
+
+    const getWXConfig = () => {
+        if (window.wx) {
+            window.wx.ready((res) => {
+              wxFunction(`95.5%`);
+            })
+            window.wx.error((res) => {
+            })
+
+            let name = window.location.href.split('#').shift()
+            name = name.replace(/\&/g, '%26');
+
+            var ticket = new XMLHttpRequest();
+            ticket.open('GET', `https://${window.IS_RELEASE ? `mp2` : `test`}.yuningwang.com/czb/api/getJsTicket?url=${name}&platfromName=siweimiao&v=${Math.random()}`, false);
+            ticket.addEventListener("load", () => {
+                var msg = JSON.parse(ticket.response);
+                if (msg && msg.result) {
+                    let result = msg.result;
+                    let info = {};
+                    Object.assign(info, result, { debug: false, jsApiList: [`onMenuShareTimeline`, `onMenuShareAppMessage`] })
+                    window.wx.config(info)
+                }
+            });
+            ticket.send(null);
+        }
+    }
+
+    const setShareObject = (pid) => {
+      window.pid = pid;
+    }
+
+    getWXConfig();
+
+    var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', `${CDN_PATH}manifest.json?v=` + Math.random(), true);
+    xhr.addEventListener("load", function () {
+        var manifest = JSON.parse(xhr.response);
+        var list = manifest.initial.concat(manifest.game);
+        loadScript(list, function () {
+            /**
+             * {
+             * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
+             * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
+             * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
+             * "canvasScaleFactor": //canvas scale factor
+             * }
+             **/
+            // 由于图片跨域问题，使用canvas渲染
+            egret.runEgret({ renderMode: "canvas", audioType: 0 });
+        });
+    });
+    xhr.send(null);
+</script>
+</body>
+
+</html>

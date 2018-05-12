@@ -1,0 +1,2 @@
+
+{pigcms{$shareScript}

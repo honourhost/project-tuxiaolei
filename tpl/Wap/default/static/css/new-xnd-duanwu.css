@@ -1,0 +1,328 @@
+.public_cen{
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+/* 幻灯 */
+.addWrap{ position:relative; width:100%;background:#fff;margin:0; padding:0;}
+.addWrap .swipe{overflow: hidden;visibility: hidden;position:relative;}
+.addWrap .swipe-wrap{overflow:hidden;position:relative;}
+.addWrap .swipe-wrap > div {float: left;width: 100%;position:relative;}
+#position{ position:absolute; bottom:0; right:0; padding-left:8px; margin:0; opacity: 0.4; width:100%; filter: alpha(opacity=50);text-align:center;}
+#position li{width:5px;height:5px;margin:0 2px;display:inline-block;-webkit-border-radius:5px;border-radius:5px;background-color:#ffffff;}
+#position li.cur{background-color:#000;}
+.img-responsive { display: block; max-width:100%;height: auto; width: 100%;}
+/* 幻灯 end*/
+.phone-gansu-header{
+	width: 100%;
+}
+.phone-gansu-header img{
+	width: 100%;
+}
+.phone-gansu-nav{
+	width: 100%;
+	margin: 0px auto;
+	background: #ed000a;
+	padding: 10px 0px;
+}
+
+.gansu-icon-nav-lf{
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+.gansu-icon-nav-lf img{
+	height: 100%;
+}
+.gansu-icon-nav-rg{
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 100%;
+	right: 12px;
+	top: 0;
+	z-index: 100;
+}
+.gansu-icon-nav-rg img{
+	height: 100%;
+}
+.phone-gansu-nav ul{
+	width: 96%;
+	margin: 0px auto;
+	border-top: 2px solid #fee600;
+	border-bottom: 2px solid #fee600;
+	position: relative;
+	z-index: 1;
+}
+.phone-gansu-nav ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	height: 50px;
+	line-height: 48px;
+	font-size: 18px;
+	color: #ffe501;
+	font-weight: bold;
+	position: relative;
+	z-index: 10;
+	letter-spacing: 3px;
+	overflow: hidden;
+}
+.phone-gansu-nav ul li:hover{
+	background: #e3000b;
+}
+.phone-gansu-nav ul li img{
+	height: 20px;
+	margin-top: 13px;
+}
+.nav-right{
+	position: absolute;
+	right: 0px;
+	top: 0;
+	display: block;
+	width: 1px;
+	height: 100%;
+	background: #ca000c;
+}
+.nav-bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #ca000c;
+}
+
+.phone-gansu-tj-nav{
+	width: 100%;
+}
+.phone-gansu-tj-title{
+	width: 100%;
+	text-align: center;
+}
+.phone-gansu-tj-title span{
+	display: inline-block;
+	width: 22%;
+	position: relative;
+}
+.phone-gansu-tj-title span b{
+	display: inline-block;
+	width: 10px;
+	height: 30px;
+	background: #ec0009;
+	position: absolute;
+	left: -9px;
+}
+.phone-gansu-tj-title span img{
+	height: 24px;
+}
+.phone-gansu-tj-title a{
+	text-align: center;
+	line-height: 32px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 20px;
+	color: #ed000a;
+	background:url(http://www.xiaonongding.com/tpl/Wap/default/static/images/list-nav-bg.png) repeat-x;
+	background-size:30px;
+	word-spacing:10px;
+	letter-spacing: 10px;
+	position: relative;
+	text-indent: 5px;
+	top: 5px;
+	
+}
+.phone-gansu-tj-title img{
+	width: 100%;
+}
+.phone-gansu-tj-nav ul{
+	margin-top: 10px;
+}
+.phone-gansu-tj-nav ul li{
+	width: 92%;
+	margin: 0px auto;
+	background: #fff;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+.phone-gansu-tj-img{
+	width: 173px;
+	height: 130px;
+	float: left;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+}
+.phone-gansu-tj-right{
+	
+}
+.phone-gansu-tj-right h3{
+	font-size: 18px;
+	color: #303030;
+	height: 50px;
+	line-height: 24px;
+	overflow: hidden;
+	margin-bottom: 3px;
+}
+.phone-gansu-tj-right p{
+	color: #8c8c8c;
+	height: 42px;
+	line-height: 20px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.phone-gansu-tj-right .phone-gansu-tj-btm{
+	height: 30px;
+	overflow: hidden;
+}
+.phone-gansu-tj-right .phone-gansu-tj-btm span{
+	float: right;
+	color: #999a9c;
+	font-size: 14px;
+	position: relative;
+	top: 10px;
+}
+.phone-gansu-tj-right .phone-gansu-tj-btm h4{
+	color: #999a9c;
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+}
+.phone-gansu-tj-right .phone-gansu-tj-btm b{
+	color: #fe645c;
+	font-size: 20px;
+}
+
+
+.phone-gansu-ts-nav{
+	width: 100%;
+}
+.phone-gansu-ts-title{
+	width: 100%;
+	padding: 15px 0px 15px 0px;
+	background: #ed0004;
+}
+.phone-gansu-ts-title img{
+	width: 100%;
+}
+.phone-gansu-ts-nav ul{
+	width: 94%;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+.phone-gansu-ts-nav ul li{
+	width: 45%;
+	float: left;
+	margin: 0px auto;
+	background: #fff;
+	margin-bottom: 10px;
+	padding: 2%;
+}
+.phone-gansu-ts-nav ul li:nth-child(even){
+	float: right;
+}
+.phone-gansu-ts-img{
+	width: 100%;
+	height: 150px;
+	margin: 0px auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.phone-gansu-ts-nav ul li h3{
+	font-size: 16px;
+	height: 45px;
+	line-height: 24px;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.phone-gansu-ts-nav ul li b{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	color: #fe645c;
+	font-weight: normal;
+	position: relative;
+	top: 4px;
+}
+
+.copy_footer{
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+}
+.copy_footer img{
+	height: 40px;
+}
+
+/* 红包 */
+.phone-hb-top{
+	width: 100%;
+}
+.phone-hb-top img{
+	width: 100%;
+}
+.phone-hb-title{
+	width: 90%;
+	background: #de2a36;
+	color: #ff949c;
+	padding: 15px 0px;
+	margin: 0px auto;
+	text-align: center;
+	font-size: 14px;
+}
+.phone-hb-title h4{
+	margin: 0px 10px;
+	line-height: 24px;
+	font-size: 16px;
+}
+.phone-hb-title span{
+	color: #ffda68;
+	margin: 0px 5px;
+}
+.phone-hb-btn{
+	display: block;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 3px;
+	background: #ffda68;
+	color: #ee361e;
+	margin: 15px auto 0px auto;
+	font-size: 16px;
+}
+.phone-hb-price{
+	width: 90%;
+	margin: 30px auto 10px auto;
+	position: relative;
+}
+.phone-hb-price img{
+	width: 100%;
+}
+.phone-hb-price-title{
+	position: absolute;
+	bottom: 10px;
+	width: 75%;
+	right: 0px;
+	text-align: center;
+	color: #959597;
+}
+.phone-hb-price-title h3{
+	font-size: 60px;
+	color: #f0361f;
+	font-weight: 700;
+	position: relative;
+	top: 25px;
+	font-family: "microsoft yahei";
+}
+.phone-hb-price-title h3 span{
+	font-size: 30px;
+	margin-right: 7px;
+}

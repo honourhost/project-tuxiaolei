@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html class="pixel-ratio-2 retina watch-active-state">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>听故事</title>
+    <script src="style/stats.js"></script>
+    <script src="style/hm.js"></script>
+    <script src="style/oauth.js"></script>
+    <link rel="stylesheet" href="style/story.css">
+    <link rel="stylesheet" type="text/css" href="style/weui.min.css">
+    <link rel="stylesheet" href="style/font_262244_x4zz7cukxro7ds4i.css">
+    <script src="style/rem.js"></script>
+    <style>html {
+        font-size: 42.666666666666664px !important
+    }</style>
+    <style>html {
+        font-size: 42.666666666666664px !important
+    }</style>
+</head>
+
+<body  ontouchstart="" onmouseover="" style="max-width: 768px;margin: 0 auto">
+<!-- 全屏幕模式的状态栏(PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- 是所有可见View的容器（不包括Modal和Panel）。Views 是你的应用主容器。一个应用中只能有一个 Views -->
+<div class="views" id="main">
+    <!-- 主视图，必须有 "view-main" 类名 在应用中是一个独立的部分，她有自己的设置、页面切换和历史。每一个视图都可以有不同的导航栏、工具栏布局和不同的样式。所以View就像是嵌在应用中的另一个应用。这种功能可以让你来分别操作一个应用中的不同部分。-->
+    <div class="view view-main"  v-cloak>
+        <!-- 页面的容器，因为我们使用固定的导航栏和工具栏，需要添加"navbar-through"、"toolbar-through"类 -->
+        <div id="listenStory" class="pages navbar-fixed">
+            <!-- 页面, "data-page"包含了页面名，属性值里不能带横线"-"。 -->
+            <div id="mainPage" data-page="main" class="page no-navbar no-toolbar ">
+                <!-- Page content -->
+                <div class="page-content infinite-scroll"  data-distance="100" style="padding-top: 0px">
+                    <div class="list-block list-block-search" style="display: none"></div>
+                    <!-- Search Bar -->
+                    <form class="searchbar" style="top: 0;z-index: 30" v-on:submit.prevent="searchBtn" v-bind:class="{'searchbarbg':searchbarbg}">
+                        <div class="searchbar-input">
+                            <div class="scan-btn mainScanImg  iconfont" @click="scanOneScan">&#xe68a;</div>
+                            <div class="play-record-img iconfont" @click="typeClick(2)">&#xe656;</div>
+                            <div class="searchbar-icon iconfont">&#xe67c;</div>
+                            <input id="input-search-story" class="iconfont" type="search" @focus="changeStyle($event)">
+                            <div class="search-placeholder iconfont" @click="changeStyle($event)">
+                                <span style="font-size: 14px">&#xe67c;</span>
+                                <span style="font-family: PingFangSC-Regular !important;">想听什么故事呢?
+                            </span>
+                            </div>
+                            <div class="searchbar-txt" @click="searchBtn">搜索</div>
+                            <!--<a href="#" class="searchbar-clear"></a>-->
+                        </div>
+                    </form>
+                    <div class="searchbar-overlay" @click="style($event)" style="z-index: 21;">
+                        <!--使用二维码扫码提示-->
+                        <p class="ewm-tipText ewm-tipText-search">点击左上角的 <span class="iconfont">&#xe68a;</span> ，扫一扫绘本上的条形码</p>
+                        <!--历史记录和推荐关键字-->
+                        <div class="search-tip">
+                            <a @click="tipJump(item)" v-for="item in recommendKeywords">{{item}}</a>
+                        </div>
+                    </div>
+                    <!--首页banner-->
+                    <div class="swiper-container swiper-1">
+                        <div class="swiper-wrapper">
+                            <div :data-url = "item.url" class="swiper-slide banner-slide" v-for="item in adImgs"><img :src="item.image" alt="" style="height: auto;"></div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-main" style="bottom: 0;"></div>
+                    </div>
+
+                    <!--分类-->
+                    <div class="sort">
+                        <div class="row menu-items">
+                            <div class="col-auto menu-item" @click = "typeClick(0)">
+                                <img class="menu-item-img" src="style/rankListImg.png" alt=""><br/>
+                                <span class="type-font">今日热榜</span>
+                            </div>
+                            <div class="col-auto menu-item" @click = "typeClick(1)">
+                                <img class="menu-item-img" src="style/starTeachers.png" alt=""><br/>
+                                <span class="type-font">明星老师</span>
+                            </div>
+                            <div class="col-auto menu-item" @click = "typeClick(2)">
+                                <img class="menu-item-img" src="style/myCollection.png" alt=""><br/>
+                                <span class="type-font">我的故事</span>
+                            </div>
+                            <div class="col-auto menu-item" @click = "typeClick(3)">
+                                <img class="menu-item-img" src="style/storyType.png" alt=""><br/>
+                                <span class="type-font">故事分类</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--打卡入口-->
+                    <div class="card" v-if="!joinPunch" v-cloak>
+                        <div class="card-content">
+                            <div class="card-content-inner"  @click="toPunch(false)">
+                                <div class="list-block media-list">
+                                    <a href="#" class="item-link item-content">
+                                        <div class="item-media"><img src="style/punchEntryImg.png"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row" style="margin-top: 0">
+                                                <div class="item-title first-punsh">魔法故事打卡团</div>
+                                            </div>
+                                            <div class="item-subtitle open-getStore">每天听故事 赢取魔法石</div>
+                                            <div class="item-text"><span class="iconfont" style="vertical-align: middle">&#xe671;</span> <span style="vertical-align: middle">已有{{punchTotalumber}}人参加</span></div>
+                                            <div class="now-joinIn">立即参加</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" v-if="joinPunch" v-cloak>
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <div class="list-block media-list" @click="toPunch(true,0)">
+                                    <div href="#" class="item-link item-content">
+                                        <div class="item-media"><img src="style/punchEntryImg.png"></div>
+                                        <div class="item-inner" v-bind:class="{'item-inner2':punchStatus}">
+                                            <div class="item-title-row">
+                                                <div class="item-title">魔法故事打卡团</div>
+                                            </div>
+                                            <div class="item-subtitle" v-if="!punchStatus && !seventhDay">前往分享完成打卡 <span class="iconfont" style="font-size: 16px;vertical-align: middle;">&#xe61f;</span>+{{punchCredits}}</div>
+                                            <div class="item-subtitle" v-if="!punchStatus && seventhDay">前往分享完成打卡 <span class="iconfont" style="font-size: 16px;vertical-align: middle;">&#xe61f;</span>+{{parseInt(punchCredits)*4}}</div>
+                                            <div class="ydy_item-text" @click.prevent.stop="toPunch(true,1)" v-if="!punchStatus">立即打卡</div>
+                                            <!--<div class="item-text" v-if="!punchStatus">今日打卡奖励{{punchCredits}}颗魔法石</div>-->
+                                            <div class="item-subtitle" v-show="punchStatus">今日打卡成功</div>
+                                            <div class="item-text" v-show="punchStatus">已连续打卡{{continuePunchDay}}天</div>
+                                            <div class="item-content-row-icon iconfont">&#xe68d;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--超人气系列故事-->
+                    <div class="superStory" v-if="ips && ips.length>0" style="padding:0;padding-bottom: 20px;" v-cloak>
+                        <div class="superStory-title" style="margin: 0 18px">
+                            超人气系列故事
+                        </div>
+                        <div class="superStory-list">
+                            <div class="swiper-container swiper-superStory">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for="ip in ips" @click="inSuperStory(ip.id)">
+                                        <div class="main-content">
+                                            <img :src="ip.cover" alt="">
+                                            <p class="story-name">{{ip.name}}</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span class="iconfont" style="font-size: 12px">&#xe634;</span> <span>{{ip.count}}个故事</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!--今日故事-->
+                    <div class="superStory" style="padding:0;padding-bottom: 20px;"  v-cloak>
+                        <div class="superStory-title" style="padding-left: 18px;">
+                            <span v-if="todayStory == true">今日故事</span>
+                            <span v-if="todayStory == false">最新故事</span>
+                        </div>
+
+                        <div class="swiper-container swiper-dayStory">
+                            <!-- Slides wrapper -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="item in audios">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item" style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img :src="item.smallImg" alt="" @click="toPlay(item,$index,0,false)"/>
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo" @click="toPlay(item,$index,0,false)">
+                                                        <div class="teachImg">
+                                                            <img :src="item.teacherImg" />
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime" @click="toPlay(item,$index,0,false)">{{item.teacherName}} {{item.className}}</p>
+                                                    <h3 class="hThree" @click="toPlay(item,$index,0,false)" style="height: 3em;position: relative;"><span class="hThree-position">{{item.name}}</span></h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33" v-for="version in item.versions"
+                                                                 @click="toPlay(item,'',$index)">
+                                                                <div class="story-languageSort" :class="{
+                                                            'doubleLang':version.type == 1,
+                                                            'pureE':version.type == 2,
+                                                            'chineseEd':version.type == 3,
+                                                            'doubleLang-sel':item.id == currentAudio.id && (version.type == currentAudio.versions[playVersion].type) && (version.type == 1),
+                                                            'pureE-sel':item.id == currentAudio.id && (version.type == currentAudio.versions[playVersion].type) && (version.type == 2),
+                                                            'chineseEd-sel':item.id == currentAudio.id && (version.type == currentAudio.versions[playVersion].type) && (version.type == 3)
+                                                            }">
+                                                                    <img v-show="item.id == currentAudio.id && (version.type == currentAudio.versions[playVersion].type)" class="bigImg" src="style/playiconwhite.gif" alt="">
+                                                                    <span v-show="version.type == 1" class="bigText">双语</span>
+                                                                    <span v-show="version.type == 1" class="bigText">{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                    <span v-show="version.type == 2" class="bigText">纯英</span>
+                                                                    <span v-show="version.type == 2" class="bigText">{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                    <span v-show="version.type == 3" class="bigText">中文</span>
+                                                                    <span v-show="version.type == 3" class="bigText">{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="peiTao-resources" v-if="item.goodsId != 0 || ydy_ZhuanPanadImgs==0" @click="sourceEvent(item.goodsId)">
+                                                <div class="right-detail-img" v-if="item.picBookImg && item.picBookName" :class="{'toumingduDown':item.goodsId == 0}"><img :src="item.picBookImg" alt=""></div>
+                                                <div class="right-detail-img" v-if="!item.picBookImg && !item.picBookName" :class="{'toumingduDown':item.goodsId == 0}"><img :src="item.classImg" alt=""></div>
+                                                <div class="right-detail">
+                                                    <p class="right-detail-text" v-if="item.goodsId>0">购买配套绘本</p>
+                                                    <p class="right-detail-text right-detail-noText" v-if="item.goodsId == 0">绘本已售罄</p>
+                                                    <p class="right-detail-name" v-if="item.picBookImg && item.picBookName" :class="{'fontColorO':item.goodsId == 0}">{{item.picBookName}}</p>
+                                                    <p class="right-detail-name" v-if="!item.picBookImg && !item.picBookName" :class="{'fontColorO':item.goodsId == 0}">{{item.className}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="peiTao-resources2" v-if="item.goodsId == 0 && ydy_ZhuanPanadImgs.length>0" @click="ydy_goAd">
+                                                <img :src="ydy_ZhuanPanadImgs[0].image" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination "></div>
+                        </div>
+
+                        <!--查看全部故事-->
+                        <a href="tpl/search.html?lookAll=1" class="look-allStory">查看全部故事 <span class="iconfont">&#xe64f;</span></a>
+                    </div>
+
+                    <!--热门免费专辑-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            热门免费专辑
+                            <div class="right-lookAll iconfont" @click="jumpAllAlbum(1)">&#xe68d;</div>
+                        </div>
+
+                        <div class="album-listContent">
+                            <div class="album-item" v-bind:class="{'marginRight': $index % 2 == 0}" v-for="album in freeAlbums" @click="toAlbumDetail(album.id)">
+                                <div class="shadow1"></div>
+                                <div class="shadow2"></div>
+                                <div class="album-item-img">
+                                    <img :src="album.image" alt="">
+                                </div>
+                                <p class="album-item-title">{{album.name}}</p>
+                                <div class="teacher-and-num">
+                                    <div class="chip noHidden">
+                                        <div class="chip-media ">
+                                            <img :src="album.teacherImg?album.teacherImg:'style/teachersImg.jpg'">
+                                        </div>
+                                        <div class="chip-label showAllTeachName">{{album.teacherName}}</div>
+                                    </div>
+                                    <div class="chip">
+                                        <div class="chip-media">
+                                            <span class="iconfont">&#xe634;</span>
+                                        </div>
+                                        <div class="chip-label">{{album.audioCount}}个故事</div>
+                                        <!--<a href="#" class="chip-delete"></a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--必学付费精品课-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            必学付费精品课
+                            <div class="right-lookAll iconfont" @click="jumpAllAlbum(2)">&#xe68d;</div>
+                        </div>
+
+                        <div class="album-listContent">
+                            <div class="album-item" v-bind:class="{'marginRight': $index % 2 == 0}" v-for="album in payAlbums" @click="toAlbumDetail(album.id)">
+                                <div class="shadow1"></div>
+                                <div class="shadow2"></div>
+                                <div class="album-item-img">
+                                    <img :src="album.image" alt="">
+                                    <div class="good-tag good-tag-pay" v-if="!album.buyFlag">付费</div>
+                                    <div class="good-tag good-tag-bule" v-if="album.buyFlag">已购</div>
+                                    <div class="study-num"><span class="iconfont" style="font-size: 12px">&#xe61b;</span> {{album.buyNum}}人学习</div>
+                                </div>
+                                <p class="album-item-title">{{album.name}}</p>
+                                <div class="teacher-and-num">
+                                    <div class="chip noHidden">
+                                        <div class="chip-media ">
+                                            <img :src="album.teacherImg?album.teacherImg:'style/teachersImg.jpg'">
+                                        </div>
+                                        <div class="chip-label showAllTeachName">{{album.teacherName}}</div>
+                                    </div>
+                                    <div class="chip">
+                                        <div class="chip-media">
+                                            <span class="iconfont">&#xe634;</span>
+                                        </div>
+                                        <div class="chip-label">{{album.audioCount}}个故事</div>
+                                        <!--<a href="#" class="chip-delete"></a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--精选故事合辑-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            精选故事合辑
+                            <div class="right-lookAll iconfont" @click="jumpAllAlbum(3)">&#xe68d;</div>
+                        </div>
+
+                        <div class="album-listContent">
+                            <div class="album-item" v-bind:class="{'marginRight': $index % 2 == 0}" v-for="album in jxAlbums" @click="toAlbumDetail(album.id)">
+                                <div class="shadow1"></div>
+                                <div class="shadow2"></div>
+                                <div class="album-item-img">
+                                    <img :src="album.image" alt="">
+                                    <div class="good-tag">精选</div>
+                                </div>
+                                <p class="album-item-title">{{album.name}}</p>
+                                <div class="teacher-and-num">
+                                    <div class="chip noHidden">
+                                        <div class="chip-media">
+                                            <img :src="album.teacherImg?album.teacherImg:'style/teachersImg.jpg'">
+                                        </div>
+                                        <div class="chip-label showAllTeachName">{{album.teacherName}}</div>
+                                    </div>
+                                    <div class="chip">
+                                        <div class="chip-media">
+                                            <span class="iconfont">&#xe634;</span>
+                                        </div>
+                                        <div class="chip-label">{{album.audioCount}}个故事</div>
+                                        <!--<a href="#" class="chip-delete"></a>-->
+                                    </div>
+                                </div>
+                                <a class="free-btn" v-if="!album.buyFlag" @click.stop="toAlbumDetail(album.id,true)">免费获取</a>
+                                <a class="free-btn has-free" v-if="album.buyFlag">已获取</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--猜你喜欢-->
+                    <div class="superStory">
+                        <div class="superStory-title" style="margin-bottom: 0;">
+                            猜你喜欢
+                            <p class="updateData" @click="changeData"><span class="iconfont">&#xe67f;</span> 换一换</p>
+                        </div>
+
+                        <div class="audio-listStyle" style="padding-bottom: 20px;">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li v-for="audio in guessAudios" @click="guessToPlay(audio,$index,0)">
+                                        <div class="item-content" style="padding-left: 0">
+                                            <div class="item-media" ><img :src="audio.smallImg" style="width: 80px;height: 80px"></div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">{{audio.name}}</div>
+                                                </div>
+                                                <div class="item-subtitle">
+                                                    <div class="chip" style="max-width: 90%" v-show="audio.className">
+                                                        <div class="chip-media">
+                                                            <span class="iconfont">&#xe6ac;</span>
+                                                        </div>
+                                                        <div class="chip-label">{{audio.className}}</div>
+                                                    </div>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter" style="justify-content: flex-start;">
+                                                            <div class="col-33 col-33-short"
+                                                                 v-for="version in audio.versions" >
+                                                                <div class="story-languageSort story-languageSort-padding"
+                                                                     :class="{
+                                                                    'doubleLang':version.type == 1,
+                                                                    'pureE':version.type == 2,
+                                                                    'chineseEd':version.type == 3,
+                                                                    'doubleLang-sel':audio == currentAudio && (version.type == currentAudio.versions[playVersion].type) && (version.type == 1),
+                                                                    'pureE-sel':audio == currentAudio && (version.type == currentAudio.versions[playVersion].type) && (version.type == 2),
+                                                                    'chineseEd-sel':audio == currentAudio && (version.type == currentAudio.versions[playVersion].type) && (version.type == 3)
+                                                                    }">
+                                                                    <img v-show="audio == currentAudio && (version.type == currentAudio.versions[playVersion].type)" class="bigImg" src="style/playiconwhite.gif" alt="">
+                                                                    <span v-show="version.type == 1" class="bigText smallText">双语&nbsp;{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                    <span v-show="version.type == 2" class="bigText smallText">纯英&nbsp;{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                    <span v-show="version.type == 3" class="bigText smallText">中文&nbsp;{{formatTime(version.playTime + allAdTime)}}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--明星老师-->
+                    <div class="superStory" style="padding:0;">
+                        <div class="superStory-title" style="margin: 0 18px">
+                            明星老师
+                            <div class="right-lookAll iconfont" @click = "typeClick(1)">&#xe68d;</div>
+                        </div>
+
+                        <div class="swiper-container swiper-teachers">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="commond in recommendTeacherList" @click="toTeachDetail(commond)"
+                                     :class="{
+                                     'moon-bgColor':commond.teacherId == 3,
+                                     'sunny-bgColor':commond.teacherId == 16,
+                                     'nangua-bgColor':commond.teacherId == 6,
+                                     'xigua-bgColor':commond.teacherId == 5,
+                                     'shaomai-bgColor':commond.teacherId == 4,
+                                     'ningmeng-bgColor':commond.teacherId == 19,
+                                     'coco-bgColor':commond.teacherId == 17,
+                                     'orange-bgColor':commond.teacherId == 15,
+                                     'apple-bgColor':commond.teacherId == 8,
+                                     'hamigua-bgColor':commond.teacherId == 1
+                                     }">
+                                    <img class="teach-imgIcon" :src="commond.teacherImg" alt="">
+                                    <span class="teach-name">{{commond.teacherName}}</span>
+                                    <pre class="teach-des" v-html="commond.recommendDes"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="zenggao" style="height: 150px;"></div>
+                </div>
+                <div class="floating-button backTop" @click="toTop($event)" style="left: auto;right: 20px">
+                    <img src="style/toTop.png" alt="">
+                </div>
+            </div>
+
+            <div id="playControl">
+                <!--播放条 -->
+                <div id="bofangtiao" class="bofangtiao" @click="toPlay('','','')">
+                    <a href="#" class="bofangImg">
+                        <img :src="currentAudio.smallImg"/>
+                    </a>
+                    <div class="bofangInfo">
+                        <p>{{currentAudio.name}}</p>
+                        <span style="font-size: 12px">{{currentAudio.teacherName}}</span>
+                    </div>
+                    <div class="menuBar cai iconfont" @click="showMenu($event)">&#xe61d;</div>
+                    <div class="menuBar zan iconfont" @click="pauseOrPlay($event)">&#xe733;</div>
+                    <div id="bofangtiaoLine" class="bofangtiaoLine"></div>
+                    <!--<div id="bofangtiaoBuffer" class="bofangtiaoLine bofangtiaoBuffer"></div>-->
+                </div>
+                <!--音频列表-->
+                <div class="audioList" @click="hideMenu($event)">
+                    <div class="upMenu">
+                        <div class="listTitle oneList" style="background-color: white">
+                            <div class="leftListTitle">
+                                <p>播放列表（<span>{{length}}</span>）</p>
+                            </div>
+                            <div class="rightListTitle">
+                                <p @click = "changeCircle($event)" class="iconfont">
+                                    <span class="circleText" style="vertical-align: 1px;font-family:
+                                    PingFangSC-Regular !important;">列表循环</span>
+                                    <span class="circleImg" style="font-size: 18px">&#xe67f;</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="audioListContent">
+                            <ul>
+                                <li v-for="item in menuList" @click="toPlay(item,$index,0,true)">
+                                    <div class="listTitle">
+                                        <div class="leftListTitle" v-bind:class="{'selectedAudio':item.id==currentAudio.id,'playBar-gray': item.needBuyFlag}" style="width: 70%">{{item.teacherName}}-{{item.name}}</div>
+                                        <div class="rightListTitle playImg" v-bind:class="{'disabledAudio':currentAudio.needBuyFlag,'playBar-gray': item.needBuyFlag}"><img :src="item.id==currentAudio.id?'style/playicongreen.gif':'style/playicongrey.png'"/></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="floating-button create-popOver punch-MainBtn" @click="popoverModal">
+                <div class="punchBtn">
+                    <div class="punchBtn-leftImg"><i class="punchBtn_red"></i><img src="style/mainLittleC.png" alt=""> <span class="punchBtn-content">打卡</span><span v-if="0" class="punchBtn-content punchBtn-right iconfont">&#xe650;</span></div>
+                </div>
+            </a>
+
+            <div class="invivationHan" onclick="returnAndDownModal()">
+                <div class="invivationHan-content">
+                    <div class="punch-modal" style="padding-bottom: 0px"><div class="two-bg"><div class="three-bg"></div></div>
+                        <div class="join-punchModal">
+                            <img class="punch-txt-tip" src="style/punchTuan12.png" alt="">
+                            <p class="join-des">圆仔邀你一同打卡<br/>赢取魔法石兑换惊喜宝物</p>
+                            <img class="punch-imgTIp" src="style/yuanzai_book.png" alt="">
+                        </div>
+                        <div class="punch-modal-bottomBtn" onclick="nowJoin()">立即参加</div>
+                        <div class="closeModal iconfont" style="" onclick="closeSuccModal()">&#xe66f;</div>
+                    </div>
+                </div>
+            </div>
+            <!--E page-->
+        </div>
+    </div>
+</div>
+
+<div class="adSwiperBox" id="adSwiperBox">
+    <div class="swiper-container swiper-ad">
+        <div class="swiper-wrapper" onclick="MtaH5.clickStat('adpopshop')">
+            <div class="swiper-slide" v-for = "item in advertsList"><a @click="goAdHref(item.url)"><img :src="item.image" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <a href="" class="adClose">&Chi;</a>
+    <div class="swiperBg"></div>
+</div>
+<a href="" class="adSwiperIcon"><img src="" alt=""></a>
+
+<!--E adSwiper-->
+<script type="text/javascript" src="style/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="style/weui.js"></script>
+<script type="text/javascript" src="style/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="style/jqmd5.js"></script>
+<script type="text/javascript" src="style/vue.min.js"></script>
+<script type="text/javascript" src="style/sha1.js"></script>
+<script type="text/javascript" src="style/framework7.min.js"></script>
+<script type="text/javascript" src="style/main.js"></script>
+<script type="text/javascript" src="style/require.js"></script>
+<script type="text/javascript" src="style/services.js"></script>
+<script type="text/javascript" src="style/tools.js"></script>
+<script type="text/javascript" src="style/ui.js"></script>
+<script type="text/javascript" src="style/app.js" charset="utf-8"></script>
+<script type="text/javascript" src="style/story.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+input::-ms-clear {
+	display: none!important
+}
+
+.mod_clear {
+	*zoom: 1
+}
+
+.mod_clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.mod_ver {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	height: 100%;
+	vertical-align: middle;
+	width: 0;
+	font-size: 0
+}
+
+.mod_container {
+	min-width: 1200px;
+	font: 14px/1.5 \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, Droid Sans Fallback, SimSun, sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+
+.mod_container h1,
+.mod_container h2,
+.mod_container h3,
+.mod_container h4,
+.mod_container h5,
+.mod_container h6 {
+	font-weight: 400
+}
+
+.mod_container img {
+	vertical-align: top
+}
+
+.mod_container a {
+	cursor: pointer
+}

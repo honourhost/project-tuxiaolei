@@ -1,0 +1,101 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;font-family:"microsoft yahei";}
+body{font-family: "microsoft yahei"; background: #fff;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight: normal;font-family:"microsoft yahei";}
+ul,ol,li{list-style:none}
+em,i{font-style:normal}
+strong,b{font-weight:normal}
+img{border:none}
+input,img{vertical-align:middle;border: 0;}
+a{text-decoration:none;font-family:"microsoft yahei";-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.ash_color{
+	color:#696969;
+}
+.red_color{
+	color:#ffffff;
+}
+.font-weight{
+	font-weight: bolder;
+}
+.white_color{
+	color: #fff;
+}
+.hoary_color{
+	color: #999999;
+}
+.font_size12{
+	font-size: 12px;
+}
+.font_size14{
+	font-size: 14px;
+}
+.font_size16{
+	font-size: 16px;
+}
+.font_size18{
+	font-size: 18px;
+}
+.font_size20{
+	font-size: 20px;
+}
+.top10{
+	margin-top: 10px;
+}
+.top20{
+	margin-top: 20px;
+}
+.top30{
+	margin-top: 30px;
+}
+.margin101{
+	text-indent: 24px;
+}
+.margin10{
+	margin: 10px 0px;
+}
+.margin20{
+	margin: 20px 0px;
+}
+.margin30{
+	margin: 30px 0px;
+}
+.margin40{
+	margin: 40px 0px;
+}
+.bg_fff{
+	background: #fff;
+}
+.bg_7123d1{
+	background: #7123d1;
+}
+.div_clear{
+	clear: both;
+}
+.public_cen{
+	width: auto;
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.width_92{
+	width: 94%;
+	margin: 0px auto;
+}
+.width_93{
+	width: 94%;
+	margin: 0px auto;
+}
+
+.width_94{
+	width: 96%;
+	margin: 0px auto;
+}
+
+/* 底部版权 */
+.foot{
+	width: 100%;
+	font-size: 14px;
+	color: #333333;
+	text-align: center;
+	padding: 15px 0px;
+}

@@ -1,0 +1,15 @@
+调用模版方法：
+	<include file="tpl/weizan/moban/xxx.php"/>
+
+hear.php  ------  pc全站通用顶部文件
+foor.php  ------  pc全站通用底部文件
+nav.php  -----  pc全站导航模版
+list.php -----  pc全站商品列表
+list_er.php -----  pc全站商品列表的二维码
+
+wap_qingjia.php  -----  wap评价模版
+wap_meal.php  -----  wap快店模版
+wap_group.php  -----  wap团购模版
+wap_group_x.php  -----  wap团购小模版
+wap_appoint.php  -----  wap预约模版
+wap_store.php  -----  wap店铺列表模版

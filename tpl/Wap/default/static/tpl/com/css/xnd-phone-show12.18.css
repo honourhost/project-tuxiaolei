@@ -1,0 +1,286 @@
+.margin-top10{
+	margin-top: 10px;
+}
+.left-3{
+	margin-left: 3%;
+}
+.xnd-phone-bg{
+	background: #f5f5f5;
+}
+.xnd-phone-center{
+	width: auto;
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.xnd-phont-header-img{
+	width: 100%;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+}
+.xnd-phone-nav{
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	padding: 10px 0px;
+}
+.xnd-phone-nav ul li{
+	float: left;
+	width: 33%;
+	height: 40px;
+	text-align: center;
+	border-left: 1px solid #f5f5f5;
+	line-height: 20px;
+	
+}
+.xnd-phone-nav ul li:first-child{
+	border-left: 0;
+}
+.xnd-phone-nav h3{
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	color: #323232;
+}
+.xnd-phone-nav span{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #888;
+}
+
+.xnd-phone-shop{
+	width: 100%;
+	background: #fff;
+	padding: 10px 0px;
+}
+.xnd-phone-shop-icon{
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	overflow: hidden;
+}
+.xnd-phone-shop-icon img{
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+}
+.xnd-phone-shop-title{
+	float: left;
+	width: 60%;
+	margin: 0px 3%;
+}
+.xnd-phone-shop-title p{
+	font-size: 14px;
+	color: #8e8e8e;
+}
+.xnd-phone-shop-title h3{
+	font-size: 16px;
+	margin-top: 5px;
+}
+.xnd-phone-shop-tel{
+	float: right;
+	margin-right: 3%;
+	margin-top: 15px;
+}
+.xnd-phone-shop-tel img{
+	height: 30px;
+}
+
+.xnd-phone-hot{
+	width: 100%;
+	background: #fff;
+}
+.xnd-phone-header{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+}
+.xnd-phone-header span{
+	width: 100%;
+	display: inline-block;
+	height: 0px;
+	border-top: 1px solid #86eac4;
+	margin-top: 20px;
+	position: absolute;
+	z-index: 30;
+}
+.fl-span{
+	float: left;
+}
+.fr-span{
+	float: right;
+}
+.xnd-phone-header h3{
+	float: left;
+	width: 50%;
+	text-align: center;
+	color: #86eac4;
+	font-size: 18px;
+	font-weight: normal;
+	position: relative;
+	z-index: 50;
+	background: #fff;
+	margin-left: 25%;
+}
+.xnd-phone-list{
+	width: 94%;
+	clear: both;
+	margin: 0px auto;
+}
+.xnd-phone-list li{
+	padding: 10px 0px;
+	border-bottom: 1px dashed #f4f4f4;
+}
+.xnd-phone-list-img{
+	width: 30%;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+	float: left;
+}
+.xnd-phone-list-right{
+	width: 67%;
+	float: right;
+	position: relative;
+	height: 90px;
+}
+.xnd-phone-list-right .title{
+	font-size: 16px;
+	font-weight: normal;
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+	color: #323232;
+}
+.xnd-phone-list-right p{
+	padding-top: 5px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #8e8e8e;
+	height: 32px;
+	overflow: hidden;
+}
+.list-right-btm{
+	
+}
+.list-right-btm span{
+	float: right;
+	color: #a7a8a9;
+	position: relative;
+	top: 8px;
+}
+.list-right-btm h4{
+	font-size: 16px;
+	font-weight: 14px;
+	color: #a7a8a9;
+	position: relative;
+	top: 5px;
+}
+.list-right-btm h4 b{
+	color: #ff6f6a;
+	font-size: 18px;
+}
+
+.xnd-phone-more{
+	width: 100%;
+	background: #fff;
+}
+
+.xnd-phone-more{
+	width: 100%;
+}
+.xnd-phone-more ul{
+	
+}
+.xnd-phone-more ul li{
+	width: 50%;
+	float: left;
+	border-top: 1px solid #f5f5f5;
+}
+.xnd-phone-more ul li:nth-child(even){
+	float: right;
+}
+.xnd-phone-more ul li a{
+	display: block;
+	width: 93.33%;
+	margin-left: 3%;
+	padding-right: 3%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-right: 1px solid #f5f5f5;
+
+}
+.xnd-phone-more ul li:nth-child(even) a{
+	border-right: 0px;
+}
+.xnd-phone-more-img{
+	width: 100%;
+	height: 130px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+}
+.xnd-phone-more-tit{
+	font-size: 16px;
+	color: #323232;
+	height: 40px;
+	overflow: hidden;
+	line-height: 20px;
+	margin-top: 10px;
+	
+}
+.xnd-phone-more-con{
+	
+}
+.xnd-phone-more-con h3{
+	color: #a7a8a9;
+	font-size: 14px;
+	position: relative;
+	top: 3px;
+}
+.xnd-phone-more-con span{
+	float: right;
+	font-size: 16px;
+	font-weight: 14px;
+	color: #a7a8a9;
+	font-size: 14px;
+	
+}
+.xnd-phone-more-con span b{
+	color: #ff6f6a;
+	font-size: 18px;
+}
+.ab_footer{
+	position: fixed;
+	background: #000000;
+	opacity: 0.8;
+	width: 100%;
+	height: 50px;
+	z-index: 1000000000;
+	left: 0;
+	bottom: 0;
+}
+.ab_footer a{
+	font-size: 18px;
+	display: block;
+	width: 50%;
+	float: left;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.ab_footer span{
+	position: absolute;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	border-left: 1px solid #fff;
+}

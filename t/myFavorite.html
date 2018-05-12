@@ -1,0 +1,129 @@
+<div class="pages">
+    <div id="myFavorite" data-page="myFavorite" class="page no-navbar no-toolbar page-on-center">
+        <!--tabs-->
+        <div class="content-block">
+            <!-- Buttons row as tabs controller -->
+            <div class="buttons-row myfavorite-buttons">
+                <!-- Link to 2nd tab -->
+                <a href="#tab00" class="tab-link button active" style="overflow: inherit">最近收听
+                    <div class="tab-selected"><img src="style/albumSelImg.png" alt=""></div>
+                    <div class="tab-noSelected" style="display: none;"></div>
+                </a>
+                <a href="#tab0" class="tab-link button" style="overflow: inherit">已购专辑
+                    <div class="tab-selected" style="display: none;"><img src="style/albumSelImg.png" alt=""></div>
+                    <div class="tab-noSelected"></div>
+                </a>
+                <a href="#tab1" class="tab-link button" style="overflow: inherit">收藏的专辑
+                    <div class="tab-selected" style="display: none;"><img src="style/albumSelImg.png" alt=""></div>
+                    <div class="tab-noSelected"></div>
+                </a>
+                <!-- Link to 3rd tab -->
+                <a href="#tab2" class="tab-link button" style="overflow: inherit">收藏的故事
+                    <div class="tab-selected" style="display: none;"><img src="style/albumSelImg.png" alt=""></div>
+                    <div class="tab-noSelected"></div>
+                </a>
+            </div>
+        </div>
+        <div class="page-content infinite-scroll" data-distance="100">
+            <!-- Tabs, tabs wrapper -->
+            <div class="tabs">
+                <!-- Tab 00 -->
+                <div id="tab00" class="tab active">
+                    <div class="content-block" style="background-color: transparent; padding-bottom: 60px;">
+                        <div class="audio-listStyle">
+                            <div class="list-block media-list">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!--无购买-->
+                        <div id="">
+                            <div class="tipImg"><img src="style/tipImg.png"></div>
+                            <p class="tipText">还没有听过任何故事呢~</p>
+                            <a class="toShop">去听故事</a>
+                        </div>
+                        <!-- Preloader -->
+                        <div class="infinite-scroll-preloader" style="margin-bottom: 50px; display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                        <div class="loadmore" style="display: none;">没有更多了哦~</div>
+                        <div class="zenggao" style="height: 40px; display: none;"></div>
+
+                    </div>
+                </div>
+                <!-- Tab 0 -->
+                <div id="tab0" class="tab">
+                    <div class="content-block" style="background-color: transparent; padding-bottom: 60px;">
+                        <div class="album-listStyle">
+                            <div class="list-block media-list">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!--无购买-->
+                        <div id="tipPage2">
+                            <div class="tipImg"><img src="style/tipImg.png"></div>
+                            <p class="tipText">还没给宝贝购买<span style="color: #DE2828">付费</span>专辑呢～</p>
+                            <a class="toShop">去选名师付费课</a>
+                        </div>
+                        <!-- Preloader -->
+                        <div class="infinite-scroll-preloader" style="margin-bottom: 50px; display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                        <div class="loadmore" style="display: none;">没有更多了哦~</div>
+                        <div class="zenggao" style="height: 40px; display: none;"></div>
+                    </div>
+                </div>
+                <!-- Tab 1 -->
+                <div id="tab1" class="tab" style=" padding-bottom: 60px;">
+                    <div class="content-block" style="background-color: transparent;">
+                        <div class="album-listStyle">
+                            <div class="list-block media-list">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="searchNoResult">
+                            <img class="anhao" src="style/inputAnhao.png" alt="">
+                            <p class="noResult" style="width: 100%; display: block;">你还没有收藏任何专辑哦~</p>
+                            <div class="searchNoResult-tip">小提示: 点击专辑详情页的"收藏"按钮<br>就可以收藏专辑了</div>
+                        </div>
+                        <!-- Preloader -->
+                        <div class="infinite-scroll-preloader" style="margin-bottom: 50px; display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                        <div class="loadmore" style="display: none;">没有更多了哦~</div>
+                        <div class="zenggao" style="height: 40px; display: none;"></div>
+                    </div>
+                </div>
+                <!-- Tab 2 -->
+                <div id="tab2" class="tab">
+                    <div class="content-block" style="background-color: transparent; padding-bottom: 60px;">
+                        <div class="audio-listStyle">
+                            <div class="list-block media-list">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="searchNoResult">
+                            <img class="anhao" src="style/inputAnhao.png" alt="">
+                            <p class="noResult" style="width: 100%; display: block;">你还没有收藏任何故事哦~</p>
+                            <div class="searchNoResult-tip">小提示: 点击故事播放页右上角的"<span class="iconfont" style="vertical-align: middle;"></span>"按钮<br>就可以收藏喜欢的故事啦</div>
+                        </div>
+                        <!-- Preloader -->
+                        <div class="infinite-scroll-preloader" style="margin-bottom: 50px; display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                        <div class="loadmore" style="display: none;">没有更多了哦~</div>
+                        <div class="zenggao" style="height: 40px; display: none;"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

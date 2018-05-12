@@ -1,0 +1,119 @@
+.china-title{
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+	padding: 10px 0px 40px 0px;
+}
+.china-title p{
+	font-size: 14px;
+	line-height: 26px;
+	display: block;
+	padding-bottom: 10px;
+}
+.china-title h3{
+	font-size: 20px;
+}
+.china-title span img{
+	height: 30px;
+}
+.width-100{
+	width: 100%;
+	height: auto;
+	padding-bottom: 50px;
+	position:relative;
+	padding-top: 50px;
+}
+.public-bg{
+	position: absolute;
+	z-index: 10;
+	opacity:0.8;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.bg-01{
+	background: #bdefd0;
+	
+}
+.bg-02{
+	background: #dff1b0;
+}
+.bg-03{
+	background: #a83552;
+}
+.bg-04{
+	background: #2e80b0;
+}
+.width-cen{
+	width: 1000px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 50;
+}
+.shop-div-left{
+	float: left;
+	width: 600px;
+	height: 350px;
+	background-origin: border-box;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.shop-div-left img{
+	width: 100%;
+	height: 350px;
+}
+.shop-div-right{
+	float: right;
+	width: 400px;
+}
+.shop-div-right ul{
+	
+}
+.shop-div-right ul li{
+	width: 48%;
+	height: 170px;
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 4px;
+	background-origin: border-box;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.shop-div-right ul li img{
+	width: 100%;
+	height: 170px;
+}
+.china-font{
+	width: 94%;
+	margin: 0px auto;
+	padding-top: 20px;
+}
+.china-font h3{
+	font-size: 24px;
+	color: #4e5450;
+}
+.china-font-btm{
+	
+}
+.china-font-btm p{
+	float: left;
+	width: 800px;
+	color: #727874;
+	line-height: 25px;
+	font-size: 14px;
+}
+.china-font-btm a{
+	display: block;
+	width: 110px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 40px;
+	float: right;
+	color: #fff;
+	background: #86e0a0;
+	font-size: 16px;
+}

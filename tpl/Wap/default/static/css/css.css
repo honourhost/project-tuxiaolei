@@ -1,0 +1,264 @@
+
+ .topbar{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+    border-bottom: 1px solid #f1f1f1;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    z-index: 9999;
+    padding: 10px 20px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 60px;
+    vertical-align: middle;
+    max-width: 650px;
+}
+ .app-logo{
+ 	width: 36px;
+    height: 36px;
+    display: inline-block;
+    
+ }
+ .app-info{
+    float: left;
+    display: inline-block;
+    
+}
+ .topbar-outer img{
+    vertical-align: inherit;
+}
+.app-info p{
+    margin: 0;
+}
+  .app-info{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 10px;
+}
+.app-title{
+    -webkit-text-size-adjust: auto;
+    -ms-text-size-adjust: auto;
+    text-size-adjust: auto;
+    font-size: 14px;
+    color: #333;
+}
+.app-ico img{
+    width: 12px;
+    margin-left: 5px;
+}
+.app-info p{
+    margin: 0;
+}
+.down-desc{
+    color: #333!important;
+}
+.intro{
+    -webkit-text-size-adjust: auto;
+    -ms-text-size-adjust: auto;
+    text-size-adjust: auto;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #666;
+}
+.app-btn-download {
+    display: block;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #57ad68;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: \\5FAE\8F6F\96C5\9ED1;
+    color: #fff;
+    text-decoration: none;
+    float: right;
+}
+.app-close{
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+}
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    content: '';
+    clear: both;
+}
+.topbar-outer img{
+    vertical-align: inherit;
+}
+ .swiper-container {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        position: relative;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-slide img{
+	width: 100%;
+}
+.wpc-nav{
+	width: 100%;
+	height: 38px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.wpc-nav ul{
+	display: flex;
+}
+.wpc-nav ul li{
+	flex: 1;
+	text-align: center;
+}
+.wpc-nav ul li a{
+	color: #333;
+	display: block;
+	width: 100%;
+	height: 38px;
+	line-height: 33px;
+	font-size: 12px;
+}
+.wpc-nav ul li.on{
+	border-bottom: 1px solid #5cb975;
+}
+.wpc-nav ul li.on a{
+	color: #5cb975;
+}
+.wpc-list{
+	width: 100%;
+}
+.wpc-list ul li{
+	border-bottom: 1px solid #E5E5E5;
+	border-bottom: 5px solid #E5E5E5;
+    padding: 10px 10px 0px 10px;
+}
+.wpc-list ul li h3{
+	padding-bottom: 15px;
+	color: #999;
+    font-size: 12px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+.wpc-list ul li h3 span{
+	float: right;
+	font-size: 12px;
+}
+.wpc-list ul li h3 span img{
+	height: 9px;
+	position: relative;
+	top: 0px;
+}
+.list-img{
+	width: 100%;
+	height: 213px;
+	overflow: hidden;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.list-img img{
+	width: 100%;
+}
+.list-img i{
+	position: absolute;
+    background: url("../img/icon_underway.png") no-repeat 100%;
+    top: 10px;
+    left: 0;
+    font-size: 10px;
+    font-style: normal;
+    color: #fff;
+    padding: 2px 20px 2px 10px;
+}
+.wpc-list ul li h4{
+	color: #000000;
+	font-weight: 500;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.wpc-list ul li p{
+	color: #999;
+    line-height: 25px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.wpc-icon{
+	display: block;
+	text-align: right;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+.wpc-icon span{
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #999999;
+	font-size: 12px;
+}
+.wpc-icon span i{
+	height: 15px;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.wpc-icon span i img{
+	height: 14px;
+}
+.wpc-user{
+	width: 100%;
+	border-top: 1px solid #E5E5E5;
+	padding: 13px 0px 5px 0px;
+}
+.wpc-user span{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.wpc-user span i{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.wpc-user span i img{
+	width: 25px;
+	height: 25px;
+}
+.wpc-user span p{
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	width: 85%;
+	left: 35px;
+}

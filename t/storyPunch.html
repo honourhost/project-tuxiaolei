@@ -1,0 +1,164 @@
+<div class="pages">
+    <div id="storyPunch" data-page="storyPunch" class="page no-navbar no-toolbar page-on-center">
+        <div class="page-content">
+            <div class="header-part">
+                <img src="style/punchMainImg.png" alt="">
+                <div class="header-part-topInfo">
+                    <div class="punchStatus clearfix">
+                        <div class="homeBtn"><span class="iconfont backIcon"></span><span class="homeBtn-txt">听故事</span></div>
+                        <p class="myMagicStores right" onclick="punchRule()"><span class="iconfont wenhao"></span> 打卡规则</p>
+
+                        <!--今日未打卡-->
+                        <h2 class="todayPunch"><img src="style/punchTuan.png" alt=""></h2>
+                        <h4 class="tenMinutesComplete"><span>完成打卡即可领取魔法石</span><span class="iconfont "></span><span>+6</span></h4>
+                        <h4 class="tenMinutesComplete" style="display: none;"><span>今日打卡成功！已获得</span><span class="iconfont "></span><span>+6</span></h4>
+                        <h4 class="tenMinutesComplete" style="display: none;"><span>打卡成功并完成学习任务！获得</span><span class="iconfont "></span><span>+9</span></h4>
+
+                        <div class="ydy_punsh">
+                            <img src="style/ydyPaushCard.gif" alt="">
+                        </div>
+
+                        <div class="ydy_punsh_tishi" style="display: none;"><img src="style/ydy_shanjiao.png" class="ydy_shanjiao" alt="">听完任意故事可再获3颗魔法石</div>
+                        <div class="ydy_punsh_tishi" style="display: none;"><img src="style/ydy_shanjiao.png" class="ydy_shanjiao" alt="">超赞！已连续打卡0天啦</div>
+
+                        <!--打卡未分享-->
+                        <!--<h4 class="tenMinutesComplete" v-if="punchStatus && !alreadyShare">今日打卡成功！获得 <span class="iconfont" style="font-size: 20px;vertical-align: middle;font-weight: 100;">&#xe61f;</span> <span class="todayPunch-plus">+</span> <span class="todayPunch-num">{{punchCredits}}</span></h4>-->
+                        <!--<p class="punch-get" @click="shareFriend" v-if="punchStatus && !alreadyShare">分享到朋友圈再获得 {{shareCredits}} 颗魔法石</p>-->
+
+                        <!--&lt;!&ndash;今日打卡成功并分享成功&ndash;&gt;-->
+                        <!--<h4 class="tenMinutesComplete" v-if="punchStatus && alreadyShare">今日打卡并分享成功！获得 <span class="iconfont" style="font-size: 20px;vertical-align: middle;font-weight: 100;">&#xe61f;</span> <span class="todayPunch-plus">+</span> <span class="todayPunch-num">{{parseInt(punchCredits) + parseInt(shareCredits)}}</span></h4>-->
+                        <!--<p class="punch-get" v-if="punchStatus && alreadyShare">太赞啦! 你已连续打卡{{continuePunchDay}}天</p>-->
+                    </div>
+                    <div class="yuanzai-tipModal" style="opacity: 0.261667; left: -60.5433px;">Hi～我是圆仔</div>
+                    <!--打卡天数-->
+                    <div class="bottom-cal">
+                        <div class="row">
+
+                        </div>
+                    </div>
+
+                    <div class="middle-info">
+                        <img class="middle-info-img" src="style/storeImg.png" alt="">
+                        <span class="middle-info-myStore">我的魔法石</span>
+                        <span class="middle-info-storeNum">0</span>
+                        <!--<div class="short-rightLine"></div>-->
+                        <!--<span class="middle-info-magicShop" ">魔法商城</span>-->
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <!--幸运大翻牌和商城入口-->
+                <div class="luncky-and-shop clearfix">
+                    <div class="content-part left">
+                        <h3 class="content-part-titile">幸运大翻牌</h3>
+
+                        <p class="content-part-des">欢乐翻牌<span class="content-part-freeNum">赢大奖</span></p>
+                        <div class="content-part-rightImg"><img src="style/icon_card.png" alt=""></div>
+                        <div class="right-line"></div>
+                    </div>
+                    <div class="content-part right">
+                        <h3 class="content-part-titile">魔法商城</h3>
+                        <p class="content-part-des"><span class="content-part-freeNum">精美宝物</span>尽在此</p>
+                        <div class="content-part-rightImg"><img src="style/icon_magic.png" alt=""></div>
+                    </div>
+                </div>
+                <!--热门优惠兑换-->
+                <div class="hotxchange">
+                    <div class="fineStory">
+                        <div class="newStorySign bestAlbum">热门宝物抢兑中</div>
+                        <a class="storyMore" style="color: #F5A623;">
+                            <span class="lookAll-txt">更多魔法宝物</span>
+                            <span class="lookAll-icon iconfont"></span>
+                        </a>
+                    </div>
+                </div>
+                <!--可兑换商品-->
+                <div class="swiper-container swiper-exchangeGoods swiper-container-horizontal">
+                    <!-- Slides wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active" style="width: 627.5px;">
+                            <div class="list-block media-list">
+                                <div class="item-content">
+                                    <div class="item-media"><img src="https://file.dayutang.cn/2018/05/02/1525249900644.jpg"></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Hello Ruby：儿童编程大冒险</div>
+                                        </div>
+                                        <div class="item-subtitle"><span class="iconfont"></span>1899</div>
+                                    </div>
+                                </div>
+                            </div><div class="list-block media-list">
+                            <div class="item-content">
+                                <div class="item-media"><img src="https://file.dayutang.cn/2018/05/01/1525149180508.jpg"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">神秘日志精华版：寻龙笔记</div>
+                                    </div>
+                                    <div class="item-subtitle"><span class="iconfont"></span>1299</div>
+                                </div>
+                            </div>
+                        </div>
+                        </div><div class="swiper-slide swiper-slide-next" style="width: 627.5px;">
+                        <div class="list-block media-list">
+                            <div class="item-content">
+                                <div class="item-media"><img src="https://file.dayutang.cn/2017/08/01/1501565868617.jpg"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">和哈利波特学魔法英文第一季Season1</div>
+                                    </div>
+                                    <div class="item-subtitle"><span class="iconfont"></span>5999</div>
+                                </div>
+                            </div>
+                        </div><div class="list-block media-list">
+                        <div class="item-content">
+                            <div class="item-media"><img src="https://file.dayutang.cn/2017/12/13/1513137721955.jpg"></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">绘本馆最萌吉祥物圆仔抱枕</div>
+                                </div>
+                                <div class="item-subtitle"><span class="iconfont"></span>2399</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="punch-Record">
+                    <div class="today-record clearfix">
+                        <div class="leftTxt left"><img src="style/todayRecond.png" alt=""></div>
+                        <div class="rightJBImg right"><img src="style/jiangbei.png" alt=""></div>
+                    </div>
+                    <div class="punch-rankList">
+                        <ul>
+                            <li>
+                                <div class="punch-rankList-one punch-rankList-me clearfix">
+
+
+                                    <div class="punch-rankList-left left">
+                                        <div class="chip">
+                                            <div class="chip-media">
+                                                <img>
+                                            </div>
+                                            <div class="chip-label">我</div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <div class="loadmore">前20名才能上榜哦!加油~</div>
+                        <div class="zenggao" style="height: 100px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--分享获得魔法石-->
+
+        <div class="backTop toolbar-fixed"><img src="style/toTop.png" alt=""></div>
+    </div>
+</div>

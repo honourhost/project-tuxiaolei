@@ -1,0 +1,343 @@
+/* 小农丁手机版首页style */
+.phone-index-body{
+	background: #f4f4f4;
+}
+/* 焦点图 */
+.phone-index-slide{
+	width: 100%;
+}
+
+/* nav */
+.phone-index-nav{
+	width: 100%;
+	background: #fff;
+	padding: 5px 0px;
+}
+.phone-index-nav ul li{
+	width: 25%;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+}
+.phone-index-nav ul li img{
+	height: 45px;
+	margin-bottom: 5px;
+}
+.phone-index-nav ul li h3{
+	display: block;
+	width: 100%;
+	font-size: 15px;
+	color: #4d4d4d;
+}
+
+
+/* 舌尖上的...banner图 */
+.phone-index-xnd{
+	width: 100%;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+}
+.phone-index-xnd img{
+	width: 100%;
+}
+
+/* 快报 */
+.phone-index-news{
+	width: 100%;
+	background: #fff;
+	padding: 15px 0px;
+	border-bottom: 1px solid #f4f4f4;
+}
+.index-news-icon{
+	margin-left: 4%;
+	height: 20px;
+	display: inline-block;
+	float: left;
+}
+.index-news-icon img{
+	height: 20px;
+}
+.index-news-title{
+	display: inline-block;
+	float: left;
+	width: 75%;
+	height: 20px;
+	overflow: hidden;
+}
+.index-news-title ul{
+	height: 20px;
+}
+.index-news-title ul li{
+	height: 20px;
+	max-width: 100%;
+	position: relative;
+	top: -3px;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size: 14px;
+}
+.index-news-title a{
+	color: #181818;
+}
+.index-news-title b{
+	color: #f4534b;
+	font-weight: normal;
+	margin: 0px 5px;
+}
+
+/* 特卖&农场 */
+.phone-index-sales{
+	width: 100%;
+	background: #fff;
+}
+.index-sales-title{
+	width: 100%;
+	background: #f4f5f7;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+}
+.index-sales-title span{
+	width: 94%;
+	margin: 0px auto;
+	height: 1px;
+	border-top: 1px solid #d5d5d3;
+	position: absolute;
+	left:3%;
+	top: 25px;
+	z-index: 5;
+}
+.index-sales-title h3{
+	position: relative;
+	margin-left: 50%;
+	left: -50px;
+	font-size: 16px;
+	color: #767877;
+	z-index: 7;
+	width: 100px;
+	background: #f4f5f7;
+	text-align: center;
+}
+.index-sales{
+	width: 50%;
+	float: left;
+}
+.index-sales-top{
+	width: 100%;
+	height: 140px;
+	position: relative;
+	border-bottom: 1px solid #f4f4f4;
+	overflow: hidden;
+}
+.index-sales-btm-left{
+	width: 50%;
+	height: 140px;
+	position: relative;
+	border-bottom: 1px solid #f4f4f4;
+	overflow: hidden;
+	float: left;
+}
+.rg-line{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	border-left: 1px solid #f4f4f4;
+}
+.index-sales-top h3,
+.index-sales-btm-left h3{
+	font-size: 16px;
+	color: #000;
+	display: block;
+	margin-left: 7px;
+	line-height: 20px;
+	padding-top: 5%;
+	margin-bottom: 3px;
+	overflow: hidden;
+	height: 20px;
+}
+.sales-top-con{
+	font-size: 14px;
+	color: #767676;
+	height: 15px;
+	overflow: hidden;
+	display: block;
+	line-height: 15px;
+	margin-left: 7px;
+}
+.index-sales-top .index-sales-img{
+	width: 100%;
+	height: 80px;
+	background-size: 90px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	position: absolute;
+	bottom: 0;
+}
+.index-sales-btm-left .index-sales-img{
+	width: 100%;
+	height: 80px;
+	background-size: 90px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	position: absolute;
+	bottom: 0;
+}
+.index-sales-btm{
+	width: 100%;
+}
+
+/* 农场相册 */
+.index-photo-con{
+	width: 100%;
+	background: #fff;
+	height: auto;
+}
+.index-photo-con ul{
+	width: 97.7%;
+	float: right;
+}
+.index-photo-con ul li{
+	float: left;
+	width: 33.333333%;
+	height: 150px;
+	padding: 5px 0px;
+}
+.index-photo-con ul li h3{
+	font-size: 16px;
+	color: #000;
+	margin-left: 0;
+	height: 22px;
+	overflow: hidden;
+	display: block;
+	max-width: 90%;
+	margin-bottom: 5px;
+}
+.index-photo-con ul li .sales-top-con{
+	margin-left: 0;
+	max-width: 90%;
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.index-photo-con ul li .index-sales-img{
+	width: 93%;
+	margin-right: 7%;
+	height: 100px;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; 
+	margin-top: 10px;
+}
+.phone-index-tx{
+	margin-top: 10px;
+	padding: 12px 0px 8px 0px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+.index-news-more{
+	float: right;
+	position: relative;
+	top: -3px;
+	font-size: 14px;
+	color: #9e9e9e;
+	margin-right: 3%;
+}
+.phone-index-tx .index-news-title{
+	max-width: 60%;
+	position: relative;
+	height: 20px;
+}
+.phone-index-tx .index-news-title ul li{
+	width: 100%;
+}
+.phone-index-tx .index-news-title2{
+	max-width: 60%;
+	position: relative;
+	top: -7px;
+	height: 25px;
+	float: left;
+	overflow: hidden;
+	
+}
+.phone-index-tx .index-news-title2 ul li{
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+.phone-index-tx .index-news-title2 ul li a{
+	color: #666;
+}
+.phone-index-tx .index-news-title2 ul li b{
+	color: red;
+	margin-right: 5px;
+	font-weight: normal;
+}
+/* 农场活动 */
+.photo-index-activity{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.index-activity-con{
+	
+}
+.index-activity-con ul li{
+	width: 100%;
+	height: 90px;
+	padding: 10px 0px;
+	border-bottom: 1px solid #e5e9ec;
+}
+.activity-con-img{
+	float: left;
+	width: 30%;
+	height: 90px;
+	background-size: cover;
+	margin-left: 3%;
+}
+.activity-con-right{
+	float: left;
+	width: 60%;
+	margin-left: 3%;
+}
+.activity-con-right h3{
+	font-size: 15px;
+	line-height: 20px;
+	height: 40px;
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #181818;
+}
+.activity-con-right span{
+	font-size: 18px;
+	color: #f5544a;
+}
+.activity-con-right h4{
+	font-size: 14px;
+	height: 20px;
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #979797;
+}
+
+
+/* 幻灯 */
+.addWrap{ position:relative; width:100%;background:#f9af4c;margin:0; padding:0;}
+.addWrap .swipe{overflow: hidden;visibility: hidden;position:relative;}
+.addWrap .swipe-wrap{overflow:hidden;position:relative;}
+.addWrap .swipe-wrap > div {float: left;width: 100%;position:relative;}
+#position{ position:absolute; bottom:0; right:0; padding-left:8px; margin:0; opacity: 0.4; width:100%; filter: alpha(opacity=50);text-align:center;}
+#position li{width:5px;height:5px;margin:0 2px;display:inline-block;-webkit-border-radius:5px;border-radius:5px;background-color:#ffffff;}
+#position li.cur{background-color:#000;}
+.img-responsive { display: block; max-width:100%;height: auto}
+/* 幻灯 end*/

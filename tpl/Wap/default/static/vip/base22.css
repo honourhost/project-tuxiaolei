@@ -1,0 +1,127 @@
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,img,label,header,footer,small,b,article,aside,span,i,del,a{
+	margin: 0;
+	padding: 0;
+}
+i{
+	font-style: normal;
+}
+ul,li{
+	list-style-type: none;
+}
+body{
+	font-size: 12px;
+	font-family: arial, helvetica, sans-serif;
+	background: #f3f3f3;
+}
+input{
+	font-family: arial, helvetica, sans-serif;
+}
+a{
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+	font-family: arial, helvetica, sans-serif;
+}
+a:hover{
+	color: #666;
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+a:focus{
+	text-decoration: none;
+}
+img{
+	border: 0;
+	display: block;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 100;
+}
+
+/* 全站通用 */
+/* 布局 */
+.wpc-body{
+	width: auto;
+	max-width: 720px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.wpc-left{
+	float: left;
+}
+.wpc-right{
+	float: right;
+}
+
+/* 字体颜色 */
+.text-cor-title{
+	color: #000;
+}
+.text-cor-fff{
+	color: #fff;
+}
+.text-cor-green{
+	color: #1ab24e;
+}
+.text-cor-label{
+	color: #444446;
+}
+.text-cor-small{
+	color: #9a9997;
+}
+.bg-cor-green{
+	background: #1ab24e;
+}
+.bg-cor-000{
+	background: #000;
+}
+.bg-cor-ef{
+	background: #efefef;
+}
+.bg-cor-f7{
+	background: #f7f7f7;
+}
+
+/* 字体大小 */
+.wpc-f-size12{
+	font-size: 12px;
+}
+.wpc-f-size14{
+	font-size: 14px;
+}
+.wpc-f-size16{
+	font-size: 16px;
+}
+.wpc-f-size18{
+	font-size: 18px;
+}
+.wpc-f-size20{
+	font-size: 20px;
+}
+.wpc-f-size22{
+	font-size: 22px;
+}
+.wpc-f-size24{
+	font-size: 24px;
+}
+.wpc-f-size26{
+	font-size: 26px;
+}
+.wpc-f-size28{
+	font-size: 28px;
+}
+.wpc-f-size30{
+	font-size: 30px;
+}
+.wpc-f-size32{
+	font-size: 32px;
+}
+small{
+	font-size: 12px;
+}
+/* more */
+.wpc-clear{
+	clear: both;
+}

@@ -1,0 +1,108 @@
+body{
+	font-family:Arial, Helvetica, sans-serif;
+}
+a{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.public-cen{
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+	background: #fff;
+}
+.wx-logo{
+	width: 100%;
+	text-align: center;
+	margin-top: 20%;
+}
+.wx-logo img{
+	height: 100px;
+	border-radius: 5px;
+}
+.wx-my{
+	font-size: 20px;
+	font-weight: normal;
+	color: #00bb8d;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.wx-price{
+	font-size: 36px;
+	color: #00bb8d;
+	margin: 10px 0px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.wx-price span{
+	font-size: 26px;
+}
+.wx-btn{
+	clear: both;
+	width: 96%;
+	margin: 30px auto 0px auto;
+	
+}
+.wx-btn a{
+	display: block;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	background: #00D397;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+/* 列表 */
+.list-ul{
+	width: 100%;
+	height: auto;
+	list-style-type: none;
+}
+.list-ul li{
+	padding: 10px 0px;
+	border-bottom: 1px solid #dcdbd9;
+}
+.list-main{
+	width: 90%;
+	margin: 0px auto;
+}
+.list-shop-img{
+	float: left;
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	border-radius: 45px;
+}
+.list-main-lf{
+	float: left;
+}
+.list-main-lf h3{
+	font-size: 16px;
+	color: #000;
+	font-weight: 700;
+	margin-top: 5px;
+}
+.list-main-lf span{
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.list-main-rg{
+	float: right;
+}
+.list-main-rg h4{
+	margin-top: 10px;
+	font-size: 20px;
+}
+.list-main-rg .color01{
+	color: #000;
+}
+.list-main-rg .color02{
+	color: #03bc01;
+}

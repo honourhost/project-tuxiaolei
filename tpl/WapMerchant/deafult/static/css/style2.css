@@ -1,0 +1,498 @@
+.header{
+	width: 100%;
+	height: 180px;
+	background: url(http://img2.ctoutiao.com/uploads/thumb/2017/02/10/14866880325088.jpg);
+	background-size: cover;
+	background-origin: content-box;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.header-logo{
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	overflow: hidden;
+	border: 3px solid #fff;
+	margin: 0px auto 30px auto;
+	position: relative;
+	top: 30px;
+}
+.header-logo img{
+	width: 80px;
+	height: 80px;
+}
+.header-name{
+	width: 80%;
+	text-align: center;
+	color: #fff;
+	margin: 0px auto;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 30px;
+	position: relative;
+	top: 15px;
+	font-size: 16px;
+}
+.header-name span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	opacity: 0.7;
+	left: 0;
+	top: 0;
+	border-radius: 30px;
+	z-index: 1;
+}
+.header-name i{
+	position: relative;
+	z-index: 2;
+}
+.zhanghu{
+	width: 100%;
+	background: #fff;
+	height: 80px;
+}
+.zhanghu ul li{
+	float: left;
+	position: relative;
+	line-height: 23px;
+	height: 80px;
+	width: 50%;
+	text-align: center;
+}
+.zhanghu ul li span{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 1px;
+	height: 100%;
+	background: #f2f7f8;
+}
+.zhanghu ul li h3{
+	color: #ff0000;
+	font-size: 20px;
+	display: block;
+	margin-top: 16px;
+}
+.zhanghu ul li h4{
+	color: #808080;
+	font-size: 14px;
+}
+.zhanghu ul li b{
+	font-size: 20px;
+	display: block;
+	font-weight: normal;
+	margin-top: 16px;
+}
+.nav-list{
+	width: 100%;
+	margin-top: 20px;
+}
+.nav-list ul li{
+	width: 100%;
+	background: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding: 10px 0px;
+	margin-bottom: 10px;
+}
+.nav-list ul li span{
+	float: right;
+	margin-right: 10px;
+}
+.nav-list ul li span img{
+	height: 15px;
+}
+.nav-list ul li span i{
+	color: #aaaaaa;
+	position: relative;
+	top: -2px;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.nav-list ul li h4{
+	font-size: 15px;
+	margin-left: 10px;
+	color: #252525;
+}
+.jifen-header{
+	width: 100%;
+	background: #fff;
+	height: 60px;
+	line-height: 60px;
+}
+.my-jifen{
+	width: 100%;
+	background: #fff;
+	padding: 15px 0px;
+}
+.my-jifen h3{
+	margin-left: 10px;
+	font-size: 12px;
+	color: #999;
+}
+.my-jifen h3 b{
+	color: #FF0000;
+	font-size: 28px;
+	font-weight: normal;
+}
+.my-jifen span{
+	float: right;
+	margin-right: 10px;
+	position: relative;
+	top: 13px;
+}
+.my-jifen span i{
+	font-size: 12px;
+	color: #999;
+	position: relative;
+	top: -3px;
+}
+.my-jifen span img{
+	height: 15px;
+	margin-left: 5px;
+	
+}
+.mx-list{
+	width: 100%;
+	margin-top: 10px;
+}
+.mx-list ul li{
+	width: 100%;
+	height: auto;
+	padding: 10px 0px;
+	border-bottom: 1px solid #f2f7f8;
+	background: #fff;
+}
+.mx-list ul li .mx-tit{
+	float: left;
+	margin-left: 10px;
+	width: 60%;
+}
+.mx-list ul li:last-child{
+	border-bottom: 0;
+}
+.mx-tit h3{
+	font-size: 16px;
+	color: #050505;
+	padding-bottom: 2px;
+}
+.mx-tit h4{
+	font-size: 12px;
+	color: #999999;
+}
+.mx-price{
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+}
+.mx-price b{
+	display: block;
+	width: 100%;
+	color: #f46c45;
+	padding-bottom: 2px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.mx-price b.jia{
+	color: #12af7e;
+	font-size: 18px;
+}
+.mx-price span{
+	display: block;
+	width: 100%;
+	color: #9a9a9a;
+	font-size: 12px;
+}
+.jifen-nav{
+	width: 100%;
+	background: #fff;
+	padding: 3px 0px 10px 0px;
+}
+.jifen-nav ul li{
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	position: relative;
+}
+.jifen-nav ul li div{
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background: #d1d1d1;
+	right: 0;
+	top: 0;
+}
+.jifen-nav ul li img{
+	height: 25px;
+}
+.jifen-nav ul li span{
+	display: block;
+	width: 100%;
+	color: #7c7c7c;
+	font-size: 12px;
+}
+.jifen-nav ul li span i{
+	color: #ff9900;
+	font-size: 12px;
+	margin-right: 2px;
+}
+.jifen{
+	background: #fff;
+	margin-top: 10px;
+}
+.jifen h3.title{
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #d1d1d1;
+	font-size: 16px;
+	text-indent: 10px;
+	color: #333333;
+}
+.shop-list{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.shop-list ul li{
+	float: left;
+	width: 50%;
+	border-top: 1px solid #d1d1d1;
+	position: relative;
+	padding: 12px 0px;
+}
+.shop-list ul li:nth-child(01){
+	border-top: 0;
+}
+.shop-list ul li:nth-child(02){
+	border-top: 0;
+}
+.shop-list ul li span.line{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	background: #d1d1d1;
+}
+.shop-list ul li:nth-child(even) span.line{
+	display: none;
+}
+.shop-title{
+	margin:0px 10px;
+	padding-bottom: 5px;
+	height: 20px;
+}
+.shop-title h4{
+	float: left;
+	color: #333333;
+	font-size: 16px;
+	height: auto;
+}
+.shop-title span{
+	border: 1px solid #f68300;
+	font-size: 12px;
+	display: inline-block;
+	height: 15px;
+	line-height: 15px;
+	padding: 0px 3px;
+	color: #f68300;
+	border-radius: 3px;
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+}
+.shop-con{
+	display: block;
+	margin: 0px 10px;
+	color: #999999;
+	font-size: 12px;
+}
+.shop-img{
+	width: 60%;
+	margin-left: 10px;
+	height: 100px;
+	background-origin: content-box;
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-size:contain;
+	margin-top: 10px;
+}
+.dh-jifen{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.dh-jifen img{
+	height: 15px;
+}
+.dh-jifen span{
+	position: relative;
+	top: -2px;
+	left: -3px;
+	color: #ffaf36;
+	font-size: 12px;
+}
+/* 轮播图 */
+.index-slide{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+    }
+    .swiper-slide img{
+    	width: 100%;
+    	position: relative;
+    	z-index: 10;
+    }
+    .swiper-slide h3{
+    	display: block;
+    	width: 100%;
+    	font-size: 12px;
+    	position: absolute;
+    	bottom: 10px;
+    	color: #fff;
+    	left: 0;
+    	text-align: left;
+    	z-index: 106;
+    	margin: 0px 15px;
+    }
+    .slide-bg{
+    	position: absolute;
+	    bottom: 0px;
+	    color: #fff;
+	    width: 100%;
+	    height: 100%;
+	    background: url(../img/ban.png);
+	    z-index: 105;
+	    left: 0;
+    }
+.lq-img{
+	width: 120px;
+	margin: 0px auto;
+	padding-bottom: 5px;
+}
+.lq-img img{
+	width: 120px;
+	margin-top: 20px;
+}
+.lq-main{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.lq-font{
+	text-align: center;
+}
+.lq-font h3{
+	font-size: 18px;
+	display: block;
+}
+.lq-font span{
+	font-size: 28px;
+}
+.tx-btn{
+	display: block;
+	width: 86%;
+	margin: 0px auto;
+	text-align: center;
+	background: #1aad19;
+	height: 45px;
+	line-height: 45px;
+	font-size: 20px;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 30px;
+	border: 0;
+}
+.fuwu{
+	width: 100%;
+	text-align: center;
+	color: #acacac;
+	padding-bottom: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.tixian{
+	width: 100%;
+	background: #fff;
+	margin-top: 15px;
+}
+.tixian ul li{
+	margin: 0px 10px 10px 10px;
+	
+	position: relative;
+	color: #999;
+}
+.tixian ul li label{
+	float: left;
+	width: 30px;
+	font-size: 16px;
+	margin-left: 10px;
+	line-height: 30px;
+	position: absolute;
+	top: 12px;
+	left: 0px;
+}
+.tixian ul li label img{
+	height: 15px;
+}
+.tixian ul li input{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #f5f5f5;
+	font-size: 14px;
+	text-indent: 30px;
+	color: #A2A1A1;
+	-webkit-appearance: none;
+}
+.tixian ul li p{
+	margin-left: 110px;
+	padding-top: 5px;
+	color: red;
+}
+.mingxi{
+	text-align: right;
+	margin-right: 7%;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #333;
+}
+.mingxi a{
+	color: #acacac;
+}
+.mingxi img{
+	position: relative;
+	top: 1px;
+	height: 13px;
+	margin-left: 5px;
+}

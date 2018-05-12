@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'mer_id', 2 => 'module_name', 3 => 'create_time', 4 => 'sort', 5 => 'status', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(13)', 'mer_id' => 'int(13)', 'module_name' => 'varchar(255)', 'create_time' => 'int(13)', 'sort' => 'int(13)', 'status' => 'int(1)', ), );?>

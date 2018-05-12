@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>喵星智能手表</title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			body,div,span,p,img,h2,h3,h4,h5,h6{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-size: 14px;
+				font-family: "microsoft yahei";
+				color: #333333;
+			}
+			ul,li{
+				list-style: none;
+			}
+			h2,h3,h4{
+				font-weight: normal;
+			}
+			img{
+				border:none;padding:0;margin:0;display:inherit;
+			}
+			.public-cen{
+				max-width: 720px;
+				min-width: 240px;
+				width: auto;
+				margin: 0px auto;
+			}
+			.header{
+				width: 100%;
+				text-align: center;
+				padding-top: 30px;
+			}
+			.logo{
+				width: 100%;
+				text-align: center;
+			}
+			.logo img{
+				height: 20px;
+				margin: 0px auto;
+				text-align: center;
+			}
+			.logo h3{
+				font-size: 16px;
+			}
+			.header .title{
+				display: block;
+				text-align: center;
+				margin-top: 10px;
+				font-size: 22px;
+				padding-bottom: 0px;
+			}
+			.p-con{
+				font-size: 14px;
+			}
+			.main01{
+				width: 100%;
+				margin-top: 20px;
+				position: relative;
+			}
+			.main01 span{
+				display: block;
+				width: 33.333%;
+				float: left;
+				text-align: center;
+				color: #1B1B1B;
+				position: relative;
+				top: 20px;
+			}
+			.down{
+				width: 100%;
+				text-align: center;
+			}
+			.down img{
+				padding-top: 30px;
+				height: 45px;
+				margin: 0px auto;
+			}
+			.main02 h3{
+				display: block;
+				text-align: center;
+				color: #333333;
+				font-size: 20px;
+				padding-bottom: 10px;
+				padding-top: 20px;
+				color: #333;
+			}
+			.main02 p{
+				display: block;
+				text-align: center;
+				margin: 0px 10px;
+				padding-bottom: 40px;
+				color: #333;
+			}
+			.img-cen img{
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			.img-cen{
+				width: 100%;
+			}
+			
+			.times{
+				width: 100%;
+				text-align: center;
+				padding: 30px 0px;
+			}
+			.times h3{
+				color: #333333;
+				font-size: 20px;
+				padding-bottom: 10px;
+			}
+			.times h4{
+				display: block;
+				margin: 0px 10px;
+				font-size: 14px;
+				line-height: 20px;
+			}
+			.times img{
+				padding-top: 25px;
+				height: 45px;
+				margin: 0px auto;
+			}
+			.main09{
+				width: 100%;
+				height: 70px;
+				margin-bottom: 30px;
+				padding-top: 10px;
+				
+			}
+			.main09 ul{
+				width: 100%;
+				margin: 0px auto;
+			}
+			.main09 .list01 li{
+				float: left;
+				text-align: center;
+				width: 25%;
+				font-size: 12px;
+				line-height: 0;
+				height: 70px;
+			}
+			.main09 .list02 li{
+				float: left;
+				text-align: center;
+				width: 25%;
+				font-size: 12px;
+				line-height: 0;
+				height: 70px;
+			}
+			.main09 ul li img{
+				height: 40px;
+				margin: 0px auto;
+			}
+			.main09 ul li h4{
+				font-size: 12px;
+				display: block;
+				text-align: center;
+				padding-top: 10px;
+			}
+			.chongdian{
+				width: 100%;
+				text-align: center;
+			}
+			.chongdian h3{
+				padding-top: 30px;
+				color: #333333;
+				font-size: 20px;
+				padding-bottom: 10px;
+			}
+			.chongdian h4{
+				display: block;
+				margin: 0px 5px;
+				font-size: 14px;
+				line-height: 20px;
+				padding-bottom: 20px;
+			}
+			.guanyu{
+				width: 100%;
+				height: auto;
+				background: #1b1b1b;
+			}
+			.guanyu h3{
+				font-size: 20px;
+				color: #fff;
+				padding-top: 30px;
+				display: block;
+				text-align: center;
+				padding-bottom: 10px;
+			}
+			.guanyu span{
+				
+			}
+			.guanyu h3 i{
+				display: block;
+				width: 60px;
+				height: 3px;
+				background: #f28d01;
+				margin:5px auto 0px auto;
+			}
+			.guanyu p{
+				text-indent: 30px;
+				font-size: 14px;
+				line-height: 28px;
+				color: #fff;
+				display: block;
+				margin: 0px 20px;
+			}
+			.guanyu img{
+				width: 100%;
+			}
+			.footer{
+				padding: 20px 0px;
+				width: 80%;
+				text-align: center;
+				margin: 0px auto;
+			}
+			.footer img{
+				width: 100%;
+				margin: 0px auto;
+			}
+			.main-app{
+				padding-bottom: 20px;
+			}
+			.canyu-btn{
+				width: 150px;
+				height: 40px;
+				line-height: 40px;
+				background: #e9912d;
+				color: #fff;
+				font-size: 18px;
+				text-align: center;
+				margin: 0px auto;
+			}
+			.canyu-btn a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #fff;
+				text-decoration: none;
+			
+			}
+			.canyu-btn a{
+				
+			}
+			.top{
+				width: 40px;
+				position: fixed;
+				right: 10px;
+				bottom: 30px;
+				border-radius: 5px;
+			}
+			.top img{
+				width: 100%;
+				border-radius: 5px;
+			}
+			.hd-top{
+				width: 100%;
+				height: auto;
+				background: #e9912d;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: #fff;
+				position: fixed;
+				left: 0;
+				top: 0;
+			}
+			.hd-top a{
+				color: #fff;
+				text-decoration: none;
+			}
+			.hd-top a:hover{
+				color: #fff;
+			}
+			.hd-top h3{
+				font-size: 24px;
+				font-family: arial, helvetica, sans-serif;
+			}
+			.hd-top h3  b{
+				font-size: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="public-cen">
+			<div class="hd-top">
+				<a href="http://z.m.jd.com/project/details/73438.html">
+					<h3>京东众筹首日突破 — <b>55万</b></h3>
+			    </a>
+			</div>
+			<div style="width: 100%; height: 50px;"></div>
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.jpg" />
+					<h3>喵星智能腕表</h3>
+				</div>
+				<h2 class="title">您贴心的商务智能管家</h2>
+				<span class="p-con">全陶瓷机身 科技与艺术的完美结合</span>
+			</div>
+			<!-- 三款手表 -->
+			<div class="main01 img-cen">
+				<span style="text-align: center;text-indent: 50px;">宝石蓝</span>
+				<span>曜石黑</span>
+				<span style="text-align: left;text-indent: 15px;">珍珠白</span>
+				<img src="img/img02.jpg" />
+			</div>
+			<div class="down">
+				<img src="img/icon-down.jpg" />
+			</div>
+			<!-- 奔驰车 -->
+			<div class="main02 img-cen">
+				<h3>功能强大，无所不能</h3>
+				<p>只有你想不到的，没有我们做不到的！</p>
+				<img src="img/img03.jpg" />
+			</div>
+			<!-- 时间管理文字 -->
+			<div class="times">
+				<h3>时间管理</h3>
+				<h4>差旅、会务、约会......活动很多，时间管理帮您精准打理一切,高效的生活才轻松！</h4>
+				<img src="img/icon-down.jpg" />
+			</div>
+			<!-- 会议提醒 -->
+			<div class="main03 img-cen">
+				<img src="img/img04s.jpg" />
+			</div>
+			<!-- 双向通话 -->
+			<div class="main06 img-cen">
+				<img src="img/img07.jpg" />
+			</div>
+			
+			<!-- 运动健康 -->
+			<div class="main08 img-cen">
+				<img src="img/img09.jpg" />
+			</div>
+			<!-- icon功能点 7条 -->
+			<div class="main09">
+				<ul class="list01">
+					<li>
+						<img src="img/icon-01.jpg"><h4>运动计步</h4>
+					</li>
+					<li>
+						<img src="img/icon-02.jpg"><h4>热量消耗</h4>
+					</li>
+					<li>
+						<img src="img/icon-03.jpg"><h4>心率监测</h4>
+					</li>
+					<li>
+						<img src="img/icon-04.jpg"><h4>运动轨迹</h4>
+					</li>
+				</ul>
+				<ul class="list02">
+					<li>
+						<img src="img/icon-05.jpg"><h4>计步统计</h4>
+					</li>
+					<li>
+						<img src="img/icon-06.jpg"><h4>好友排名</h4>
+					</li>
+					<li>
+						<img src="img/icon-07.jpg"><h4>微信分享</h4>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+			</div>
+			<!-- APP图 -->
+			<div class="main-app img-cen">
+				<img src="img/img10.jpg" />
+			</div>
+			<!-- 手机助手 -->
+			<div class="main10 img-cen">
+				<img src="img/img11.jpg" />
+			</div>
+			<!-- 防水 -->
+			<div class="main11 img-cen">
+				<img src="img/img12.jpg" />
+			</div>
+			<!-- 语音输入 -->
+			<div class="main12 img-cen">
+				<img src="img/img13.jpg" />
+			</div>
+			<!-- 全部功能 -->
+			<div class="main13 img-cen">
+				<img src="img/img14.jpg" />
+			</div>
+			<!-- 天气推送 -->
+			<div class="main14 img-cen">
+				<img src="img/img15.jpg" />
+			</div>
+			<!-- 低耗省电 -->
+			<div class="main15 img-cen">
+				<img src="img/img16.jpg" />
+			</div>
+			<div class="down">
+				<img src="img/icon-down.jpg" />
+			</div>
+			
+			<!-- 全陶瓷机身 -->
+			<div class="main16 img-cen" style="padding-top: 40px;">
+				<img src="img/img17.jpg" />
+			</div>
+			<!-- 蓝宝石镜面 -->
+			<div class="main17 img-cen">
+				<img src="img/img18.jpg" />
+			</div>
+			<!-- 多种定位 -->
+			<div class="main18 img-cen">
+				<img src="img/img19.jpg" />
+			</div>
+			<!-- 蓝牙耳机 -->
+			<div class="main19 img-cen">
+				<img src="img/img20.jpg" />
+			</div>
+			<div class="chongdian">
+				<h3>便携式充电宝</h3>
+				<h4>操作方便，手感舒适；内置900毫安大容量电池，在无电源情况下，自身蓄电可为腕表及标配耳机各充电一次。</h4>
+			</div>
+			<!-- 便携式充电宝 -->
+			<div class="main20 img-cen">
+				<img src="img/img21.jpg" />
+			</div>
+			<div class="canshu img-cen">
+				<img src="img/canshu.jpg" />
+			</div>
+			<!-- 关于喵星科技 -->
+			<div class="guanyu">
+				<h3><span>关于喵星科技</span><i></i></h3>
+				<p>青岛喵星信息科技有限公司，是一家致力于智能穿戴产品研发、生产，智慧养老服务的高新技术企业。公司成立于2012年，全资控股青岛喵星养老产业发展有限公司和深圳喵星智造科技有限公司。</p>
+				<p>喵星科技在硬件产品的高精度监测方法、GPS、LBS综合定位算法、功耗控制、数据链路等领域居国内领先水平。公司通过ISO9001质量管理体系认证、拥有42项发明专利、实用新型专利及软件著作权，并具有工信部颁发的手机生产牌照。所有硬件产品全部通过国际相关质量认证，通讯类产品均具有国家电网入网许可资质。</p>
+				<img src="img/img23.jpg">
+			</div>
+			<!-- 我们的团队 -->
+			<div class="guanyu">
+				<h3><span>我们的团队</span><i></i></h3>
+				<img src="img/img24.jpg">
+			</div>
+			<!-- 参与众筹 -->
+			<div class="lianxi img-cen">
+				<img src="img/lianxi.jpg" />
+			</div>
+			<div class="canyu-btn">
+				<a href="http://z.m.jd.com/project/details/73438.html">参与众筹</a>
+			</div>
+			<div class="footer img-cen">
+				<img src="img/img25.jpg">
+			</div>
+			<div class="zhongchou img-cen">
+				<a href="http://z.m.jd.com/project/details/73438.html"><img src="img/jingdong.png" /></a>
+			</div>
+			<div class="top">
+				<a href="#"><img src="img/top.jpg" /></a>
+			</div>
+		</div>
+		
+	</body>
+	<?php include 'test.php';?>
+</html>

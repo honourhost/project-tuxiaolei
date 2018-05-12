@@ -1,0 +1,39 @@
+body,h1,h2,h3,h4,h5,h6,div,p,span,br,img,ul,li,b,i,pre{margin: 0; padding: 0;}
+body{
+	background: #f6f2f2;
+	font-size: 12px;
+	font-family: arial, helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	font-family: arial, helvetica, sans-serif;
+}
+img{
+	border: 0;
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	color: #888;
+	text-decoration: none;
+}
+.public-cen{
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.mag-10{
+	margin-top: 10px;
+}
+.mag-15{
+	margin-top: 15px;
+}
+.bg-fff{
+	background: #fff;
+}
+.clear{
+	clear: both;
+	display: block;
+	width: 100%;
+}

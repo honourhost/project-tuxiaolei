@@ -1,0 +1,268 @@
+.cz-logo{
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px 15px 0px;
+}
+.cz-logo img{
+	height: 26px;
+}
+.wx-info{
+	width: 90%;
+	margin: 0px auto;
+	text-align: center;
+}
+.wx-info img{
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	margin: 0px auto;
+}
+.wx-info h3{
+	font-size: 16px;
+	color: #979797;
+	display: block;
+	padding: 0px 0px;
+}
+.wx-recharge{
+	width: 90%;
+	margin: 30px auto 0px auto;
+	background: #fff;
+	border-radius: 5px;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+}
+.wx-recharge label{
+	font-size: 15px;
+	font-weight: 700;
+	margin-left: 10px;
+	float: left;
+}
+.wx-recharge input{
+	float: right;
+	height: 25px;
+	line-height: 25px;
+	width: 100px;
+	border: 0;
+	text-align: right;
+	margin-right: 5px;
+	font-size: 16px;
+	color: #9B9494;
+	position: relative;
+	top: 9px;
+}
+.wx-recharge span{
+	float: right;
+	margin-right: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+.wx-textarea{
+	width: 90%;
+	margin: 10px auto;
+	border-radius: 5px;
+	overflow: hidden;
+	background: #fff;
+}
+.wx-textarea textarea{
+	display: block;
+	width: 94%;
+	height: 55px;
+	line-height: 22px;
+	border: 0;
+	border-radius: 5px;
+	margin: 5px auto;
+	color: #dddddd;
+	font-size: 16px;
+	resize:none;
+}
+.my-money{
+	display: block;
+	width: 90%;
+	margin: 20px auto 10px auto;
+	text-align: center;
+	font-size: 26px;
+}
+.my-money h2{
+	font-weight: 700;
+}
+.wx-btn{
+	width: 90%;
+	margin: 0px auto;
+}
+.wx-btn input{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: #e93429;
+	color: #fff;
+	font-size: 20px;
+	border: 0;
+	border-radius: 5px;
+	-webkit-appearance:none; 
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* WebKit*/  
+    color: #dddddd;  
+    font-weight: 100;
+}  
+input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+    color: #dddddd;  
+    font-weight: 100;
+}  
+input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */  
+    color: #dddddd;  
+    font-weight: 100;
+}  
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { /* IE 10+ */  
+    color: #dddddd;  
+    font-weight: 100;
+}  
+.wx-cen{
+	width: 90%;
+	margin: 20px auto;
+	background: #fff;
+	border-radius: 10px;
+	padding-bottom: 0px;
+}
+.red-bg{
+	background:url(http://demo.xiaonongding.com/xiansheng/money/img/red-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top: -40px;
+	z-index: 5;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+.wx-logo2{
+	width: 100%;
+	text-align: center;
+	padding: 25px 0px 15px 0px;
+}
+.wx-logo2 img{
+	height: 34px;
+}
+.wx-uesr{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.wx-uesr img{
+	width: 85px;
+	height: 85px;
+	border-radius: 100%;
+	margin: 10px auto 0px auto;
+}
+.wx-uesr h3{
+	font-size: 14px;
+}
+.wx-uesr p{
+	font-size: 18px;
+	padding: 10px 0px;
+}
+.wx-an{
+	width: 150px;
+	text-align: center;
+	margin: 10px auto 0px auto;
+	border: 10px solid #fff;
+	border-bottom: 7px solid #fff;
+	background: #fff;
+}
+.wx-an img{
+	width: 130px;
+}
+.changan{
+	font-size: 16px;
+	padding: 10px 0px;
+	color: #d23c44;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	position: relative;
+	top: -30px;
+}
+.user-img{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+.user-img img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin: 0px auto;
+}
+.wx-jieshi{
+	width: 100%;
+	text-align: center;
+	color: #969696;
+}
+.neirong{
+			width: 100%;
+				height: 3000px;
+				background: #f1f1f1;
+			}
+			.wx-alert-bg{
+				position: fixed;
+				left: 0;
+				top: 0;
+				background: #000000;
+				opacity: 0.6;
+				z-index: 999;
+				width: 100%;
+				height: 100%;
+			}
+			.alert-main{
+				width: 240px;
+				margin: 0px auto;
+				position: fixed;
+				height: 340px;
+				top: 15%;
+				left: 50%;
+				margin-left: -120px;
+				background-image: url(../img/alert-bg.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				z-index: 1000;
+				border-radius: 0px 0px 20px 20px;
+			}
+			.kong{
+				width: 100%;
+				height: 85px;
+			}
+			.user-icon{
+				width: 80%;
+				margin: 0px auto;
+				text-align: center;
+				color: #f7da8c;
+			}
+			.user-icon img{
+				width: 60px;
+				height: 60px;
+				border-radius: 10px;
+				margin: 15px auto 0px auto;
+			}
+			.user-icon h3{
+				font-size: 13px;
+			}
+			.user-icon p{
+				font-size: 13px;
+				padding-top: 10px;
+			}
+			.user-icon h4{
+				font-size: 32px;
+				color: #f7da8c;
+				padding-top: 2px;
+				font-weight: 700;
+			}
+			.alert-close{
+				position: absolute;
+				right: -25px;
+				top: -25px;
+			}
+			.alert-close img{
+				width: 25px;
+				height: 25px;
+			}

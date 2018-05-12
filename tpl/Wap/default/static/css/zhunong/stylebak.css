@@ -1,0 +1,251 @@
+body{
+	background-color: orange;
+}
+.public-main{
+	width: auto;
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.tops{
+	position: relative;
+}
+.banner{
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	height: auto;
+}
+.banner-bg{
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	height: 400px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.banner-bg img{
+	width: 100%;
+}
+.zhunong{
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	left: 20px;
+	width: 140px;
+	
+}
+.ma{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 4;
+}
+.ma img{
+	width: 100%;
+}
+.zhunong img{
+	width: 100%;
+}
+.fx-content{
+	position: absolute;
+	width: 140px;
+	height: auto;
+	background: #f39801;
+	z-index: 3;
+	left: 20px;
+	bottom: 20px;
+	padding: 13px 0px;
+}
+.title-top{
+	margin-left: 13px;
+}
+.fx-content p.title{
+	font-size: 13px;
+	line-height: 16px;
+}
+.fx-content p.title b{
+	font-size: 15px;
+}
+.fx-content  h3{
+	line-height: 20px;
+	font-size: 16px;
+	color: #040001;
+	font-weight: 700;
+	padding-top: 3px;
+}
+.fx-my{
+	width: 100%;
+	padding-top: 5px;
+}
+.fx-my-img{
+	width: 85px;
+	height: 85px;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 0px auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.fx-my h3{
+	font-size: 14px;
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+	padding-top: 5px;
+	margin: 0px 10px;
+}
+.fx-my p{
+	font-size: 13px;
+	display: block;
+	margin: 0px 10px;
+	line-height: 18px;
+	padding-top: 10px;
+	text-align: center;
+}
+.fx-my p b{
+	font-size: 14px;
+}
+.my-logo{
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+.my-logo .logos{
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	overflow: hidden;
+	margin: 0px auto;
+	margin-top: -60px;
+	position: relative;
+	z-index: 2;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.logos img{
+	
+}
+.my-logo h3{
+	font-size: 16px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	color: #827d15;
+}
+.my-logo p{
+	width: 185px;
+	margin: 0px auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.my-logo p b{
+	font-size: 20px;
+	font-weight: 100;
+}
+.fenxiang{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	padding: 20px 0px;
+}
+.fenxiang h3{
+	font-size: 22px;
+	display: block;
+	padding-bottom: 5px;
+	font-weight: 100;
+}
+.fenxiang p{
+	font-size: 16px;
+}
+.fenxiang img{
+	height: 50px;
+	display: block;
+	margin: 30px auto;
+}
+.list{
+	width: 100%;
+}
+.list ul li{
+	width: 100%;
+	margin-bottom: 15px;
+}
+.list ul li .imgs{
+	width: 100%;
+	height: 230px;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.con{
+	width: 100%;
+	background: #fff;
+	padding: 15px 0px;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	
+}
+.xnd-logo{
+	display: inline-block;
+	float: left;
+	width: 45%;
+	text-align: center;
+	height: 100%;
+	-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+
+}
+.xnd-logo img{
+	height: 50px;
+	margin: 0px auto;
+	display: inline-block;
+	vertical-align:middle;
+	font-size: 0;
+	
+}
+.xnd-con{
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 122px;
+	overflow: hidden;
+	line-height: 20px;
+	font-size: 14px;
+	color: #2d2d2d;
+	padding-right: 5%;
+	text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 6;
+-webkit-box-orient: vertical;
+}
+.footer{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.footer img{
+	height: 60px;
+	margin: 0px auto;
+}

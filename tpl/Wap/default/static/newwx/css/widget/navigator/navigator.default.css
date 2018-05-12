@@ -1,0 +1,30 @@
+/** 一级导航样式 */
+.ui-navigator {
+    width: 100%;
+    background:#fff;
+}
+.ui-navigator .ui-navigator-list li a, .ui-navigator .ui-navigator-fix{
+    padding: 0.6em 15px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+    font-weight: 100;
+    text-align: center;
+}
+#nav-smartSetup ul li a{
+	padding: 0.6em 15px;
+	display: inline-block;
+	float: left;
+}
+/*css for pad*/
+@media all and (min-device-width: 768px) and (max-device-width: 1024px){
+    .ui-navigator .ui-navigator-list li a, .ui-navigator .ui-navigator-fix{
+        font-size: 18px;
+    }
+}
+
+.ui-navigator .ui-navigator-list li a.cur, .ui-navigator .ui-navigator-fix.cur{
+    color: #2ABC67;
+    border-bottom: 2px solid #2ABC67;
+}

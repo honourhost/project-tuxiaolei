@@ -1,0 +1,75 @@
+
+<div class="signal-top" style="width: 100%; height: 60px; background: #ffffff;position:fixed;top:0;z-index:2147483584;border-bottom: 1px solid rgba(222,222,222,1);  display: none;">
+    <img src="style/peo.png" alt="" class="peo" style="width: 40px;height: 40px;position: absolute;top: 50%;left: 3%;margin: -20px 0 0 0;">
+    <label class="service" style="display:none;">
+        <p style="color:#06B89B;font-size: 14px;position: absolute;left: 16%;top:50%;margin-top:-19px;">开启上课和物流通知<br><label style="color: #999999;font-size: 10px;margin:0;display:block;">关注新东方绘本课堂官方服务号</label></p>
+        <span class="serviceBtn" onclick="serviceBtn()" style="position: absolute;right: 10%;top: 50%;margin-top: -14px;font-size: 12px;color: #FFFFFF;width: 80px;height: 28px;line-height: 28px;text-align: center;border-radius: 100px;background-image: linear-gradient(-95deg, #00D48B 0%, #00D1AA 100%);box-shadow: 0 4px 8px 2px rgba(40,206,172,0.20);">立即开启</span>
+    </label>
+
+    <label class="subscribe" style="display:none;">
+        <p style="color:#FE6B64;font-size: 14px;position: absolute;left: 16%;top:50%;margin-top:-19px;">打卡赢绘本免费包邮到家<br><label style="color: #999999;font-size: 10px;margin:0;display:block;">关注新东方绘本馆官方订阅号</label></p>
+        <span class="subscribeBtn" onclick="subscribeBtn()" style="position: absolute;right: 10%;top: 50%;margin-top: -14px;font-size: 12px;color: #FFFFFF;width: 80px;height: 28px;line-height: 28px;text-align: center;border-radius: 100px;background-image: linear-gradient(-95deg, #ED6A65 0%, #E7504A 100%);box-shadow: 0 4px 8px 2px rgba(217,88,123,0.20);">立即参加</span>
+    </label>
+    <img src="style/X.png" alt="" class="signalClose" onclick="$('.signal-top').hide();" style="width: 12px;height: 12px;position: absolute;top: 50%;margin-top: -6px;right: 3%;">
+</div>
+
+<div class="signalShade" style="background: rgba(0,0,0,0.60);width:100%;height:100%;position:fixed;z-index:2147483584;display:none;"></div>
+<div class="signalAlert" style="position: fixed;z-index: 2147483585;top: 10%;left: 50%;width: 80%;margin-left: -40%;display: none">
+    <div class="signalBoxSub" style="display:none;">  <!--订阅号弹窗-->
+        <img src="//static.dayutang.cn/img/ad/subAd.jpg" alt="" style="width:100%;background:red;">
+    </div>
+
+    <div class="signalBoxSer" style="background: #FFFFFF;border-radius: 8px;display: none;">   <!--服务号弹窗-->
+        <img src="style/serbg2.png" alt="" style="width:100%;height:auto;">
+        <div style="position: absolute;top: 4%;width: 100%;text-align: center;">
+            <p style="color:#ffffff;font-size:20px;width:100%;">关注官方服务号<br>自动开启上课和物流通知 </p>
+            <img src="style/fuwuAll.jpg" alt="" style="border: 8px solid #ffffff;border-radius: 10px;width: 56%;background: #ffffff;margin: 8% 0 0 0;">
+            <p style="color:#999999;font-size:14px;margin:5% 0 0 0 ;">长按识别二维码立即关注</p>
+        </div>
+    </div>
+    <img src="style/adClose.png" alt="" onclick="$('.signalAlert').hide(); $('.signalShade').hide()" style="width:12%;display:block;margin:10% auto;">
+</div>
+<script>
+    checkUserSubscribe();
+    // 验证用户是否关注公众账号   订阅号
+    function checkUserSubscribe() {
+        request("PersonalCenter", "checkUserSubscribe", {userId: myselfUserID, wxAccountId: 12},
+            function (data) {
+                if (data.code == 0) {
+                    if (!data.subscribe) {
+                        $('.signal-top').fadeIn();
+                        $('.signal-top .subscribe').show();
+                    } else {
+                        checkUserSubscribeSer();
+                    }
+                }
+            })
+    }
+
+    // 验证用户是否关注公众账号   服务号
+    function checkUserSubscribeSer() {
+        request("PersonalCenter", "checkUserSubscribe", {userId: myselfUserID, wxAccountId: 11},
+            function (data) {
+                if (data.code == 0) {
+                    if (!data.subscribe) {
+                        $('.signal-top').fadeIn();
+                        $('.signal-top .service').show();
+                    }
+                }
+            })
+    }
+
+    function serviceBtn() {
+        $('.signal-top').hide();
+        $('.signalAlert').show();
+        $('.signalShade').show();
+        $('.signalBoxSer').show();
+    }
+
+    function subscribeBtn() {
+        $('.signal-top').hide();
+        $('.signalAlert').show();
+        $('.signalShade').show();
+        $('.signalBoxSub').show();
+    }
+</script>

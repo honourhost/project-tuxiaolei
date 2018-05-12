@@ -1,0 +1,1580 @@
+.margin-top10{
+	margin-top: 10px;
+}
+.public_cen{
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.left-3{
+	margin-left: 3%;
+}
+.xnd-phone-bg{
+	background: #f4f4f4;
+}
+.xnd-phone-center{
+	width: auto;
+	max-width: 650px;
+	min-width: 240px;
+	margin: 0px auto;
+}
+.xnd-phont-header-img{
+	width: 100%;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+	position: relative;
+	background-color: #fff;
+}
+.xnd-phont-header-img img{
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	overflow: hidden;
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	margin-left: -40px;
+	border: 3px solid #fff;
+}
+.xnd-phone-nav{
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	padding: 10px 0px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.xnd-phone-nav ul li{
+	float: left;
+	width: 33%;
+	height: 40px;
+	text-align: center;
+	border-left: 1px solid #dddddd;
+	line-height: 20px;
+	
+}
+.xnd-phone-nav ul li:first-child{
+	border-left: 0;
+}
+.xnd-phone-nav h3{
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	color: #323232;
+}
+.xnd-phone-nav span{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #888;
+}
+
+.xnd-phone-shop{
+	width: 100%;
+	background: #fff;
+	padding: 10px 0px;
+}
+.xnd-phone-shop-icon{
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	overflow: hidden;
+}
+.xnd-phone-shop-icon img{
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+}
+.xnd-phone-shop-title{
+	float: left;
+	width: 60%;
+	margin: 0px 3%;
+	height: 55px;
+	overflow: hidden;
+}
+.xnd-phone-shop-title p{
+	font-size: 14px;
+	color: #8e8e8e;
+	line-height: 30px;
+}
+.xnd-phone-shop-title h3{
+	font-size: 16px;
+	margin-top: 5px;
+}
+.xnd-phone-shop-tel{
+	float: right;
+	margin-right: 3%;
+	margin-top: 15px;
+}
+.xnd-phone-shop-tel img{
+	height: 30px;
+}
+
+.xnd-phone-hot{
+	width: 100%;
+	background: #fff;
+}
+.xnd-phone-header{
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+}
+.xnd-phone-header span{
+	width: 100%;
+	display: inline-block;
+	height: 0px;
+	border-top: 1px solid #86eac4;
+	margin-top: 20px;
+	position: absolute;
+	z-index: 30;
+}
+.fl-span{
+	float: left;
+}
+.fr-span{
+	float: right;
+}
+.xnd-phone-header h3{
+	float: left;
+	width: 50%;
+	text-align: center;
+	color: #86eac4;
+	font-size: 18px;
+	font-weight: normal;
+	position: relative;
+	z-index: 50;
+	background: #fff;
+	margin-left: 25%;
+}
+.xnd-phone-list{
+	width: 94%;
+	clear: both;
+	margin: 0px auto;
+}
+.xnd-phone-list li{
+	padding: 10px 0px;
+	border-bottom: 1px dashed #f4f4f4;
+}
+.xnd-phone-list-img{
+	width: 30%;
+	height: 90px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+	float: left;
+}
+.xnd-phone-list-right{
+	width: 67%;
+	float: right;
+	position: relative;
+	height: 90px;
+}
+.xnd-phone-list-right .title{
+	font-size: 16px;
+	font-weight: normal;
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+	color: #323232;
+}
+.xnd-phone-list-right p{
+	padding-top: 5px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #8e8e8e;
+	height: 32px;
+	overflow: hidden;
+}
+.list-right-btm{
+	
+}
+.list-right-btm span{
+	float: right;
+	color: #a7a8a9;
+	position: relative;
+	top: 8px;
+}
+.list-right-btm h4{
+	font-size: 16px;
+	font-weight: 14px;
+	color: #a7a8a9;
+	position: relative;
+	top: 5px;
+}
+.list-right-btm h4 b{
+	color: #ff6f6a;
+	font-size: 18px;
+}
+
+.xnd-phone-more{
+	width: 100%;
+	background: #fff;
+}
+
+.xnd-phone-more{
+	width: 100%;
+}
+.xnd-phone-more ul{
+	
+}
+.xnd-phone-more ul li{
+	width: 50%;
+	float: left;
+	border-top: 1px solid #f5f5f5;
+}
+.xnd-phone-more ul li:nth-child(even){
+	float: right;
+}
+.xnd-phone-more ul li a{
+	display: block;
+	width: 93.33%;
+	margin-left: 3%;
+	padding-right: 3%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-right: 1px solid #f5f5f5;
+
+}
+.xnd-phone-more ul li:nth-child(even) a{
+	border-right: 0px;
+}
+.xnd-phone-more-img{
+	width: 100%;
+	height: 130px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size:cover;
+	background-position: 50% 50%;
+}
+.xnd-phone-more-tit{
+	font-size: 16px;
+	color: #323232;
+	height: 40px;
+	overflow: hidden;
+	line-height: 20px;
+	margin-top: 10px;
+	
+}
+.xnd-phone-more-con{
+	
+}
+.xnd-phone-more-con h3{
+	color: #a7a8a9;
+	font-size: 14px;
+	position: relative;
+	top: 3px;
+}
+.xnd-phone-more-con span{
+	float: right;
+	font-size: 16px;
+	font-weight: 14px;
+	color: #a7a8a9;
+	font-size: 14px;
+	
+}
+.xnd-phone-more-con span b{
+	color: #ff6f6a;
+	font-size: 18px;
+}
+.ab_footer{
+	position: fixed;
+	background: #000000;
+	opacity: 0.8;
+	width: 100%;
+	height: 50px;
+	z-index: 1000000000;
+	left: 0;
+	bottom: 0;
+}
+.ab_footer a{
+	font-size: 18px;
+	display: block;
+	width: 100%;
+	float: left;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.ab_footer span{
+	position: absolute;
+	left: 100%;
+	width: 1px;
+	height: 100%;
+}
+.Hundreds-nav{
+	background: #fff;
+	width: 100%;
+	height: auto;
+	border-left: 0;
+	border-right: 0;
+	margin: 10px 0px;
+	padding: 0;
+	line-height: 0px;
+	padding-bottom: 10px;
+}
+.Hundreds-nav li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	line-height: 20px;
+	padding: 0;
+	margin-top: 10px;
+}
+.Hundreds-nav li span{
+	display: block;
+}
+.Hundreds-nav li span img{
+	width: 50px;
+	height: 50px;
+	-webkit-transition: -webkit-transform 2s ease-out;
+    -moz-transition: -moz-transform 2s ease-out;
+    -o-transition: -o-transform 2s ease-out;
+    -ms-transition: -ms-transform 2s ease-out;
+}
+.Hundreds-nav li h3{
+	color: #9e9e9e;
+	font-size: 14px;
+	font-weight: normal;
+}
+header{
+  height:50px;
+  background: -webkit-gradient(linear,center top,center bottom,from(#12c4ad), to(#5dd384));
+  background: -moz-gradient(linear,center top,center bottom,from(#12c4ad), to(#5dd384));
+  background: -ms-gradient(linear,center top,center bottom,from(#12c4ad), to(#5dd384));
+  background: linear-gradient(to top right,#12c4ad,#5dd384);	
+  position: relative;
+  display: -webkit-box;
+}
+#locaitonBtn{
+	background: url(http://www.xiaonongding.com/tpl/Wap/pure/static/img/index/location.png) no-repeat;
+	position: absolute;
+	width: 50px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 19px 20px;
+    background-position: 16px 15px;
+}
+#qrcodeBtn{
+	background: url(http://www.xiaonongding.com/tpl/Wap/pure/static/img/index/qrcode.png) no-repeat;
+	position: absolute;
+	width: 50px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-size: 19px 20px;
+    background-position: 16px 15px;
+}
+#searchBox{
+	margin:0 50px;
+	background: rgba(17,88,81,.11);
+	border-radius: 30px;
+	height:30px;
+	-webkit-box-sizing: border-box;
+  	-webkit-box-flex: 1;
+  	margin-top:10px;
+}
+#searchBox a{
+	display: block;
+  	color: #115851;
+  	height: 100%;
+}
+#searchBox .icon-search{
+	margin-left:25px;
+	float:left;
+	background: url(http://www.xiaonongding.com/tpl/Wap/pure/static/img/index/search.png) no-repeat;
+	width:14px;
+	height:14px;
+	margin-top:8px;
+	background-size:100%;
+}
+#searchBox span{
+	float:left;
+	font-size:14px;
+	line-height:30px;
+	margin-left:5px;
+	color:white;
+	opacity: .3;
+}
+.phone_footer{
+	text-align: center;
+	font-size: 12px;
+	color: #ccc;
+	padding: 15px 0px;
+}
+
+.phone-pinzhi{
+	width: 100%;
+	height: 30px;
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px 0px;
+	line-height:30px;
+}
+.phone-pinzhi ul li{
+	float: left;
+	width: 33.333%;
+	overflow: hidden;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #323232;
+}
+.phone-pinzhi ul li img{
+	height: 30px;
+	margin-right:2px;
+}
+
+/* 鍐滃満鍒楄〃 style*/
+.phone-nc-list{
+	width: 100%;
+}
+.phone-nc-list ul li{
+	width: 100%;
+	height: 160px;
+	position: relative;
+}
+.phone-nc-list ul li .nc-list-bg{
+	width: 100%;
+	height: 160px;
+	background-origin: content-box;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.phone-nc-list ul li .nc-list-title{
+	position: absolute;
+	top: 35%;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	width: 100%;
+	font-weight: 700;
+}
+.nc-list-btm{
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+.btn-left{
+	float: left;
+	margin-left: 3%;
+	line-height: 40px;
+	color: #fff;
+	font-size: 14px;
+	width: 50%;
+	height: 40px;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis
+}
+.btn-left-header{
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	border:2px solid #fff;
+	overflow: hidden;
+	float: left;
+	margin-right: 3%;
+}
+.btn-left img{
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+}
+.btn-right{
+	float: right;
+	background: #009900;
+	padding: 3px 10px;
+	border-radius: 15px 0px 0px 15px;
+	position: absolute;
+	height: 20px;
+	overflow: hidden;
+	top: 10px;
+	right: 0;
+	font-size: 14px;
+	color: #fff;
+	line-height: 20px;
+	background: -webkit-gradient(linear, 70% 0, 0 30%, from(#1abf9d), to(#4eca74));
+}
+.btn-right img{
+	height: 17px;
+	position: relative;
+	top: 1px;
+	margin-right: 5px;
+	float: left;
+}
+.btn-right small{
+	margin-left: 5px;
+}
+.btn-right label{
+	display: inline-block;
+	max-width: 60px;
+	overflow: hidden;
+	float: left;
+	white-space:nowrap;
+	text-overflow:ellipsis
+}
+
+
+
+/* 浜у搧璇︽儏椤� */
+.phone-xq{
+	width: 100%;
+	text-align: center;
+}
+.phone-xq img{
+	width: 100%;
+}
+.phone-xq-title{
+	width: 100%;
+	height: auto;
+	padding: 40px 0px 0px 0px;
+	background-color: #fff;
+}
+.phone-xq-title h3{
+	display: block;
+	width: 94%;
+	height: auto;
+	font-size: 18px;
+	text-align: left;
+	color: #333333;
+	margin: 0px auto;
+	line-height: 20px;
+}
+.phone-xq-title span{
+	display: block;
+	text-align: center;
+	color: #f53b3c;
+	font-size: 20px;
+	font-weight: 700;
+}
+.phone-xq-num{
+	width: 94%;
+	margin: 0px auto;
+	height: 30px;
+	background: url(../images/xnd_img/phone-xq-num.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	text-indent: 20px;
+	background-size: 16px;
+}
+.phone-xq-num h4{
+	font-size: 14px;
+	color: #656565;
+}
+.phone-xq-num span{
+	float: right;
+	color: #666666;
+	font-size: 14px;
+}
+.phone-xq-shop{
+	width: 100%;
+	height: auto;
+	padding: 15px 0px;
+	background: #f2f2f2;
+	margin-top: 5px;
+}
+.phone-xq-shop-cen{
+	width: 94%;
+	margin: 0px auto;
+}
+.phone-xq-shop-portrait{
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	overflow: hidden;
+}
+.phone-xq-shop-portrait img{
+	width: 60px;
+	height: 60px;
+}
+.phone-xq-shop-title{
+	float: left;
+	margin-left: 10px;
+	max-width: 40%;
+	overflow: hidden;
+}
+.phone-xq-shop-title h3{
+	font-size: 18px;
+	height: 25px;
+	overflow: hidden;
+	color: #333333;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.phone-xq-shop-title span{
+	font-size: 14px;
+	color: #666666;
+	display: block;
+	height: 20px;
+	overflow: hidden;
+}
+.phone-xq-shop-title b{
+	max-width: 45%;
+	overflow: hidden;
+	display: block;
+	float: left;
+	font-weight: normal;
+}
+.phone-xq-shop-get{
+	float: right;
+}
+.phone-xq-shop-get a{
+	display: block;
+	border: 1px solid #11bfa4;
+	padding: 5px 10px;
+	font-size: 16px;
+	color: #11bfa4;
+	background: #fff;
+	margin-top: 10px;
+	border-radius: 2px;
+}
+.phone-xq-details-title{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	background: #fff;
+}
+.phone-xq-details-title span{
+	position: absolute;
+	width: 94%;
+	left: 3%;
+	top: 25px;
+	height: 1px;
+	border-top: 1px solid #ffdbdb;
+	z-index: 90;
+}
+/* 鐜嬪己鏂板 */
+.phone-fram-nav{
+	width: 100%;
+	background: #fff;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid #e2e2e2;
+}
+.phone-fram-nav ul{
+}
+.phone-fram-nav ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	position: relative;
+	padding: 20px 0px;
+}
+.phone-fram-nav ul li img{
+	height: 55px;
+	margin-bottom: 15px;
+}
+.phone-fram-nav ul li .line-btm{
+	display: block;
+	width: 80%;
+	margin: 0px auto;
+	height: 1px;
+	border-top: 1px solid #e2e2e2;
+	margin-bottom: 10px;
+}
+.phone-fram-nav ul li .line-right{
+	display: block;
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-left: 1px solid #e2e2e2;
+	
+}
+.phone-fram-nav ul li h4{
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	color: #666666;
+}
+.phone-fram-nav ul li a{
+	color: #666;
+}
+
+
+
+.phone-xq-details-title h3{
+	position: relative;
+	text-align: center;
+	width: 130px;
+	margin: 0px auto;
+	display: block;
+	background: #fff;
+	z-index: 100;
+	font-size: 20px;
+	color: #ff4b4d;
+}
+.phone-xq-details-con{
+	width: 94%;
+	font-size: 16px;
+	color: #7f7f7f;
+	line-height: 24px;
+	margin: 0px auto;
+	overflow: auto;
+}
+.phone-xq-details-con img{
+	width: 100%;
+	margin-top: 5px;
+}
+
+
+.phone-xq-footer{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 1000000;
+}
+.phone-xq-footer a{
+	display: block;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+.phone-xq-footer-car{
+	width: 20%;
+	background: #000000;
+	opacity: 0.9;
+	position: relative;
+}
+.phone-xq-footer-car img{
+	height: 30px;
+	margin-top: 10px;
+}
+.phone-xq-footer-car span{
+	position: absolute;
+	left:55%;
+	top: 5px;
+	background: #f92929;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	line-height: 20px;
+	
+}
+.phone-xq-footer-add{
+	width: 40%;
+	background: #ffaf18;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+}
+.phone-xq-footer-buy{
+	width: 40%;
+	background: #fa2829;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+}
+.phone-ul-user{
+	width: 94%;
+	margin: 0px auto;
+	padding: 5px 0px 10px 0px;
+}
+.phone-ul-user li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.phone-ul-user img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.phone-activity{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	z-index: 1000000;
+}
+.phone-activity #price{
+	display: block;
+	float: left;
+	width: 20%;
+	text-align: center;
+	background: #333331;
+	color: #828282;
+}
+.phone-activity #content{
+	display: block;
+	float: left;
+	width: 40%;
+	text-align: left;
+	font-size: 12px;
+	background: #333331;
+	color: #828282;
+}
+.phone-activity a{
+	display: block;
+	float: right;
+	width: 40%;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background: #fa2829;
+}
+
+.phone-fram{
+	width: 100%;
+	height: 50px;
+	background: #000000;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10000000;
+}
+.phone-fram span{
+	position: absolute;
+	width: 1px;
+	height: 35px;
+	top: 8px;
+	left: 50%;
+	border-left: 1px solid #7a7a7a;
+}
+.phone-fram a{
+	display: block;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	width: 50%;
+}
+
+.phone-fram-num{
+	width: 100%;
+	text-align: center;
+	background: #fff;
+}
+.phone-fram-num h4{
+	font-size: 14px;
+	color: #656565;
+}
+.phone-fram-num span{
+	margin-left: 20px;
+}
+.phone-fram-num img{
+	height: 15px;
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+
+.phone-fram-shop{
+	width: 100%;
+	padding: 10px 0px;
+	border-top: 1px dashed #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+	background: #fff;
+	margin-bottom: 15px;
+}
+.fram-shop-left{
+	float: left;
+	width: 64%;
+	overflow: hidden;
+	margin-left: 1%;
+}
+.fram-shop-left p{
+	font-size: 14px;
+	color: #666666;
+	line-height: 20px;
+}
+.phone-fram-sc{
+	float: right;
+	display: block;
+	border: 1px solid #11bfa4;
+	padding: 5px 10px;
+	font-size: 16px;
+	color: #11bfa4;
+	background: #fff;
+	margin-top: 18px;
+	border-radius: 2px;
+	margin-right: 1%;
+}
+.phone-fram-sc img{
+	height: 20px;
+	position: relative;
+	top: 5px;
+	margin-right: 10px;
+}
+
+
+
+/* 璁㈠崟椤� */
+.phone-order-body{
+	background: #f3f4f6;
+}
+.phone-order{
+	background: #fff;
+	margin-top: 10px;
+	height: auto;
+}
+.phone-order-header{
+	width: 100%;
+	height: 40px;
+}
+.order-header-wc{
+	display: none;
+}
+.phone-order-header span{
+	float: right;
+}
+.phone-order-header span a{
+	color: #323232;
+	font-size: 16px;
+}
+.phone-order-header .radio{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 13px;
+}
+.phone-order-header h3{
+	float: left;
+	display: inline-block;
+	border-bottom: 1px solid #e4e4e4;
+	font-size: 16px;
+	height: 43px;
+	line-height: 43px;
+	width: 85%;
+	color: #323232;
+}
+.phone-order-ul{
+	width: 100%;
+}
+.phone-order-ul .checkbox{
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+	margin-top: 35px;
+}
+.phone-order-ul .phone-order-right{
+	float: left;
+	width: 85%;
+	border-bottom: 1px solid #e4e4e4;
+	padding: 10px 0px;
+}
+.phone-order-ul .phone-order-right .order-right-shop{
+	float: left;
+	width: 80px;
+	height: 80px;
+	background-origin: content-box;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 10px;
+}
+.order-right-title{
+	height: 82px;
+	overflow: hidden;
+}
+.order-right-title .order-h3{
+	font-size: 14px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 20px;
+}
+.order-right-title .order-number{
+	float: left;
+	margin-right: 10px;
+	margin-top: 13px;
+}
+.order-num-price{
+	color: #fa2829;
+	font-size: 16px;
+	position: relative;
+	top: 12px;
+}
+.phone-order-footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+}
+.phone-order-footer-del{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+}
+.order-footer-left{
+	float: left;
+	width: 65%;
+	background: #333333;
+	color: #818181;
+	height: 50px;
+}
+.order-footer-left h3{
+	font-size: 14px;
+	margin-left: 10%;
+	line-height: 0px;
+	margin-top: 15px;
+}
+.order-footer-left h3 b{
+	font-size: 16px;
+	color: #fa2829;
+	font-weight: normal;
+}
+.order-footer-left p{
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+}
+.order-footer-left h4{
+	font-size: 14px;
+	margin-left: 10%;
+	margin-top: 8px;
+}
+.phone-group-xq-footer-add{
+	width: 33.333%;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color: #fff;
+}
+.phone-group-xq-footer-add img{
+	
+	margin-top: 5px;
+}
+.phone-group-xq-footer-add span{
+	display: block;
+	width: 100%;
+}
+.order-footer-a{
+	float: right;
+	width: 35%;
+	display: block;
+	height: 100%;
+	line-height: 50px;
+	background: #fa2829;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* 鍗曢€夊閫� */
+.radio {
+	border-radius: 20px;
+	color: #ccc;
+	background: #fefefe;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 1px solid #949494;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+.radioed {
+	border-radius: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url(http://www.xiaonongding.com/tpl/Static/weizan/images/xnd_img/qx.png);
+	background-size: 20px;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	border: none;
+}
+.checkbox {
+	color: #ccc;
+	background: #fefefe;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 1px solid #949494;
+	vertical-align: middle;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+}
+.checked {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url(http://www.xiaonongding.com/tpl/Static/weizan/images/xnd_img/qx.png);
+	background-size: 20px;
+	vertical-align: middle;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	border: 0;
+	border: none;
+}
+/* 璐拱鏁伴噺 */
+.Spinner {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+.Spinner .Amount {
+	width: 30px;
+	height: 17px;
+	padding: 4px 5px;
+	line-height: 17px;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #d9d9d9;
+	float: left;
+	text-align: center;
+	color: #565656;
+	outline: 0;
+}
+.Spinner a {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #d9d9d9;
+	background-color: #f7f7f7;
+	float: left;
+	cursor: pointer;
+	outline: 0;
+}
+.Spinner a i {
+	font-style: normal;
+	background: url(http://www.xiaonongding.com/tpl/Static/weizan/images/xnd_img/BuynBtn.png) no-repeat;
+	display: block;
+	width: 9px;
+	height: 9px;
+	margin: 8px;
+	text-indent: 999999%;
+	overflow: hidden;
+}
+.Spinner .Decrease i {
+	background-position: -9px -9px;
+}
+.Spinner .Increase i {
+	background-position: -9px -0px;
+}
+.Spinner .DisDe i {
+	background-position: -0px -9px;
+}
+.Spinner .DisIn i {
+	background-position: -0px -0px;
+}
+.phone-car-body{
+	background: #f3f4f6;
+}
+.phone-car-header{
+	width: 100%;
+	height: 90px;
+	background-color: #fffaf4;
+}
+.phone-car-header-bg{
+	display: block;
+	width: 100%;
+	height: 3px;
+	overflow: hidden;
+}
+.phone-car-header-title{
+	display: block;
+	font-size: 16px;
+	color: #323232;
+	margin-top: 10px;
+}
+.phone-car-header-title img{
+	height: 25px;
+	margin-top: 0px;
+}
+.phone-car-header-title span{
+	margin-left: 10px;
+}
+.phone-car-header-bg img{
+	width: 100%;
+}
+.phone-car-header-cen p{
+	font-size: 14px;
+	color: #8a8a8a;
+	margin-top: 5px;
+	margin-left: 3px;
+	line-height: 18px;
+}
+.phone-car-header-cen{
+	width: 94%;
+	height: 74px;
+	margin: 0px auto;
+}
+.phone-car-header-cen{
+	
+}
+.phone-car-header-rg{
+	float: right;
+}
+.phone-car-header-rg img{
+	height: 25px;
+	margin-top: 15px;
+}
+.phone-car-price{
+	width: 100%;
+	margin-top: 10px;
+	background: #fff;
+}
+.phone-car-price ul{
+	width: 94%;
+	margin: 0px auto;
+}
+.phone-car-price ul li{
+	border-bottom: 1px dashed #f3f4f6;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #bbbbbb;
+}
+.phone-car-price span{
+	float: right;
+	color: #000000;
+}
+.phone-car-price span b{
+	font-size: 14px;
+	color: #f96652;
+}
+.phone-car-price li h3{
+	font-size: 16px;
+	color: #000000;
+}
+.phone-car-zhifu{
+	width: 100%;
+	margin-top: 10px;
+}
+.phone-car-zhifu ul li{
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+}
+.phone-car-zhifu ul li input{
+	float: left;
+	margin-top: 17px;
+	margin-left: 15px;
+	width: 15px;
+	height: 15px;
+}
+.phone-car-ka{
+	float: right;
+	border-bottom: 1px solid #f3f4f6;
+	width: 85%;
+}
+.phone-car-ka img{
+	float: left;
+	height: 30px;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+.phone-car-ka h3{
+	float: left;
+	font-size: 16px;
+	margin-right: 5px;
+}
+.phone-car-ka span{
+	float: left;
+	color: #929292;
+}
+
+/* public header nav */
+@font-face {font-family: "iconfont";
+  src: url('./fonts/iconfont-phone.eot'); /* IE9*/
+  src: url('./fonts/iconfont-phone.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./fonts/iconfont-phone.woff') format('woff'), /* chrome, firefox */
+  url('./fonts/iconfont-phone.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./fonts/iconfont-phone.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-2xia:before { content: "\e607"; }
+.icon-xia:before { content: "\e756"; }
+.icon-shang:before { content: "\e680"; }
+.icon-shoucangyishoucang-copy:before { content: "\e600"; }
+.icon-zan:before { content: "\e64d"; }
+
+.public-phone-nav{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.public-phone-nav ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	color: #808080;
+}
+.public-phone-nav  ul li a{
+	color: #808080;
+}
+.public-phone-nav ul li h3{
+	font-size: 16px;
+	float: left;
+	width: 50%;
+	text-align: right;
+}
+.public-phone-nav ul li span{
+	float: left;
+	font-size: 16px;
+	margin-left: 5px;
+}
+.public-phone-nav .nav-on{
+	color: #21c298;
+}
+.public-phone-nav .nav-on a{
+	color: #21c298;
+}
+/* ====================  鐗瑰崠  ====================== */
+.phone-temai{
+	width: 100%;
+}
+.phone-temai ul li{
+	width: 100%;
+	margin-bottom: 10px;
+	background: #fff;
+	border-bottom: 1px solid #e8e2e2;
+}
+.phone-temai-img{
+	width: 100%;
+	height: 180px;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.phone-temai-con{
+	width: 100%;
+	height: 85px;
+	overflow: hidden;
+}
+.phone-temai-con-price{
+	float: left;
+	width: 35%;
+	text-align: center;
+	position: relative;
+}
+.phone-temai-con-price span{
+	position: absolute;
+	right: 0;
+	top: 10%;
+	width: 1px;
+	height: 75%;
+	border-left: 1px solid #d5dce2;
+}
+.phone-temai-con-price h3{
+	font-size: 16px;
+	line-height: 85px;
+	color: #a5a5a5;
+}
+.phone-temai-con-price h3 b{
+	font-size: 26px;
+	color: #fd7569;
+}
+.phone-temai-con-title{
+	float: left;
+	width: 63%;
+	margin-left: 2%;
+}
+.phone-temai-con-title h3{
+	font-size: 16px;
+	color: #333333;
+	height: 38px;
+	line-height: 20px;
+	overflow: hidden;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+.phone-temai-con-title del{
+	color: #a5a5a5;
+	margin-right: 10px;
+}
+.phone-temai-con-title span{
+	color: #a5a5a5;
+}
+
+/* ========phone-photo-header========= */
+.phone-photo-header{
+	width: 100%;
+	height: 180px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.photo-header-logo{
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	overflow: hidden;
+	border: 3px solid #fff;
+	margin: 0px auto 0px auto;
+	position: relative;
+	top: 50px;
+}
+.photo-header-logo img{
+	width: 70px;
+	height: 70px;	
+}
+.photo-header-shop{
+	width: 80%;
+	margin: 0px auto;
+	position: absolute;
+	bottom: 10px;
+	left: 10%;
+	background: #db8c4f;
+	height: 30px;
+	line-height: 30px;
+	opacity: 0.8;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 30px;
+}
+.phone-photo-header ul{
+	width: 80%;
+	margin: 0px auto;
+	position: absolute;
+	bottom: 10px;
+	left: 10%;
+}
+.phone-photo-header ul li{
+	float: left;
+	color: #fff;
+	width: 49%;
+	background: #db8c4f;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 1%;
+	opacity: 0.8;
+}
+.phone-photo-header ul li span{
+	float: left;
+	width: 40%;
+	text-align: right;
+	font-size: 16px;
+	position: relative;
+	top: 1px;
+	margin-right: 2px;
+}
+.phone-photo-header ul li h3{
+	font-size: 16px;
+}
+.lf-hd{
+	border-radius: 30px 0px 0px 30px;
+}
+.rg-hd{
+	border-radius: 0px 30px 30px 0px;
+}
+.photo-header-guanzhu{
+	width: 100%;
+	background: #fff;
+	height: 50px;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+}
+.photo-header-guanzhu span{
+	float: right;
+	margin-right: 3%;
+	background: #f4534b;
+	color: #fff;
+	border-radius: 3px;
+	padding: 5px 15px;
+	margin-top: 5px;
+}
+.photo-header-guanzhu h3{
+	font-size: 16px;
+	line-height: 50px;
+	margin-left: 3%;
+}
+.phone-my-con{
+	width: 100%;
+	background: #fff;
+	margin-top: 10px;
+}
+.phone-my-con p{
+	font-size: 15px;
+	color: #323232;
+	text-indent: 30px;
+	margin: 0px 10px;
+	padding: 10px 0px;
+	line-height: 24px;
+}
+.phone-my-con h3{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #323232;
+	padding: 10px 0px;
+	margin: 0px 10px;
+}
+
+
+/* 鐩稿唽鍒楄〃 */
+.photo-list{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	background: #fff;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.photo-list-img{
+	width: 100%;
+	height: 240px;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	margin-bottom: 5px;
+}
+.photo-list-lf{
+	float: left;
+	width: 49.5%;
+	height: 100px;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.photo-list-rg{
+	float: right;
+	width: 49.5%;
+	height: 100px;
+    background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.xnd-logo{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	padding: 20px 0px;
+}
+.xnd-logo img{
+	height: 50px;
+}

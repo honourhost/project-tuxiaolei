@@ -1,0 +1,29 @@
+body{
+	background: #f2f4f7;
+}
+.header{
+	width: 100%;
+}
+.header img{
+	width: 100%;
+}
+.xnd-ic{
+	width: 100%;
+	background: #fff7dc;
+	padding: 10px 0px;
+}
+.xnd-ic p{
+	margin: 0px 15px;
+	font-size: 12px;
+	color: #9f8153;
+	line-height: 20px;
+}
+
+.xnd-index{
+	width: 100%;
+}
+
+.xnd-index ul{
+	width: 100%;
+	background: #fff;
+}

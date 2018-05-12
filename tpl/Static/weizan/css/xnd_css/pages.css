@@ -1,0 +1,7 @@
+.ui_page { float:right;}
+.ui_page_item { display:inline-block; padding:0 6px; vertical-align:middle; font-size:14px; line-height:24px; color:#636363;}
+.ui_page_item:hover { background:#e0f1e1; border-radius:3px; text-decoration:none; color:#323232;}
+.ui_page_item_current, .ui_page_item_current:hover { background:#5ea67c; border-radius:3px; font-weight:700; color:#fff;}
+.ui_page_prev, .ui_page_next { font-size:12px;}
+.ui_page.load { position:relative;}
+.ui_page.load:after { content:''; position:absolute; left:0; top:0; right:0; bottom:0; background-color:#fff; background-color:rgba(255,255,255,0.7);}

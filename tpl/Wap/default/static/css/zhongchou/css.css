@@ -1,0 +1,162 @@
+ .swiper-container {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-slide img{
+	width: 100%;
+}
+.wpc-nav{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.wpc-nav ul{
+	display: flex;
+}
+.wpc-nav ul li{
+	flex: 1;
+	text-align: center;
+}
+.wpc-nav ul li a{
+	color: #666666;
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+.wpc-nav ul li.on{
+	border-bottom: 1px solid #5cb975;
+}
+.wpc-nav ul li.on a{
+	color: #5cb975;
+}
+.wpc-list{
+	width: 100%;
+}
+.wpc-list ul li{
+	margin: 0px 10px;
+}
+.wpc-list ul li h3{
+	font-size: 14px;
+	color: #999999;
+	display: block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+.wpc-list ul li h3 span{
+	float: right;
+	font-size: 12px;
+}
+.wpc-list ul li h3 span img{
+	height: 15px;
+	position: relative;
+	top: 3px;
+}
+.list-img{
+	width: 100%;
+	height: 150px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.list-img i{
+	display: block;
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	background: #000000;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	font-style: normal;
+	position: relative;
+	top: 10px;
+}
+.wpc-list ul li h4{
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	padding: 10px 0px 15px 0px;
+}
+.wpc-list ul li p{
+	font-size: 12px;
+	color: #999999;
+	line-height: 22px;
+}
+.wpc-icon{
+	display: block;
+	text-align: right;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+.wpc-icon span{
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #999999;
+	font-size: 14px;
+}
+.wpc-icon span i{
+	height: 15px;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.wpc-icon span i img{
+	height: 15px;
+}
+.wpc-user{
+	width: 100%;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+.wpc-user span{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding-top: 13px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.wpc-user span i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.wpc-user span i img{
+	width: 30px;
+	height: 30px;
+}
+.wpc-user span p{
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	width: 85%;
+	left: 35px;
+}

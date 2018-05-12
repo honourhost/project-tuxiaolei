@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body,div,ul,li,span,p,img,h1,h2,h3,h4,h5,b,table,tr,td,small,header,footer,section,select,option{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+	font-family: arial, helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5{
+	font-weight: 100;
+}
+b{
+	font-weight: 100;
+}
+img{
+	border: 0;
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	font-family: arial, helvetica, sans-serif;
+}
+a:hover{
+	text-decoration: none;
+}
+p{
+	font-family: arial, helvetica, sans-serif;
+}
+.clear{
+	clear: both;
+}
+input{
+	-webkit-appearance: none;
+}
+select{
+	-webkit-appearance: none;
+}

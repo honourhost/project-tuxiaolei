@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{pigcms{$tpl.wxname}</title>
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telphone=no, email=no"/> 
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="{pigcms{$static_path}tpl/com/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="{pigcms{$static_path}tpl/com/css/xnd-phone-show.css"/>
+
+	</head>
+	<body class="xnd-phone-bg">
+		<div class="xnd-phone-center">
+			<!-- 农场大图 -->
+			<div class="xnd-phont-header-img" style="background-image: url({pigcms{$currentmerchant.merchant_theme_image});">
+				
+			</div>
+			<!-- 农场大图 end -->
+			<!-- 已筹、店铺、粉丝 -->
+				<div class="xnd-phone-nav">
+					<ul>
+						<li>
+							<if condition="$storenum">
+							<h3>{pigcms{$storenum}件</h3>
+							<else/>
+							<h3>0件</h3>
+							</if>
+							<span>特卖</span>
+						</li>
+						<li>
+							<if condition="$currentmerchant['hits']">
+							<h3>{pigcms{$currentmerchant.hits}次</h3>
+							<else/>
+							<h3>0</h3>
+							</if>
+							<span>浏览</span>
+						</li>
+						<li>
+							<h3>{pigcms{$currentmerchant.fans_count}人</h3>
+							<span>粉丝</span>
+						</li>
+						<div style="clear: both;"></div>
+					</ul>
+					<div style="clear: both;"></div>
+				</div>
+			<!-- 已筹、店铺、粉丝 -->
+			<!-- 店铺信息 -->
+			<div class="xnd-phone-shop margin-top10">
+				<div class="xnd-phone-shop-icon left-3">
+					<img src="{pigcms{$currentmerchant.person_image}"  />
+				</div>
+				<div class="xnd-phone-shop-title">
+					<h3>{pigcms{$currentmerchant.person_name}</h3>
+					<p>电话：{pigcms{$currentmerchant.phone}</p>
+				</div>
+				<div class="xnd-phone-shop-tel">
+					<a href="tel:{pigcms{$currentmerchant.phone}"><img src="{pigcms{$static_path}tpl/com/images/xnd-phone-icon.png"></a>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<!-- 店铺信息end -->
+			
+			<!-- 农场精品推荐 -->
+			<div class="xnd-phone-hot margin-top10">
+				<div class="xnd-phone-header">
+					<span class="fl-span"></span>
+					<h3>农场特卖推荐</h3>
+				</div>
+				<div class="xnd-phone-list">
+					<ul>
+						<volist name="group_list" id="group">
+						<li>
+							<a href="/wap.php?g=Wap&c=Group&a=detail&group_id={pigcms{$group.group_id}">
+							<div class="xnd-phone-list-img" style="background-image: url({pigcms{$group.all_pic.0.image});">
+							</div>
+							<div class="xnd-phone-list-right">
+								<h3 class="title">{pigcms{$group.name}</h3>
+								<p>{pigcms{$group.intro}</p>
+								<div class="list-right-btm">
+									<span>销售：<php>echo $group['sale_count']+$group['virtual_num'];</php></span>
+									<h4><b>{pigcms{$group.price}</b></h4>
+								</div>
+							</div>
+							</a>
+							<div style="clear: both;"></div>
+						</li>
+					</volist>
+						<div style="clear: both;"></div>
+					</ul>
+				</div>
+			</div>
+			<!-- 农场精品推荐end -->
+			<if condition="$meal_list">
+			<!-- 农场产品 -->
+			<div class="xnd-phone-more margin-top10">
+				<div class="xnd-phone-header">
+					<span class="fl-span"></span>
+					<h3>农小店热卖</h3>
+				</div>
+				<ul>
+					<volist name="meal_list" id="meal">
+					<li>
+						<a href="/wap.php?g=Wap&c=Food&a=menu&mer_id={pigcms{$mer_id}&store_id={pigcms{$store_id}">
+						<div class="xnd-phone-more-img" style="background-image: url({pigcms{$meal.image.image});">
+						</div>
+						<h3 class="xnd-phone-more-tit">{pigcms{$meal.name}</h3>
+						<div class="xnd-phone-more-con">
+							<span><b>{pigcms{$meal.price}</b>/{pigcms{$meal.unit}</span>
+							<h3>销售：{pigcms{$meal.sell_count}</h3>
+						</div>
+						</a>
+						<div style="clear: both;"></div>
+					</li>
+					</volist>
+				</ul>
+				<div style="clear: both;"></div>
+			</div>
+			
+			<div style="width: 100%; height: 60px;"></div>
+			<div class="ab_footer">
+				<a href="/wap.php?g=Wap&c=Food&a=menu&mer_id={pigcms{$mer_id}&store_id={pigcms{$store_id}">进入农小店</a>
+			</div>
+			</if>
+		</div>
+		<script type="text/javascript">
+			var shareData={
+						imgUrl: "{pigcms{$currentmerchant.person_image}", 
+						link: "http://www.xiaonongding.com/wap.php?g=Wap&c=index&a=index&mer_id={pigcms{$mer_id}&store_id={pigcms{$store_id}",
+						title: "{pigcms{$tpl.wxname}",
+						desc: "{pigcms{$currentstore.txt_info}"
+			};
+		</script>
+		 <include file="Share:share"/>
+	</body>
+</html>

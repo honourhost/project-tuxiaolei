@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Just for test</title>
+    <script type="text/javascript" href="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+<a href="javascript:fuck();">点我测试</a>
+</body>
+<script type="text/javascript" >
+function fuck() {
+    $.ajax({
+        url: "{pigcms{:U('Ts/test')}",
+        success: function () {
+            
+        },
+        dataType: 'json'
+    });
+}
+
+
+</script>
+</html>

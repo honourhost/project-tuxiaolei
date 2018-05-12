@@ -1,0 +1,795 @@
+/* @update: 2015-7-14 15:6:6 */
+
+.insur-ad .common-help .help-perbtn i,
+.insur-ad .jrappbg,
+.s-sprite,
+.week-catewrap .tips {
+	background-image: url(../s-s1caf550062.png);
+	background-repeat: no-repeat
+}
+
+.accident-list .week-catecon .fore1 .icon,
+.accident-list .week-catecon .fore2 .icon,
+.accident-list .week-catecon .fore3 .icon,
+.health-list .week-catecon .fore1 .icon,
+.health-list .week-catecon .fore2 .icon,
+.health-list .week-catecon .fore3 .icon,
+.icon-sprite,
+.travel-list .week-catecon .fore1 .icon,
+.travel-list .week-catecon .fore2 .icon,
+.travel-list .week-catecon .fore3 .icon {
+	background-image: url(../icon-s7a67225436.png);
+	background-repeat: no-repeat
+}
+
+body {
+	background-color: #f5f5f5
+}
+
+.accident-list,
+.health-list,
+.insur-deatilslist dt .listname,
+.insur-goodsall .selectall .sel-search-wrap .search-btn,
+.insur-goodslist .tit .down,
+.insur-goodslist .tit .up,
+.travel-list,
+.week-catecon .intro .week-catelist dd {
+	background-image: url(../bg2.png);
+	background-repeat: no-repeat
+}
+
+.sub-nav-wrap .current {
+	height: 39px
+}
+
+.com-redbtn1 {
+	padding: 10px 64px 12px;
+	text-align: center;
+	font: 700 18px/46px microsoft yahei;
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ea544a;
+	background: -moz-linear-gradient(top, #f46157, #ea544a);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f46157), to(#ea544a))
+}
+
+.com-redbtn1:hover {
+	background: #f5675d;
+	background: -moz-linear-gradient(top, #fb746b, #f5675d);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fb746b), to(#f5675d))
+}
+
+.com-red1-disable {
+	padding: 10px 64px 12px;
+	text-align: center;
+	font: 700 18px/46px microsoft yahei;
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ea544a;
+	background: -moz-linear-gradient(top, #f46157, #ea544a);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f46157), to(#ea544a));
+	filter: alpha(Opacity=50);
+	opacity: .5;
+	cursor: default
+}
+
+.com-redbtn2 {
+	padding: 9px 48px 10px;
+	text-align: center;
+	font: 16px/40px microsoft yahei;
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ea544a;
+	background: -moz-linear-gradient(top, #f46157, #ea544a);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f46157), to(#ea544a))
+}
+
+.com-redbtn2:hover {
+	background: #f5675d;
+	background: -moz-linear-gradient(top, #fb746b, #f5675d);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fb746b), to(#f5675d));
+	color: #fff
+}
+
+.com-disable {
+	filter: alpha(Opacity=50);
+	opacity: .5;
+	cursor: default
+}
+
+.list-banner {
+	height: 320px
+}
+
+.list-banner .introduction {
+	width: 260px;
+	padding-right: 150px;
+	padding-top: 86px;
+	line-height: 29px;
+	font-size: 16px;
+	position: relative;
+	float: left;
+	text-indent: 10em
+}
+
+.list-banner .introduction .text {
+	font-size: 48px;
+	font-weight: 700;
+	padding-right: 17px;
+	visibility: hidden;
+	display: none
+}
+
+.list-banner .introduction .text-vis {
+	visibility: visible;
+	position: absolute;
+	top: 53px;
+	left: 2px;
+	line-height: 64px;
+	font-size: 48px;
+	font-weight: 700;
+	display: block;
+	width: 161px;
+	height: 64px;
+	text-indent: 0
+}
+
+.week-recom {
+	float: left;
+	width: 740px;
+	overflow: hidden;
+	padding: 40px 0
+}
+
+.week-catewrap {
+	position: relative;
+	width: 760px;
+	height: 240px;
+	background-color: #fff
+}
+
+.week-catewrap .tips {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	display: block;
+	background-position: 0 -1793px;
+	height: 107px;
+	width: 107px
+}
+
+.week-catewrap .week-control {
+	position: absolute;
+	top: 213px;
+	left: 0;
+	width: 780px;
+	text-align: center
+}
+
+.week-catewrap .week-control span {
+	display: inline-block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #e6e6e6;
+	width: 12px;
+	height: 12px;
+	margin-right: 6px;
+	cursor: pointer
+}
+
+.week-catewrap .week-control span.curr {
+	background-color: #ea544a
+}
+
+.week-catecon {
+	overflow: hidden;
+	width: 760px;
+	height: 240px;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.week-catecon li {
+	float: left;
+	width: 710px;
+	height: 240px;
+	padding-left: 70px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	overflow: hidden
+}
+
+.week-catecon li.banner-current {
+	display: block;
+	opacity: 1;
+	filter: alpha(opacity=100)
+}
+
+.week-catecon li .info-block {
+	position: absolute;
+	left: 69px;
+	width: 700px
+}
+
+.week-catecon .intro {
+	float: left;
+	width: 380px;
+	padding-top: 20px
+}
+
+.week-catecon .intro .name {
+	border-bottom: 1px solid #e6e6e6;
+	height: 68px;
+	font: 700 30px/68px "microsoft yahei";
+	padding-left: 20px;
+	width: 170px;
+	overflow: hidden;
+	color: #57a5a5;
+	padding-right: 200px
+}
+
+.week-catecon .intro .icon {
+	display: block;
+	position: absolute;
+	left: 260px;
+	top: 30px
+}
+
+.week-catecon .intro .week-catelist {
+	padding-left: 20px;
+	padding-top: 5px
+}
+
+.week-catecon .intro .week-catelist dt {
+	font: 700 18px/42px "microsoft yahei";
+	color: #5e5e5e
+}
+
+.week-catecon .intro .week-catelist dd {
+	font: 400 14px/22px "microsoft yahei";
+	padding-left: 27px;
+	width: 360px;
+	height: 22px;
+	overflow: hidden
+}
+
+.week-catecon .price {
+	float: right;
+	background-color: #f9f9f9;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	padding-top: 40px
+}
+
+.week-catecon .price .name {
+	font-size: 18px;
+	color: #ea544a;
+	padding-bottom: 25px;
+	margin-top: 0;
+	height: 20px;
+}
+
+.week-catecon .price .price-details {
+	color: #ea544a;
+	font-size: 18px;
+	font-weight: 700;
+	padding-bottom: 15px
+}
+
+.week-catecon .price .price-details .number {
+	font-family: arial;
+	font-size: 40px
+}
+
+.list-container {
+	padding-top: 25px;
+	padding-bottom: 55px
+}
+
+.insur-ad {
+	float: right;
+	width: 310px
+}
+
+.insur-ad .tit {
+	padding-bottom: 18px
+}
+
+.insur-ad .tit .help {
+	padding-left: 180px
+}
+
+.insur-ad .jr-name {
+	color: #474e5d;
+	font-size: 18px;
+	padding-right: 20px;
+	font-weight: 700
+}
+
+.insur-ad .text {
+	color: #a5a5a5
+}
+
+.insur-ad .item {
+	margin-bottom: 20px;
+	width: 310px;
+	height: auto;
+	overflow: hidden
+}
+.insur-ad .item img{
+	width: 100%;
+}
+.insur-ad .jrappbg {
+	background: none;
+	height: auto;
+	width: 310px
+}
+.insur-ad .jrappbg img{
+	width: 100%;
+}
+
+.insur-ad .common-qa {
+	background-color: #fff;
+	border: 1px solid #e6e6e6;
+	margin-bottom: 20px
+}
+
+.insur-ad .common-qa .list {
+	padding: 15px 40px
+}
+
+.insur-ad .common-qa li {
+	line-height: 40px;
+	height: 40px;
+	width: 278px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+
+.insur-ad .common-qa li a {
+	font-size: 14px;
+	color: #5e5e5e
+}
+
+.insur-ad .common-qa li a:hover {
+	color: #ea544a
+}
+
+.insur-ad .common-help {
+	border-top: 1px dashed #e6e6e6;
+	text-align: center;
+	padding: 25px 0
+}
+
+.insur-ad .common-help .help-perbtn {
+	background-color: #8cb5de;
+	padding: 7px 46px;
+	color: #fff;
+	font-size: 14px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px
+}
+
+.insur-ad .common-help .help-perbtn i {
+	display: inline-block;
+	background-position: 0 -1920px;
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	margin-top: -2px;
+	padding-right: 5px
+}
+
+.insur-goodsall {
+	width: 820px
+}
+
+.insur-goodsall .selectall {
+	margin-bottom: 10px
+}
+
+.insur-goodsall .selectall .tit {
+	padding-bottom: 10px;
+	height: 32px
+}
+
+.insur-goodsall .selectall .name {
+	color: #474e5d;
+	font-size: 18px;
+	padding-right: 20px;
+	font-weight: 700;
+	float: left;
+	line-height: 32px
+}
+
+.insur-goodsall .selectall .sel-search {
+	border: 1px solid #ccc;
+	padding: 8px 10px;
+	font-size: 12px;
+	width: 178px;
+	background-color: #fff
+}
+
+.insur-goodsall .selectall .sel-search-wrap {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 32px
+}
+
+.insur-goodsall .selectall .sel-search-wrap .search-btn {
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 175px;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	*zoom: 1;
+	z-index: 1;
+	background-position: 0 -141px
+}
+
+.insur-goodsall .selectall .con {
+	background-color: #fff;
+	border: 1px solid #e6e6e6;
+	overflow: hidden
+}
+
+.select-catelist {
+	border-top: 1px dashed #e6e6e6;
+	margin-top: -1px;
+	overflow: hidden;
+	*zoom: 1
+}
+
+.select-catelist dt {
+	float: left;
+	color: #a5a5a5;
+	width: 50px;
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 51px
+}
+
+.select-catelist dd {
+	float: left;
+	width: 720px;
+	margin-right: 20px;
+	line-height: 30px;
+	padding-top: 10px
+}
+
+.select-catelist dd a {
+	padding: 1px 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #474e5d;
+	margin-right: 8px;
+	font-size: 14px;
+	white-space: nowrap
+}
+
+.select-catelist dd a.curr,
+.select-catelist dd a:hover {
+	background-color: #ea544a;
+	color: #fff
+}
+
+.insur-goodslist {
+	border: 1px solid #e6e6e6;
+	background-color: #fff
+}
+
+.insur-goodslist .tit {
+	height: 38px;
+	line-height: 38px;
+	background-color: #f9f9f9;
+	padding: 0 20px;
+	font-size: 14px;
+	border-bottom: 1px solid #e6e6e6
+}
+
+.insur-goodslist .tit .label {
+	color: #a5a5a5;
+	display: inline-block;
+	width: 50px
+}
+
+.insur-goodslist .tit .extra {
+	color: #a5a5a5
+}
+
+.insur-goodslist .tit .extra strong {
+	color: #ea544a;
+	font-weight: 400;
+	padding: 0 4px;
+	font-family: arial
+}
+
+.insur-goodslist .tit a {
+	color: #5e5e5e;
+	padding-right: 10px;
+	margin-right: 30px
+}
+
+.insur-goodslist .tit a.curr,
+.insur-goodslist .tit a:hover {
+	color: #ea544a
+}
+
+.insur-goodslist .tit .up {
+	background-position: -103px 5px
+}
+
+.insur-goodslist .tit .down {
+	background-position: -183px 5px
+}
+
+.insur-goodslist .con {
+	padding: 0 30px 30px
+}
+
+.insur-deatilslist {
+	border-bottom: 1px dashed #e6e6e6;
+	padding-top: 20px
+}
+
+.insur-deatilslist .title {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	width: 508px;
+	height: 24px;
+	line-height: 24px;
+	word-break: break-word;
+	overflow: hidden
+}
+
+.insur-deatilslist .title a {
+	color: #5e5e5e
+}
+
+.insur-deatilslist .title a:hover {
+	color: #ea544a
+}
+
+.insur-deatilslist dl {
+	position: relative;
+	height: 100px
+}
+
+.insur-deatilslist dd {
+	width: 240px;
+	float: right;
+	background-color: #f9f9f9;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	position: absolute;
+	top: -34px;
+	right: 0
+}
+
+.insur-deatilslist dd .sprite {
+	color: #ea544a;
+	font-size: 18px;
+	font-weight: 700
+}
+
+.insur-deatilslist dd .sprite .number {
+	font-family: arial;
+	font-size: 40px
+}
+
+.insur-deatilslist dd .btn {
+	padding-top: 5px
+}
+
+.insur-deatilslist dt {
+	float: left;
+	width: 508px
+}
+
+.insur-deatilslist dt .title-extra {
+	color: #a5a5a5;
+	font-size: 14px;
+	padding-bottom: 17px;
+	display: none
+}
+
+.insur-deatilslist dt .listname {
+	line-height: 27px;
+	font-size: 14px;
+	padding-left: 14px;
+	height: 27px;
+	overflow: hidden
+}
+
+.insur-deatilslist dt .listname .name {
+	width: 255px;
+	padding-left: 5px;
+	height: 27px;
+	overflow: hidden;
+	float: left;
+	margin-top: 0;
+	line-height: 30px;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.insur-deatilslist dt .listname .number {
+	float: left
+}
+
+.page {
+	text-align: right;
+	margin-top: 20px;
+	font-size: 14px;
+	width: auto;
+}
+
+.page a {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 6px;
+	color: #444;
+	border: 1px solid #dedede;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-right: 8px
+}
+
+.page a.curr,
+.page a:hover {
+	border-color: #f35858;
+	background: #f35858;
+	color: #fff;
+	text-decoration: none
+}
+
+.page .apostrophe {
+	padding-right: 5px
+}
+
+.travel-list {
+	background-position: center -828px;
+	background-color: #e3eaf2
+}
+
+.travel-list .week-catecon .fore1 .icon {
+	left: 200px;
+	top: 28px;
+	background-position: 0 -562px;
+	height: 60px;
+	width: 156px
+}
+
+.travel-list .week-catecon .fore2 .icon {
+	left: 240px;
+	top: 6px;
+	background-position: 0 -740px;
+	height: 83px;
+	width: 100px
+}
+
+.travel-list .week-catecon .fore3 .icon {
+	left: 240px;
+	top: 18px;
+	background-position: 0 -372px;
+	height: 70px;
+	width: 92px
+}
+
+.travel-list .introduction,
+.travel-list .week-catecon .intro .name {
+	color: #729dc7
+}
+
+.travel-list .week-catecon .intro .week-catelist dd {
+	background-position: 0 -37px
+}
+
+.travel-container .insur-deatilslist dt .listname {
+	background-position: -400px -29px
+}
+
+.health-list {
+	background-position: center -498px;
+	background-color: #f8ebe0
+}
+
+.health-list .week-catecon .fore1 .icon {
+	left: 240px;
+	top: 10px;
+	background-position: 0 -642px;
+	height: 78px;
+	width: 110px
+}
+
+.health-list .week-catecon .fore2 .icon {
+	left: 240px;
+	top: 10px;
+	background-position: 0 -176px;
+	height: 78px;
+	width: 110px
+}
+
+.health-list .week-catecon .fore3 .icon {
+	left: 240px;
+	top: 10px;
+	background-position: 0 -274px;
+	height: 78px;
+	width: 110px
+}
+
+.health-list .introduction,
+.health-list .week-catecon .intro .name {
+	color: #fe9d50
+}
+
+.health-list .week-catecon .intro .week-catelist dd {
+	background-position: 0 -107px
+}
+
+.health-container .insur-deatilslist dt .listname {
+	background-position: -400px -61px
+}
+
+.accident-list {
+	background-position: center -168px;
+	background-color: #e2f0f1
+}
+
+.accident-list .week-catecon .fore1 .icon {
+	left: 200px;
+	top: 30px;
+	background-position: 0 -98px;
+	height: 58px;
+	width: 118px
+}
+
+.accident-list .week-catecon .fore2 .icon {
+	left: 200px;
+	top: 10px;
+	background-position: 0 0;
+	height: 78px;
+	width: 110px
+}
+
+.accident-list .week-catecon .fore3 .icon {
+	left: 190px;
+	top: 8px;
+	background-position: 0 -462px;
+	height: 80px;
+	width: 175px
+}
+
+.accident-list .introduction,
+.accident-list .week-catecon .intro .name {
+	color: #57a5a5
+}
+
+.accident-list .week-catecon .intro .week-catelist dd {
+	background-position: 0 -76px
+}
+
+.accident-container .insur-deatilslist dt .listname {
+	background-position: -400px 3px
+}

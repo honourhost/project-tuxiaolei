@@ -1,0 +1,181 @@
+body,div,p,img,span,i,ul,li,h1,h2,h3,h4,h5,h6,pre{
+	margin: 0;
+	padding: 0;;
+}
+body{
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	background: #00c8df;
+}
+ul,li{
+	list-style-type: none;
+}
+img{
+	border: 0;
+}
+a{
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+.weixin{
+max-width: 650px;
+min-width: 240px;
+height: 100%;
+margin: 0px auto;
+padding: 20px;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#01d299), to(#00c8df));
+
+overflow: hidden;
+}
+.weixin-main{
+	width: 100%;
+	background: #fff;
+	height: auto;
+	border-radius: 0px;
+	text-align: center;
+	padding: 30px 0px;
+	position: relative;
+}
+.wx-top-lf{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #01d299;
+	left: -18px;
+	top: -18px;
+}
+.wx-top-rg{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #01d299;
+	right: -18px;
+	top: -18px;
+}
+.wx-btm-lf{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #00c9dd;
+	left: -18px;
+	bottom: -18px;
+}
+.wx-btm-rg{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #00c9dd;
+	right: -18px;
+	bottom: -18px;
+}
+.weixin-main h2.wx-title{
+	font-size: 20px;
+	color: #22d9a3;
+	display: block;
+	width: 96%;
+	height: auto;
+}
+.weixin-main p{
+	font-size: 14px;
+	color: #bababa;
+	display: block;
+	width: 70%;
+	margin: 0px auto;
+	line-height: 20px;
+	padding-top: 4%;
+}
+.weixin-main p span{
+	color: #3cd3e6;
+}
+.wx-line{
+	width: 65%;
+	height: 3px;
+	position: relative;
+	margin: 3% auto;
+}
+.wx-line p{
+	position: absolute;
+	top: 0px;
+	border-top: 1px solid #e2e2e2;
+	display: block;
+	width: 100%;
+	z-index: 2;
+}
+.wx-line span{
+	display: block;
+	width: 80px;
+	height: 3px;
+	background: #fff;
+	position: absolute;
+	z-index: 3;
+	top: -1px;
+	left: 50%;
+	margin-left: -40px;
+}
+.wx-line i{
+	width: 3px;
+	height: 3px;
+	border-radius: 3px;
+	background: #dddddd;
+	display: block;
+	float: left;
+	margin-left: 18px;
+}
+.weixin-main h3{
+	font-size: 16px;
+	color: #fe8019;
+	font-weight: normal;
+}
+.weixin-main b{
+	font-size: 28px;
+	font-weight: normal;
+	padding-left: 3px;
+}
+.wx-ma{
+	width: 180px;
+	margin: 3% auto 0px;
+	position: relative;
+}
+.wx-ma .ma-img{
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.wx-ma .user-img{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	margin-top: -15px;
+	left: 50%;
+	margin-left: -15px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.weixin-main a.wx-btn{
+	display: block;
+	width: 80%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background: #ff7f1a;
+	margin: 3% auto 0;
+}
+.wx-footer{
+	
+}
+.footer-logo{
+	width: 100%;
+	padding: 15px 0px 0px 0px;
+	text-align: center;
+}
+.footer-logo img{
+	height: 35px;
+}

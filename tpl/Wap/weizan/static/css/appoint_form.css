@@ -1,0 +1,562 @@
+﻿html, body {
+  min-height: 100%;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body {
+  height: 100%;
+}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+body, button, input, select, textarea {
+  font: 16px/1.5 tahoma,arial,sans-serif;
+}
+body {
+  background: #f5f5f5;
+}
+body {
+  color: #333;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+input, select, textarea, button {
+  font-size: 1em;
+}
+input, testarea, button {
+  outline: 0;
+}
+input, button, textarea, input:focus, button:focus, textarea:focus {
+  -webkit-appearance: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+small, cite, code, em, th, i, b {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+}
+section{
+	  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.yxc-space {
+  height: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.space-six {
+  height: 6px;
+  overflow: hidden;
+}
+.border-t-no {
+  border-top: 0;
+}
+
+
+.tit-select-service {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 13px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.comm-service {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 13px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+i{
+    width:70px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+i.taocan
+{
+    background: url(/liuchang/images/wap/appoint_taocan.png) no-repeat center #37caad;    
+    background-size:25px;
+}
+
+i.mer
+{
+    background: url(/liuchang/images/wap/appoint_mer.png) no-repeat center #37caad;    
+    background-size:25px;
+}
+
+i.time
+{
+    background: url(/liuchang/images/wap/appoint_time.png) no-repeat center #37caad;    
+    background-size:25px;
+}
+
+i.dingjin
+{
+    background: url(/liuchang/images/wap/appoint_dingjin.png) no-repeat center #37caad;    
+    background-size:25px;
+}
+
+
+i.map
+{
+    background: url(/liuchang/images/wap/appoint_map.png) no-repeat center #37caad;    
+    background-size:25px;
+}
+
+.comm-service h1 
+{
+    padding-right: 15px;
+    padding-left: 80px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  color: #555;
+  font-weight: normal;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+.comm-service h2 
+{
+padding-right: 15px;
+padding-left: 80px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+.comm-service em {
+    padding-left: 80px;
+    padding-top: 13px;
+    margin-top: 15px;
+    border-top: 1px #eee solid;
+    display: block;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  line-height: 25px;
+}
+.comm-service em font
+{
+  font-size: 18px;
+  color: #f84848;
+  
+ } 
+.comm-service em b
+{
+    font-size:16px;
+    color: #f84848;
+    font-weight: normal;
+}
+.comm-service em u
+{
+    font-size:14px;
+    color: #999;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.comm-service:after {
+  display: block;
+  content: "";
+  border-top: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  width: 11px;
+  height: 11px;
+  -webkit-transform: rotate(135deg);
+  background-color: transparent;
+  position: absolute;
+  top: 35px;
+  right: 13px;
+}
+
+
+.liu-margin-top{margin-top: 15px;}
+
+.con-service {
+  display: inline-block;
+  vertical-align: middle;
+  width: 68%;
+}
+.con-service-inner {
+  font-size: 14px;
+  line-height: 17px;
+  height: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+
+.yxc-attr-list {
+  background: #fff;
+}
+.yxc-attr-list li {
+  padding-left: 93px;
+  height:50px;
+  position: relative;
+}
+.yxc-attr-list p {
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font: normal 14px/50px microsoft yahei,arial,verdana,helvetica,sans-serif;
+  color: #37caad;
+  font-size: 16px;
+}
+.yxc-attr-list li:last-child p {
+  border: 0;
+}
+
+/* .yxc-attr-list li p.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+.ipt-attr {
+  width: 95%;
+  border: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  resize: none;
+  height:50px;
+  color:#555;
+
+  font-size: 16px;
+}
+.ipt-attr:focus {
+	background: #ececec;
+	outline: 0;
+}
+
+textarea.ipt-attr{
+    margin-top:15px;
+	height:24px;
+}
+.select select{
+    margin-left: -5px;
+	  -webkit-appearance: none;
+	    color: #aaa;
+}
+.select:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 5.3%;
+  width: .5em;
+  height: .5em;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  -webkit-transform: translateY(-70%) rotateZ(-45deg);
+  -moz-transform: translateY(-70%) rotateZ(-45deg);
+  -ms-transform: translateY(-70%) rotateZ(-45deg);
+}
+.form_error{
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+}
+.yxc-body-bg {
+  position: relative;
+  min-height: 100%;
+}
+.index-section {
+  min-height: 100%;
+}
+.yxc-attr-list {
+  background: #fff;
+}
+
+
+.tip-add-money {
+	color: #37caad;
+}
+.bt-sub-order {
+  border: 0;
+  background: #37caad;
+
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+}
+.bt-sub-order.disabled{
+	background-color: #dcdcdc;
+	color: #999;
+	border: 0;
+}
+
+.yxc-paymentMoney{
+	padding:10px 0;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+}
+.yxc-paymentMoney span {
+	vertical-align:middle;
+}
+.yxc-paymentMoney img {
+	vertical-align: middle;
+}
+.yxc-payment-bg {
+  min-height: 100%;
+  background: #f0f4f5;
+  position: relative;
+}
+.pad-bot-comm {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.yxc-brand {
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+.arrow-wrapper {
+  width: 44px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bt-brand-back {
+  display: block;
+  border-top: 2px solid #c5c5c5;
+  border-left: 2px solid #c5c5c5;
+  width: 11px;
+  height: 11px;
+  -webkit-transform: rotate(315deg);
+  background-color: transparent;
+  float: left;
+  position: absolute;
+  left: 16px;
+  top: 12px;
+}
+.service-list {
+  background: 0;
+}
+.yxc-service-list li {
+  height: 50px;
+  width: 100%;
+  padding: 0 13px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  font: normal 16px/50px microsoft yahei,arial,verdana,helvetica,sans-serif;
+  overflow: hidden;
+  color: #333;
+  position: relative;
+}
+.service-list li {
+  background: #fff;
+  width: auto;
+  height: inherit;
+  position: relative;
+  border: 1px solid #eee;
+  border-left-width:0 ;border-right-width:0 ;
+  padding: 10px;
+  margin-top:15px;
+}
+.service-list li.active {
+  border: 1px solid #37caad;
+  border-left-width:0 ;border-right-width:0 ;
+}
+.pay-type {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.service-price {
+  font-size: 20px;
+  color: #f84848;
+  height: 35px;
+  line-height: 40px;
+}
+.yxc-package span {
+  right: 11px;
+}
+.service-price em {
+  font-size: 18px;
+  margin-left: 7px;
+}
+.service-intro {
+margin-top: 7px;
+  color: #999;
+  display: block;
+  vertical-align: middle;
+  width:85%;
+  margin-left: 7px;
+  line-height: 18px;
+  font-size: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px #eee solid;
+}
+.service-intro h3 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+.bt-interior {
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -11px;
+  border-radius: 50%;
+  border: 1px solid #c3c3c3;
+}
+.pay-type input[type="checkbox"]:checked+span, .pay-type input[type="radio"]:checked+span {
+  border: 1px solid #37caad;
+  background: #37caad;
+}
+
+.pay-type input[type="checkbox"]:checked+span:after, .pay-type input[type="radio"]:checked+span:after {
+  display: block;
+  content: "";
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  width: 6px;
+  height: 11px;
+  -webkit-transform: rotate(-135deg);
+  background-color: transparent;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+
+.yxc-time-con.number-2 dl{
+	width:50%;
+}
+.yxc-time-con.number-3 dl{
+	width:33%;
+}
+.yxc-time-con.number-3 dl:last-child{
+	width:34%;
+}
+.yxc-time-con dl {
+  text-align: center;
+  width: 25%;
+  float: left;
+  background: #fff;
+}
+
+.yxc-time-con dl dt {
+  display: block;
+  height: 50px;
+    border-bottom: 1px solid #eee;
+  font-size: 18px;
+  background: #fff;
+  line-height: 50px;
+}
+.yxc-time-con.number-4 dl.last dt{
+	line-height:45px;
+}
+.yxc-time-tab li.active,.yxc-time-con dl .active {
+  background: #37caad;
+    color:#fff;
+}
+
+
+.yxc-time-con dl dt span {
+  display: block;
+  font-size: 13px;
+}
+.yxc-time-con dl dt span.last-colum {
+  line-height: 38px;
+}
+.yxc-time-con dl dd {
+  height: 40px;
+  font-size: 16px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  color: #37caad;
+  line-height: 40px;
+}
+.yxc-time-con dl .disable {
+  color: #aaa;
+}
+.yxc-time-con dl .all {
+  color: #f84848;
+}
+
+.shuoming
+{
+    margin-top: 10px;
+    float:left;
+    padding: 13px;
+    font-size: 14px;
+    color:#777;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.shuoming b{padding: 0 7px;background: #f84848;margin-right: 5px;}
+
+.motify {
+  display: none;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  width: 220px;
+  padding: 0;
+  margin: 0 0 0 -110px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5em;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.motify .motify-inner {
+  padding: 10px 10px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#service-position .iw{
+	display:none!important;
+}

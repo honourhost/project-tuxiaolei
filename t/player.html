@@ -1,0 +1,1196 @@
+<html class="pixel-ratio-2 retina watch-active-state pixel-ratio-3 ios ios-11 ios-11-0 ios-gt-10 ios-gt-9 ios-gt-8 ios-gt-7 ios-gt-6">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>预上线环境:听故事</title>
+
+
+
+    <link rel="stylesheet" href="style/story.css">
+    <link rel="stylesheet" type="text/css" href="style/weui.min.css">
+    <link rel="stylesheet" href="style/font_262244_x4zz7cukxro7ds4i.css">
+    <script src="style/rem.js"></script>
+    <style>html {
+        font-size: 25px !important
+    }</style>
+    <style>html {
+        font-size: 42.666666666666664px !important
+    }</style>
+    <style>html {
+        font-size: 42.666666666666664px !important
+    }</style>
+    <style>html {
+        font-size: 37.53333333333333px !important
+    }</style>
+    <style>html {
+        font-size: 41.333333333333336px !important
+    }</style>
+</head>
+
+<body ontouchstart="" onmouseover="" style="max-width: 768px;margin: 0 auto" class="framework7-root">
+<!-- 全屏幕模式的状态栏(PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- 是所有可见View的容器（不包括Modal和Panel）。Views 是你的应用主容器。一个应用中只能有一个 Views -->
+<div class="views" id="main">
+    <!-- 主视图，必须有 "view-main" 类名 在应用中是一个独立的部分，她有自己的设置、页面切换和历史。每一个视图都可以有不同的导航栏、工具栏布局和不同的样式。所以View就像是嵌在应用中的另一个应用。这种功能可以让你来分别操作一个应用中的不同部分。-->
+    <div class="view view-main" data-page="player">
+        <!-- 页面的容器，因为我们使用固定的导航栏和工具栏，需要添加"navbar-through"、"toolbar-through"类 -->
+        <div id="listenStory" class="pages navbar-fixed">
+            <!-- 页面, "data-page"包含了页面名，属性值里不能带横线"-"。 -->
+            <div id="mainPage" data-page="main" class="page no-navbar no-toolbar page-on-left">
+                <!-- Page content -->
+                <div class="page-content infinite-scroll" data-distance="100" style="padding-top: 0px">
+                    <div class="list-block list-block-search" style="display: none"></div>
+                    <!-- Search Bar -->
+                    <form class="searchbar" style="top: 0;z-index: 30">
+                        <div class="searchbar-input">
+                            <div class="scan-btn mainScanImg  iconfont"></div>
+                            <div class="play-record-img iconfont"></div>
+                            <div class="searchbar-icon iconfont"></div>
+                            <input id="input-search-story" class="iconfont" type="search">
+                            <div class="search-placeholder iconfont">
+                                <span style="font-size: 14px"></span>
+                                <span style="font-family: PingFangSC-Regular !important;">想听什么故事呢?
+                            </span>
+                            </div>
+                            <div class="searchbar-txt">搜索</div>
+                            <!--<a href="#" class="searchbar-clear"></a>-->
+                        </div>
+                    </form>
+                    <div class="searchbar-overlay" style="z-index: 21;">
+                        <!--使用二维码扫码提示-->
+                        <p class="ewm-tipText ewm-tipText-search">点击左上角的 <span class="iconfont"></span> ，扫一扫绘本上的条形码</p>
+                        <!--历史记录和推荐关键字-->
+                        <div class="search-tip">
+
+                        </div>
+                    </div>
+                    <!--首页banner-->
+                    <div class="swiper-container swiper-1 swiper-container-horizontal">
+                        <div class="swiper-wrapper"
+                             style="transform: translate3d(-4444.77px, 0px, 0px); transition-duration: 300ms;">
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1435&amp;_channel=119"
+                                 data-swiper-slide-index="0" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/05/1525497622924.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1426&amp;channel=119"
+                                 data-swiper-slide-index="1" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525063472059.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1428&amp;_belong=197_channel=119"
+                                 data-swiper-slide-index="2" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/02/1525275478265.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1427&amp;_channel=119"
+                                 data-swiper-slide-index="3" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525019637183.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate-active"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1435&amp;_channel=119"
+                                 data-swiper-slide-index="0" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/05/1525497622924.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate-next"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1426&amp;channel=119"
+                                 data-swiper-slide-index="1" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525063472059.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1428&amp;_belong=197_channel=119"
+                                 data-swiper-slide-index="2" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/02/1525275478265.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-prev"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1427&amp;_channel=119"
+                                 data-swiper-slide-index="3" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525019637183.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate swiper-slide-active"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1435&amp;_channel=119"
+                                 data-swiper-slide-index="0" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/05/1525497622924.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate swiper-slide-next"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1426&amp;channel=119"
+                                 data-swiper-slide-index="1" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525063472059.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1428&amp;_belong=197_channel=119"
+                                 data-swiper-slide-index="2" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/05/02/1525275478265.jpg">
+                            </div>
+                            <div class="swiper-slide banner-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                 data-url="https://www.dayutang.cn/shopOrder/goodDetails.html?goodId=1427&amp;_channel=119"
+                                 data-swiper-slide-index="3" style="width: 549.091px; margin-right: 10px;"><img alt=""
+                                                                                                                style="height: auto;"
+                                                                                                                src="https://file.dayutang.cn/2018/04/30/1525019637183.jpg">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-main swiper-pagination-clickable swiper-pagination-bullets"
+                             style="bottom: 0;"><span
+                                class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                                class="swiper-pagination-bullet"></span><span
+                                class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+                        </div>
+                    </div>
+
+                    <!--分类-->
+                    <div class="sort">
+                        <div class="row menu-items">
+                            <div class="col-auto menu-item">
+                                <img class="menu-item-img" src="style/rankListImg.png" alt=""><br>
+                                <span class="type-font">今日热榜</span>
+                            </div>
+                            <div class="col-auto menu-item">
+                                <img class="menu-item-img" src="style/starTeachers.png" alt=""><br>
+                                <span class="type-font">明星老师</span>
+                            </div>
+                            <div class="col-auto menu-item">
+                                <img class="menu-item-img" src="style/myCollection.png" alt=""><br>
+                                <span class="type-font">我的故事</span>
+                            </div>
+                            <div class="col-auto menu-item">
+                                <img class="menu-item-img" src="style/storyType.png" alt=""><br>
+                                <span class="type-font">故事分类</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--打卡入口-->
+
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <div class="list-block media-list">
+                                    <div href="#" class="item-link item-content">
+                                        <div class="item-media"><img src="style/punchEntryImg.png"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">魔法故事打卡团</div>
+                                            </div>
+                                            <div class="item-subtitle">前往分享完成打卡 <span class="iconfont"
+                                                                                      style="font-size: 16px;vertical-align: middle;"></span>+6
+                                            </div>
+
+                                            <div class="ydy_item-text">立即打卡</div>
+                                            <!--<div class="item-text" v-if="!punchStatus">今日打卡奖励{{punchCredits}}颗魔法石</div>-->
+                                            <div class="item-subtitle" style="display: none;">今日打卡成功</div>
+                                            <div class="item-text" style="display: none;">已连续打卡0天</div>
+                                            <div class="item-content-row-icon iconfont"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--超人气系列故事-->
+                    <div class="superStory" style="padding:0;padding-bottom: 20px;">
+                        <div class="superStory-title" style="margin: 0 18px">
+                            超人气系列故事
+                        </div>
+                        <div class="superStory-list">
+                            <div class="swiper-container swiper-superStory swiper-container-horizontal">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper"
+                                     style="transform: translate3d(18px, 0px, 0px); transition-duration: 0ms;">
+                                    <div class="swiper-slide swiper-slide-active"
+                                         style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600863480.jpg">
+                                            <p class="story-name">小猪佩奇</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>81个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-next"
+                                         style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600824492.jpg">
+                                            <p class="story-name">超级飞侠</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>17个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600928087.jpg">
+                                            <p class="story-name">皮特猫</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>25个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516601096413.jpg">
+                                            <p class="story-name">阿凡提</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>14个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600905505.jpg">
+                                            <p class="story-name">狗狗巡逻队</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>7个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/27/1517033950751.jpg">
+                                            <p class="story-name">葫芦娃</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>7个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600949672.jpg">
+                                            <p class="story-name">老鼠记者</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>69个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516600978057.jpg">
+                                            <p class="story-name">好奇猴乔治</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>22个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516601032957.jpg">
+                                            <p class="story-name">小鼠波波</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>13个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516601065521.jpg">
+                                            <p class="story-name">托马斯和他的朋友们</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>11个故事</span></p>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                        <div class="main-content">
+                                            <img alt="" src="https://file.dayutang.cn/2018/01/22/1516601009097.jpg">
+                                            <p class="story-name">小马宝莉</p>
+                                        </div>
+                                        <p class="story-nums"><span class="story-nums-line"></span><span
+                                                class="iconfont" style="font-size: 12px"></span> <span>7个故事</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!--今日故事-->
+                    <div class="superStory" style="padding:0;padding-bottom: 20px;">
+                        <div class="superStory-title" style="padding-left: 18px;">
+                            <span>今日故事</span>
+
+                        </div>
+
+                        <div class="swiper-container swiper-dayStory swiper-container-horizontal">
+                            <!-- Slides wrapper -->
+                            <div class="swiper-wrapper"
+                                 style="transform: translate3d(-2185.74px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0"
+                                     style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525523664190.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500622912002.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">Star姐姐 神奇树屋音频故事</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">Revolutionary War on Wednesday 星期三革命战争 Part 4</span>
+                                                    </h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort doubleLang doubleLang-sel">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="">
+                                                                    <span class="bigText">双语</span>
+                                                                    <span class="bigText">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort pureE">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                    <span class="bigText">纯英</span>
+                                                                    <span class="bigText">2:24</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="peiTao-resources">
+                                                <div class="right-detail-img"><img alt=""
+                                                                                   src="https://file.dayutang.cn/2017/05/15/1494857356462.png">
+                                                </div>
+
+                                                <div class="right-detail">
+                                                    <p class="right-detail-text">购买配套绘本</p>
+
+                                                    <p class="right-detail-name">神奇树屋1-28册套装</p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                     data-swiper-slide-index="1" style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525520393267.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500630632052.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">彩虹姐姐 道德经解读本</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">独异于人</span></h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort chineseEd">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText">中文</span>
+                                                                    <span class="bigText">8:26</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="peiTao-resources2">
+                                                <img alt="" src="https://file.dayutang.cn/2018/04/14/1523719375839.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0"
+                                     style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525523664190.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500622912002.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">Star姐姐 神奇树屋音频故事</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">Revolutionary War on Wednesday 星期三革命战争 Part 4</span>
+                                                    </h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort doubleLang doubleLang-sel">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="">
+                                                                    <span class="bigText">双语</span>
+                                                                    <span class="bigText">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort pureE">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                    <span class="bigText">纯英</span>
+                                                                    <span class="bigText">2:24</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="peiTao-resources">
+                                                <div class="right-detail-img"><img alt=""
+                                                                                   src="https://file.dayutang.cn/2017/05/15/1494857356462.png">
+                                                </div>
+
+                                                <div class="right-detail">
+                                                    <p class="right-detail-text">购买配套绘本</p>
+
+                                                    <p class="right-detail-name">神奇树屋1-28册套装</p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                                     data-swiper-slide-index="1" style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525520393267.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500630632052.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">彩虹姐姐 道德经解读本</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">独异于人</span></h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort chineseEd">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText">中文</span>
+                                                                    <span class="bigText">8:26</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="peiTao-resources2">
+                                                <img alt="" src="https://file.dayutang.cn/2018/04/14/1523719375839.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                     data-swiper-slide-index="0" style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525523664190.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500622912002.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">Star姐姐 神奇树屋音频故事</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">Revolutionary War on Wednesday 星期三革命战争 Part 4</span>
+                                                    </h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort doubleLang doubleLang-sel">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="">
+                                                                    <span class="bigText">双语</span>
+                                                                    <span class="bigText">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">6:32</span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort pureE">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                    <span class="bigText">纯英</span>
+                                                                    <span class="bigText">2:24</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">中文</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">2:24</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="peiTao-resources">
+                                                <div class="right-detail-img"><img alt=""
+                                                                                   src="https://file.dayutang.cn/2017/05/15/1494857356462.png">
+                                                </div>
+
+                                                <div class="right-detail">
+                                                    <p class="right-detail-text">购买配套绘本</p>
+
+                                                    <p class="right-detail-name">神奇树屋1-28册套装</p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                                     data-swiper-slide-index="1" style="width: 544.054px; margin-right: 10px;">
+                                    <div class="audio-list-div">
+                                        <div class="audio-list-item"
+                                             style="padding-bottom: 0px;border: none;margin-bottom: 20px">
+                                            <div class="mainImg" style="border-radius: 4px;overflow: hidden">
+                                                <img alt="" src="https://file.dayutang.cn/2018/05/05/1525520393267.jpg">
+                                                <div class="mainImg-otherInfo">
+                                                    <div class="blur-style"></div>
+                                                    <div class="teachInfo">
+                                                        <div class="teachImg">
+                                                            <img src="https://file.dayutang.cn/2017/07/21/1500630632052.png">
+                                                        </div>
+                                                    </div>
+                                                    <p class="audioTime">彩虹姐姐 道德经解读本</p>
+                                                    <h3 class="hThree" style="height: 3em;position: relative;"><span
+                                                            class="hThree-position">独异于人</span></h3>
+                                                    <div class="story-languageSorts">
+                                                        <div class="row no-gutter">
+                                                            <div class="col-33">
+                                                                <div class="story-languageSort chineseEd">
+                                                                    <img class="bigImg" src="style/playiconwhite.gif"
+                                                                         alt="" style="display: none;">
+                                                                    <span class="bigText"
+                                                                          style="display: none;">双语</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText"
+                                                                          style="display: none;">纯英</span>
+                                                                    <span class="bigText"
+                                                                          style="display: none;">8:26</span>
+
+                                                                    <span class="bigText">中文</span>
+                                                                    <span class="bigText">8:26</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="peiTao-resources2">
+                                                <img alt="" src="https://file.dayutang.cn/2018/04/14/1523719375839.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-bullets"><span
+                                    class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
+                                    class="swiper-pagination-bullet"></span></div>
+                        </div>
+
+                        <!--查看全部故事-->
+                        <a href="tpl/search.html?lookAll=1" class="look-allStory">查看全部故事 <span class="iconfont"></span></a>
+                    </div>
+
+                    <!--热门免费专辑-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            热门免费专辑
+                            <div class="right-lookAll iconfont"></div>
+                        </div>
+
+                        <div class="album-listContent">
+
+                        </div>
+
+                    </div>
+
+                    <!--必学付费精品课-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            必学付费精品课
+                            <div class="right-lookAll iconfont"></div>
+                        </div>
+
+                        <div class="album-listContent">
+
+                        </div>
+
+                    </div>
+
+                    <!--精选故事合辑-->
+                    <div class="superStory">
+                        <div class="superStory-title">
+                            精选故事合辑
+                            <div class="right-lookAll iconfont"></div>
+                        </div>
+
+                        <div class="album-listContent">
+
+                        </div>
+
+                    </div>
+
+                    <!--猜你喜欢-->
+                    <div class="superStory">
+                        <div class="superStory-title" style="margin-bottom: 0;">
+                            猜你喜欢
+                            <p class="updateData"><span class="iconfont"></span> 换一换</p>
+                        </div>
+
+                        <div class="audio-listStyle" style="padding-bottom: 20px;">
+                            <div class="list-block media-list">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--明星老师-->
+                    <div class="superStory" style="padding:0;">
+                        <div class="superStory-title" style="margin: 0 18px">
+                            明星老师
+                            <div class="right-lookAll iconfont"></div>
+                        </div>
+
+                        <div class="swiper-container swiper-teachers swiper-container-horizontal">
+                            <div class="swiper-wrapper"
+                                 style="transform: translate3d(18px, 0px, 0px); transition-duration: 0ms;">
+                                <div class="swiper-slide moon-bgColor swiper-slide-active"
+                                     style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/07/21/1500630596641.png">
+                                    <span class="teach-name">Moon姐姐</span>
+                                    <pre class="teach-des">最暖英语绘本
+女神</pre>
+                                </div>
+                                <div class="swiper-slide xigua-bgColor swiper-slide-next"
+                                     style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/07/21/1500622986123.png">
+                                    <span class="teach-name">西瓜姐姐</span>
+                                    <pre class="teach-des">最搞笑幽默
+语文王</pre>
+                                </div>
+                                <div class="swiper-slide nangua-bgColor" style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/07/21/1500630610919.png">
+                                    <span class="teach-name">南瓜姐姐</span>
+                                    <pre class="teach-des">最渊博语文
+绘本女神</pre>
+                                </div>
+                                <div class="swiper-slide" style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/07/21/1500622912002.png">
+                                    <span class="teach-name">Star姐姐</span>
+                                    <pre class="teach-des">英语绘本故事
+女王</pre>
+                                </div>
+                                <div class="swiper-slide shaomai-bgColor" style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/07/21/1500622954790.png">
+                                    <span class="teach-name">烧麦姐姐</span>
+                                    <pre class="teach-des">奥赛冠军
+数学绘本王</pre>
+                                </div>
+                                <div class="swiper-slide ningmeng-bgColor"
+                                     style="width: 170.882px; margin-right: 10px;">
+                                    <img class="teach-imgIcon" alt=""
+                                         src="https://file.dayutang.cn/2017/09/02/1504364632909.jpg">
+                                    <span class="teach-name">柠檬哥哥</span>
+                                    <pre class="teach-des">绘本馆行走的
+“百科全书”</pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="zenggao" style="height: 150px;"></div>
+                </div>
+                <div class="floating-button backTop" style="left: auto; right: 20px; display: none;">
+                    <img src="style/toTop.png" alt="">
+                </div>
+            </div>
+
+            <div id="playControl" style="display: none;">
+                <!--播放条 -->
+                <div id="bofangtiao" class="bofangtiao">
+                    <a href="#" class="bofangImg">
+                        <img src="https://file.dayutang.cn/2018/05/05/1525523664190.jpg">
+                    </a>
+                    <div class="bofangInfo">
+                        <p>Revolutionary War on Wednesday 星期三革命战争 Part 4</p>
+                        <span style="font-size: 12px">Star姐姐</span>
+                    </div>
+                    <div class="menuBar cai iconfont"></div>
+                    <div class="menuBar zan iconfont"></div>
+                    <div id="bofangtiaoLine" class="bofangtiaoLine" style="width: 0px;"></div>
+                    <!--<div id="bofangtiaoBuffer" class="bofangtiaoLine bofangtiaoBuffer"></div>-->
+                </div>
+                <!--音频列表-->
+                <div class="audioList">
+                    <div class="upMenu">
+                        <div class="listTitle oneList" style="background-color: white">
+                            <div class="leftListTitle">
+                                <p>播放列表（<span>2</span>）</p>
+                            </div>
+                            <div class="rightListTitle">
+                                <p class="iconfont">
+                                    <span class="circleText" style="vertical-align: 1px;font-family:
+                                    PingFangSC-Regular !important;">列表循环</span>
+                                    <span class="circleImg" style="font-size: 18px"></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="audioListContent">
+                            <ul>
+                                <li>
+                                    <div class="listTitle">
+                                        <div class="leftListTitle selectedAudio" style="width: 70%">Star姐姐-Revolutionary
+                                            War on Wednesday 星期三革命战争 Part 4
+                                        </div>
+                                        <div class="rightListTitle playImg"><img src="style/playicongreen.gif"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="listTitle">
+                                        <div class="leftListTitle" style="width: 70%">彩虹姐姐-独异于人</div>
+                                        <div class="rightListTitle playImg"><img src="style/playicongrey.png"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="floating-button create-popOver punch-MainBtn" style="bottom: 200px;">
+                <div class="punchBtn">
+                    <div class="punchBtn-leftImg"><i class="punchBtn_red"></i><img src="style/mainLittleC.png" alt="">
+                        <span class="punchBtn-content">打卡</span></div>
+                </div>
+            </a>
+
+            <div class="invivationHan" onclick="returnAndDownModal()">
+                <div class="invivationHan-content">
+                    <div class="punch-modal" style="padding-bottom: 0px">
+                        <div class="two-bg">
+                            <div class="three-bg"></div>
+                        </div>
+                        <div class="join-punchModal">
+                            <img class="punch-txt-tip" src="style/punchTuan12.png" alt="">
+                            <p class="join-des">圆仔邀你一同打卡<br>赢取魔法石兑换惊喜宝物</p>
+                            <img class="punch-imgTIp" src="style/yuanzai_book.png" alt="">
+                        </div>
+                        <div class="punch-modal-bottomBtn" onclick="nowJoin()">立即参加</div>
+                        <div class="closeModal iconfont" style="" onclick="closeSuccModal()"></div>
+                    </div>
+                </div>
+            </div>
+            <!--E page-->
+            <div data-page="player" class="page no-navbar no-toolbar page-on-center">
+                <div id="player" class="page-content">
+                    <div class="clearfix">
+                        <a class="header-leftBack iconfont"></a>
+                        <div class="player-header-album-audio">
+                            <p class="header-albumName">神奇树屋音频故事</p>
+                            <p class="header-audioName">Revolutionary War on Wednesday 星期三革命战争 Part 3</p>
+                        </div>
+                        <div class="header-rightCollect iconfont"></div>
+                        <div class="story-languageSorts">
+                            <div class="row no-gutter">
+                                <div class="col-33">
+                                    <div class="story-languageSort white-border doubleLang-sel">
+                                        <img class="bigImg" src="img/playiconwhite.gif" alt="">
+                                        <span class="bigText">双语</span>
+                                        <span class="bigText">07:48</span>
+
+                                        <span class="bigText" style="display: none;">纯英</span>
+                                        <span class="bigText" style="display: none;">07:48</span>
+
+                                        <span class="bigText" style="display: none;">中文</span>
+                                        <span class="bigText" style="display: none;">07:48</span>
+
+                                    </div>
+                                </div>
+                                <div class="col-33">
+                                    <div class="story-languageSort white-border">
+                                        <img class="bigImg" src="img/playiconwhite.gif" alt="" style="display: none;">
+                                        <span class="bigText" style="display: none;">双语</span>
+                                        <span class="bigText" style="display: none;">03:45</span>
+
+                                        <span class="bigText">纯英</span>
+                                        <span class="bigText">03:45</span>
+
+                                        <span class="bigText" style="display: none;">中文</span>
+                                        <span class="bigText" style="display: none;">03:45</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nextVersionTip" style="display: none;">5秒后开始播放本音频的纯英版本哦!</div>
+                        </div>
+                        <div class="bottomImg">
+                            <img src="https://file.dayutang.cn/2017/07/25/1500968495413.png">
+                        </div>
+                        <div class="mainPart">
+                            <div class="rotateImg">
+                                <img alt="" src="https://file.dayutang.cn/2017/07/25/1500968501116.png">
+                            </div>
+                            <!-- Slider container -->
+                            <div class="swiper-container swiper-7 swiper-container-play swiper-container-horizontal"
+                                 style="height: 620px;">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper"
+                                     style="transform: translate3d(-620px, 0px, 0px); transition-duration: 0ms;">
+                                    <div class="swiper-slide swiper-slide-player swiper-slide-duplicate swiper-slide-prev"
+                                         data-swiper-slide-index="3" style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip in"><img alt="纸牌背面"
+                                                                         src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <!-- Slides -->
+                                    <div class="swiper-slide swiper-slide-player swiper-slide-active"
+                                         data-swiper-slide-index="0" style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip out"><img alt="纸牌背面"
+                                                                          src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-player swiper-slide-next"
+                                         data-swiper-slide-index="1" style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip in"><img alt="纸牌背面"
+                                                                         src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-player" data-swiper-slide-index="2"
+                                         style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip in"><img alt="纸牌背面"
+                                                                         src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-player swiper-slide-duplicate-prev"
+                                         data-swiper-slide-index="3" style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip in"><img alt="纸牌背面"
+                                                                         src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-player swiper-slide-duplicate swiper-slide-duplicate-active"
+                                         data-swiper-slide-index="0" style="width: 620px; height: 620px;">
+                                        <div class="box viewport-flip"
+                                             style="width: 368.125px; height: 368.125px; top: 126px; margin-left: -184.062px;">
+                                            <a class="list flip in">
+                                                <img alt="纸牌正面"
+                                                     src="https://file.dayutang.cn/2017/09/19/1505829728399.jpg">
+                                                <div class="bought-gifBtn"><img src="img/turnTableBtn.gif" alt=""></div>
+                                            </a>
+
+                                            <a class="list flip in"><img alt="纸牌背面"
+                                                                         src="https://file.dayutang.cn/2018/05/04/1525435501797.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setTime-bottomBg" style="display: none;"></div>
+                        <!--底部按钮-->
+                        <div class="bottomBtns">
+                            <!-- 播放条 -->
+                            <div class="play-div">
+                                <div class="play-bar">
+                                    <div class="aud-div">
+                                        <div class="txt" id="timecurrent">00:00</div>
+                                        <div class="txt" style="right: 0; text-align: right;" id="timeduration">07:48
+                                        </div>
+                                        <div id="bar" class="bar">
+                                            <div id="line" class="line"></div>
+                                            <div id="process" class="line process" style="width: 0px;"></div>
+                                            <div id="bufferLine" class="line bufferLine"
+                                                 style="width: 68.0687px;"></div>
+                                            <div id="circle" class="circle" style="left: 0px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-20">
+                                    <div id="time" class="setTime-menu iconfont"></div>
+                                </div>
+                                <div class="col-20">
+                                    <div class="btnsStyle iconfont"></div>
+                                </div>
+                                <div class="col-20">
+                                    <div class="btnsStyle bigBtnsStyle iconfont"></div>
+                                </div>
+                                <div class="col-20">
+                                    <div class="btnsStyle iconfont"></div>
+                                </div>
+                                <div class="col-20">
+                                    <div class="setTime-menu iconfont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--音频列表-->
+                        <div class="audioList">
+                            <div class="upMenu">
+                                <div class="listTitle oneList">
+                                    <div class="leftListTitle">
+                                        <p>播放列表（<span>4</span>）</p>
+                                    </div>
+                                    <div class="rightListTitle" style="color: #666666;">
+                                        <p>
+                                            <span class="circleName">列表循环</span>
+                                            <span class="circleImg iconfont"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="audioListContent">
+                                    <ul>
+                                        <li>
+                                            <div class="listTitle">
+                                                <div class="leftListTitle selectedAudio" style="width: 70%">
+                                                    Star姐姐-Revolutionary War on Wednesday 星期三革命战争 Part 3
+                                                </div>
+                                                <div class="rightListTitle playImg"><img src="img/playicongreen.gif">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listTitle">
+                                                <div class="leftListTitle" style="width: 70%">Star姐姐-Revolutionary War
+                                                    on Wednesday 星期三革命战争 Part 3
+                                                </div>
+                                                <div class="rightListTitle playImg"><img src="img/playicongrey.png">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listTitle">
+                                                <div class="leftListTitle" style="width: 70%">Star姐姐-Revolutionary War
+                                                    on Wednesday 星期三革命战争 Part 3
+                                                </div>
+                                                <div class="rightListTitle playImg"><img src="img/playicongrey.png">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listTitle">
+                                                <div class="leftListTitle" style="width: 70%">Star姐姐-Revolutionary War
+                                                    on Wednesday 星期三革命战争 Part 3
+                                                </div>
+                                                <div class="rightListTitle playImg"><img src="img/playicongrey.png">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <audio style="display:none" id="musicBox" preload="metadata" controls=""
+                               autoplay="false"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="adSwiperBox" id="adSwiperBox">
+    <div class="swiper-container swiper-ad">
+        <div class="swiper-wrapper" onclick="MtaH5.clickStat('adpopshop')">
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <a href="" class="adClose">Χ</a>
+    <div class="swiperBg"></div>
+</div>
+<a href="" class="adSwiperIcon"><img src="" alt=""></a>
+
+<!--E adSwiper-->
+<script type="text/javascript" src="style/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="style/weui.js"></script>
+<script type="text/javascript" src="style/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="style/jqmd5.js"></script>
+<script type="text/javascript" src="style/vue.min.js"></script>
+<script type="text/javascript" src="style/sha1.js"></script>
+<script type="text/javascript" src="style/framework7.min.js"></script>
+
+<script type="text/javascript" src="style/require.js"></script>
+<script type="text/javascript" src="style/services.js"></script>
+<script type="text/javascript" src="style/tools.js"></script>
+<script type="text/javascript" src="style/ui.js"></script>
+<script type="text/javascript" src="style/app.js" charset="utf-8"></script>
+
+
+
+</body>
+</html>

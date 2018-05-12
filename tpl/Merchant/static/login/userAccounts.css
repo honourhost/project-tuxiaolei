@@ -1,0 +1,2164 @@
+body {
+	color: #323232;
+	background: #fff;
+	text-align: left
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	outline: none
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+body,
+button,
+input,
+select,
+textarea {
+	font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif
+}
+input,
+button,
+select,
+textarea {
+	font-size: 100%;
+	color: #636363;
+	outline: none
+}
+textarea {
+	resize: none
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+fieldset,
+img {
+	border: 0
+}
+iframe {
+	display: block
+}
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal
+}
+del {
+	text-decoration: line-through
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: 500
+}
+ol,
+ul {
+	list-style: none
+}
+caption,
+th {
+	text-align: left
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: 500
+}
+q:before,
+q:after {
+	content: ""
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+sup {
+	top: -0.5em
+}
+sub {
+	bottom: -0.25em
+}
+a {
+	text-decoration: none;
+	color: #0073b6
+}
+a:hover {
+	text-decoration: underline
+}
+a:focus,
+input:focus {
+	outline: none
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	outline: none
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #959595 !important
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #959595 !important
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #959595 !important
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #959595 !important
+}
+.cb {
+	clear: both
+}
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0
+}
+.clearfix {
+	zoom: 1
+}
+.fr {
+	float: right
+}
+.fl {
+	float: left
+}
+.fontTahoma {
+	font-family: tahoma, \5b8b\4f53, sans-serif
+}
+.fontArial {
+	font-family: helvetica, arial, \5b8b\4f53, sans-serif
+}
+.fontSong {
+	font-family: \5b8b\4f53, sans-serif
+}
+.fontYaHei {
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif
+}
+.cBlack {
+	color: #323232
+}
+.cGray {
+	color: #636363
+}
+.cLightgray {
+	color: #959595
+}
+.cWhite {
+	color: #fff
+}
+.cRed {
+	color: #790000
+}
+.cBlue {
+	color: #0073b6
+}
+.cGreen {
+	color: #077345
+}
+.cRed_caution {
+	color: #ed1c24
+}
+.qyWrap {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto
+}
+.qySide {
+	width: 270px
+}
+.qyMain {
+	width: 680px
+}
+.ui2_input {
+	height: 24px;
+	overflow: hidden;
+	padding: 3px 7px;
+	border: 1px solid #c0c0c0;
+	font-size: 14px;
+	line-height: 24px
+}
+.ui2_textarea {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	font-family: Helvetica, Arial, "Hiragino Sans GB", 宋体, sans-serif;
+	padding: 2px 5px
+}
+.ui2_input:focus,
+.ui2_textarea:focus {
+	border-color: #5fa678;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05) inset
+}
+.ui2_focus {
+	border-color: #5fa678;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05) inset
+}
+.ui2_error {
+	border-color: #cb0900;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05) inset
+}
+.ui3_input {
+	height: 32px;
+	line-height: 32px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	overflow: hidden;
+	padding: 3px 7px;
+	border: 1px solid #c0c0c0;
+	font-size: 14px
+}
+.ui3_input:focus {
+	border-color: #5fa678;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05) inset
+}
+.ui3_input_icon_ok,
+.ui3_input_icon_error,
+.ui3_input_icon_loading,
+.ui3_input_icon_cal {
+	background-image: url(http://static.qyer.com/models/common/images/input_icons.png);
+	background-repeat: no-repeat;
+	background-position: right 3px;
+	padding-right: 28px
+}
+.ui3_input_icon_ok {
+	background-position: right -143px
+}
+.ui3_input_icon_error {
+	background-position: right -218px;
+	border-color: #bc0003 !important
+}
+.ui3_input_icon_loading {
+	background-image: url(http://static.qyer.com/models/common/images/wait_16_2.gif);
+	background-position: right center
+}
+.ui3_input_icon_cal {
+	background-position: right 2px
+}
+.ui3_input_icon_cal:hover {
+	background-position: right -77px
+}
+.ui3_input_disabled[disabled="disabled"],
+.ui3_textarea[disabled="disabled"] {
+	border-color: #cecece;
+	background-color: #e7e7e7
+}
+.ui3_textarea {
+	background-color: #FFF;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #CCC;
+	font-family: Helvetica, Arial, "Hiragino Sans GB", 宋体, sans-serif;
+	padding: 2px 5px
+}
+.ui3_textarea:focus {
+	border-color: #5fa678;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05) inset
+}
+.ui_button,
+.ui_buttonA,
+.ui_buttonB,
+.ui_buttonC,
+.ui_button_warning,
+.ui_button_disabled,
+.ui_button_load,
+.ui_button_cancel {
+	display: inline-block;
+	height: 28px;
+	padding: 0 15px;
+	border: none;
+	border-radius: 3px;
+	overflow: visible;
+	font-size: 14px;
+	line-height: 28px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer
+}
+.ui_button {
+	background-color: #3f9f5f
+}
+.ui_button:hover {
+	background-color: #5cad77;
+	color: #fff;
+	text-decoration: none
+}
+.ui_button:active {
+	background-color: #3f9f5f;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_buttonA {
+	background-color: #1995dd
+}
+.ui_buttonA:hover {
+	background-color: #3ba5e2;
+	color: #fff;
+	text-decoration: none
+}
+.ui_buttonA:active {
+	background-color: #1995dd;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_buttonC {
+	background-color: #f26622
+}
+.ui_buttonC:hover {
+	background-color: #f5802d;
+	color: #fff;
+	text-decoration: none
+}
+.ui_buttonC:active {
+	background-color: #f26622;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_button_warning {
+	background-color: #cb0900
+}
+.ui_button_warning:hover {
+	background-color: #e50e04;
+	color: #fff;
+	text-decoration: none
+}
+.ui_button_warning:active {
+	background-color: #b90800;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_button_cancel {
+	height: 26px;
+	line-height: 26px;
+	background-color: #f5f5f5;
+	border: 1px solid #c0c0c0;
+	padding: 0 14px;
+	color: #323232
+}
+.ui_button_cancel:hover {
+	background-color: #fff;
+	border-color: #959595;
+	text-decoration: none;
+	color: #323232
+}
+.ui_button_cancel:active {
+	background-color: #f5f5f5;
+	border-color: #959595;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_button_disabled {
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #d7d7d7;
+	padding: 0 14px;
+	background-color: #eaeaea;
+	text-decoration: none;
+	cursor: default;
+	color: #c0c0c0
+}
+.ui_button_disabled:hover {
+	text-decoration: none
+}
+.ui_button_load {
+	height: 26px;
+	padding: 0 28px;
+	line-height: 26px;
+	border: 1px solid #d7d7d7;
+	background: #fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center;
+	color: #999;
+	text-indent: -200px;
+	cursor: default
+}
+.ui_button_load:hover {
+	text-decoration: none;
+	color: #999;
+	cursor: default
+}
+input.ui_button_load,
+input.ui_button_cancel,
+input.ui_button_disabled,
+button.ui_button_load,
+button.ui_button_cancel,
+button.ui_button_disabled {
+	height: 28px;
+	line-height: normal
+}
+.ui_btn_big,
+.ui_btn_bigA,
+.ui_btn_bigC,
+.ui_btn_big_warning,
+.ui_btn_big_disabled,
+.ui_btn_big_load,
+.ui_btn_big_cancel {
+	display: inline-block;
+	height: 36px;
+	padding: 0 25px;
+	border: none;
+	border-radius: 3px;
+	overflow: visible;
+	font-size: 18px;
+	line-height: 36px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	color: #fff;
+	text-align: center;
+	cursor: pointer
+}
+.ui_btn_big {
+	background-color: #3f9f5f
+}
+.ui_btn_big:hover {
+	background-color: #5cad77;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_big:active {
+	background-color: #3f9f5f;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_bigA {
+	background-color: #1995dd
+}
+.ui_btn_bigA:hover {
+	background-color: #3ba5e2;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_bigA:active {
+	background-color: #1995dd;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_bigC {
+	background-color: #f26622
+}
+.ui_btn_bigC:hover {
+	background-color: #f5802d;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_bigC:active {
+	background-color: #f26622;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_big_warning {
+	background-color: #cb0900
+}
+.ui_btn_big_warning:hover {
+	background-color: #e50e04;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_big_warning:active {
+	background-color: #b90800;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_big_cancel {
+	height: 34px;
+	line-height: 34px;
+	background-color: #f5f5f5;
+	border: 1px solid #c0c0c0;
+	padding: 0 24px;
+	color: #323232
+}
+.ui_btn_big_cancel:hover {
+	background-color: #fff;
+	border-color: #959595;
+	text-decoration: none;
+	color: #323232
+}
+.ui_btn_big_cancel:active {
+	background-color: #f5f5f5;
+	border-color: #959595;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_big_disabled {
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #d7d7d7;
+	padding: 0 24px;
+	background-color: #eaeaea;
+	text-decoration: none;
+	cursor: default;
+	color: #c0c0c0
+}
+.ui_btn_big_disabled:hover {
+	text-decoration: none
+}
+.ui_btn_big_load {
+	height: 34px;
+	padding: 0 42px;
+	line-height: 34px;
+	border: 1px solid #ccc;
+	background: #fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center;
+	color: #999;
+	text-indent: -200px;
+	cursor: default
+}
+.ui_btn_big_load:hover {
+	text-decoration: none;
+	color: #999;
+	cursor: default
+}
+input.ui_btn_big_load,
+input.ui_btn_big_cancel,
+input.ui_btn_big_disabled,
+button.ui_btn_big_load,
+button.ui_btn_big_cancel,
+button.ui_btn_big_disabled {
+	height: 36px;
+	line-height: normal
+}
+.ui_btn_small,
+.ui_btn_smallA,
+.ui_btn_smallB,
+.ui_btn_smallC,
+.ui_btn_small_warning,
+.ui_btn_small_disabled,
+.ui_btn_small_load,
+.ui_btn_small_cancel {
+	display: inline-block;
+	height: 24px;
+	padding: 0 13px;
+	border: none;
+	border-radius: 3px;
+	overflow: visible;
+	font-size: 12px;
+	line-height: 24px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer
+}
+.ui_btn_small {
+	background-color: #3f9f5f
+}
+.ui_btn_small:hover {
+	background-color: #5cad77;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_small:active {
+	background-color: #3f9f5f;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_smallA {
+	background-color: #1995dd
+}
+.ui_btn_smallA:hover {
+	background-color: #3ba5e2;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_smallA:active {
+	background-color: #1995dd;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_smallC {
+	background-color: #f26622
+}
+.ui_btn_smallC:hover {
+	background-color: #f5802d;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_smallC:active {
+	background-color: #f26622;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_small_warning {
+	background-color: #cb0900
+}
+.ui_btn_small_warning:hover {
+	background-color: #e50e04;
+	color: #fff;
+	text-decoration: none
+}
+.ui_btn_small_warning:active {
+	background-color: #b90800;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_small_cancel {
+	height: 22px;
+	line-height: 22px;
+	background-color: #f5f5f5;
+	border: 1px solid #c0c0c0;
+	padding: 0 12px;
+	color: #323232
+}
+.ui_btn_small_cancel:hover {
+	background-color: #fff;
+	border-color: #959595;
+	text-decoration: none;
+	color: #323232
+}
+.ui_btn_small_cancel:active {
+	background-color: #f5f5f5;
+	border-color: #959595;
+	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+.ui_btn_small_disabled {
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #d7d7d7;
+	padding: 0 12px;
+	background-color: #eaeaea;
+	text-decoration: none;
+	cursor: default;
+	color: #c0c0c0
+}
+.ui_btn_small_disabled:hover {
+	text-decoration: none
+}
+.ui_btn_small_load {
+	height: 22px;
+	padding: 0 24px;
+	line-height: 22px;
+	border: 1px solid #d7d7d7;
+	background: #fff url(http://static.qyer.com/models/common/images/wait_16.gif) no-repeat center center;
+	color: #999;
+	text-indent: -200px;
+	cursor: default
+}
+.ui_btn_small_load:hover {
+	text-decoration: none;
+	color: #999;
+	cursor: default
+}
+input.ui_btn_small_load,
+input.ui_btn_small_cancel,
+input.ui_btn_small_disabled,
+button.ui_btn_small_load,
+button.ui_btn_small_cancel,
+button.ui_btn_small_disabled {
+	height: 24px;
+	line-height: normal
+}
+.borderbox {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box
+}
+.ui_tab_cnt_item {
+	display: none
+}
+.ui_tab_cnt_item_current {
+	display: block
+}
+.qyer_header_fixed {
+	height: 40px
+}
+.qyer_header_bg {
+	z-index: 999;
+	_position: static;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-width: 980px;
+	border-bottom: 2px solid #72b088;
+	background: #147850;
+	text-align: left;
+	font: 12px/1.5 helvetica, arial, "hiragino sans gb", "\5b8b\4f53", sans-serif;
+	color: #323232;
+	clear: both;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+}
+.qyer_header {
+	width: 980px;
+	height: 38px;
+	margin: 0 auto
+}
+.qyer_hf_bg {
+	background: url(http://static.qyer.com/models/basic/images/headfoot2.png) no-repeat left top
+}
+.qyer_head_logo {
+	float: left;
+	width: 110px;
+	height: 40px
+}
+.qyer_head_logo img {
+	width: 80px !important;
+	height: 38px !important
+}
+.qyer_head_nav {
+	float: left;
+	width: 480px
+}
+.qyer_head_nav_item {
+	float: left;
+	margin-top: 2px
+}
+.qyer_head_nav_item_tit {
+	display: block;
+	height: 34px;
+	height: 38px\9\0;
+	padding: 0 12px;
+	line-height: 34px;
+	line-height: 38px\9\0;
+	overflow: hidden;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	font-size: 17px;
+	color: #e0f1df !important;
+	text-align: center
+}
+.qyer_head_nav_item_tit:hover {
+	text-decoration: none !important;
+	color: #fff !important;
+	border-bottom: 2px solid #74b089
+}
+#qyer_head_nav_item_lastm {
+	position: relative
+}
+#qyer_head_nav_item_lastm .tip {
+	display: none
+}
+#qyer_head_nav_item_lastm:after {
+	content: '';
+	position: absolute;
+	right: -4px;
+	top: -2px;
+	width: 22px;
+	height: 16px;
+	overflow: hidden;
+	background: url(/images/common/head/nav-hot.png) no-repeat;
+	line-height: 200px
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	#qyer_head_nav_item_lastm::after {
+		background: url(//static.qyer.com/images/common/head/nav-hot@2x.png) no-repeat;
+		background-size: 100% 100%
+	}
+}
+#qyer_head_nav_item_plan {
+	position: relative
+}
+#qyer_head_nav_item_plan:after {
+	content: '';
+	position: absolute;
+	right: -4px;
+	top: -2px;
+	width: 20px;
+	height: 16px;
+	overflow: hidden;
+	background: url(/images/common/head/nav-plan-new@2x.gif) no-repeat;
+	line-height: 200px;
+	background-size: 20px 16px
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	#qyer_head_nav_item_plan::after {
+		background: url(//static.qyer.com/images/common/head/nav-plan-new@2x.gif) no-repeat;
+		background-size: 100% 100%
+	}
+}
+.qyer_head_nav_item_this .qyer_head_nav_item_tit {
+	border-bottom: 2px solid #74b089;
+	color: #fff !important
+}
+.qyer_head_nav_item_sns,
+.qyer_head_nav_item_yd {
+	position: relative;
+	padding: 0 21px 0 12px
+}
+.qyer_head_nav_item_sns:after,
+.qyer_head_nav_item_yd:after {
+	position: absolute;
+	top: 14px;
+	right: 12px;
+	content: "";
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 4px solid transparent;
+	border-top-color: #e0f1df;
+	border-bottom-width: 0
+}
+.qyer_head_nav_item_current .qyer_head_nav_item_sns,
+.qyer_head_nav_item_current .qyer_head_nav_item_yd {
+	border: 1px solid #d9d9d9;
+	padding: 0 20px 0 11px;
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: #fff;
+	color: #147850 !important
+}
+.qyer_head_nav_item_current .qyer_head_nav_item_sns:after,
+.qyer_head_nav_item_current .qyer_head_nav_item_yd:after {
+	border-top-color: #147850
+}
+#qyer_head_nav_item_sns:hover,
+#qyer_head_nav_item_yd:hover {
+	position: relative;
+	z-index: 399
+}
+#qyer_head_nav_item_sns:hover .qyer_head_nav_item_sns,
+#qyer_head_nav_item_yd:hover .qyer_head_nav_item_yd {
+	border: 1px solid #d9d9d9;
+	padding: 0 20px 0 11px;
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: #fff;
+	color: #147850 !important
+}
+#qyer_head_nav_item_sns:hover .qyer_head_nav_item_sns:after,
+#qyer_head_nav_item_yd:hover .qyer_head_nav_item_yd:after {
+	border-top-color: #147850
+}
+.qyer_head_subnav_bg {
+	display: none
+}
+#qyer_head_nav_item_sns:hover .qyer_head_subnav_bg,
+#qyer_head_nav_item_yd:hover .qyer_head_subnav_bg {
+	display: block;
+	width: 142px;
+	position: absolute;
+	z-index: 499;
+	right: 0;
+	top: 34px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-top: none;
+	border-radius: 5px 0px 5px 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+}
+.qyer_head_subnav_list {
+	padding: 8px
+}
+.qyer_head_subnav_list li {
+	font-size: 14px
+}
+.qyer_head_subnav_list .subnav_item {
+	display: block;
+	height: 30px;
+	padding-left: 39px;
+	line-height: 30px;
+	color: #147850;
+	background-repeat: no-repeat;
+	border-radius: 2px
+}
+.qyer_head_subnav_list .subnav_item:hover {
+	background-color: #74b089;
+	color: #fff;
+	text-decoration: none
+}
+.subnav_item.bbs {
+	background-position: 8px -359px
+}
+.subnav_item.ask {
+	background-position: 8px -390px
+}
+.subnav_item.mguide {
+	background-position: 8px -1140px
+}
+.subnav_item.qlab {
+	background-position: 8px -1020px
+}
+.subnav_item.bbs:hover {
+	background-position: 8px -450px
+}
+.subnav_item.ask:hover {
+	background-position: 8px -481px
+}
+.subnav_item.mguide:hover {
+	background-position: 8px -1170px
+}
+.subnav_item.qlab:hover {
+	background-position: 8px -1050px
+}
+.subnav_item.plane {
+	background-position: 8px -542px
+}
+.subnav_item.insure {
+	background-position: 8px -573px
+}
+.subnav_item.visa {
+	background-position: 8px -602px
+}
+.subnav_item.hoteldeal {
+	background-position: 8px -633px
+}
+.subnav_item.shop {
+	background-position: 8px -665px
+}
+.subnav_item.liner {
+	background-position: 8px -692px
+}
+.subnav_item.car {
+	background-position: 8px -722px
+}
+.subnav_item.airbnb {
+	background-position: 8px -1200px
+}
+.subnav_item.plane:hover {
+	background-position: 8px -762px
+}
+.subnav_item.insure:hover {
+	background-position: 8px -791px
+}
+.subnav_item.visa:hover {
+	background-position: 8px -821px
+}
+.subnav_item.hoteldeal:hover {
+	background-position: 8px -853px
+}
+.subnav_item.shop:hover {
+	background-position: 8px -883px
+}
+.subnav_item.liner:hover {
+	background-position: 8px -911px
+}
+.subnav_item.car:hover {
+	background-position: 8px -941px
+}
+.subnav_item.airbnb:hover {
+	background-position: 8px -1230px
+}
+.qyer_head_search {
+	position: relative;
+	*z-index: 998;
+	float: right;
+	width: 175px;
+	height: 28px;
+	margin-top: 5px;
+	background: #fff
+}
+.qyer_head_search_input {
+	float: left;
+	width: 131px;
+	height: 18px;
+	padding: 5px 8px;
+	border: none;
+	background: transparent;
+	font-size: 12px;
+	line-height: 18px
+}
+.qyer_head_search_btn {
+	float: left;
+	width: 28px;
+	height: 28px;
+	border: 0;
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -100px;
+	background-position: 0 -189px
+}
+.qyer_head_search_btn:hover {
+	background-position: -62px -189px
+}
+.qyer_head_search_drop {
+	display: none;
+	position: absolute;
+	z-index: 998;
+	left: 0;
+	top: 28px;
+	width: 268px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
+}
+.qyerHeadSearchDropList {}.qyerHeadSearchDropList li {
+	border-top: 1px solid #ececec
+}
+.qyerHeadSearchDropList li:first {
+	border-top: none
+}
+.qyerHeadSearchDropList a {
+	display: block;
+	color: #323232
+}
+.qyerHeadSearchDropList a:hover,
+.qyerHeadSearchDropList a.current {
+	background-color: #e6f4d9;
+	text-decoration: none
+}
+.qyerHeadSearchDropList .item a {
+	height: 36px;
+	padding: 7px 10px 7px 50px
+}
+.qyerHeadSearchDropList .item .related {
+	font-weight: bold;
+	color: #007345
+}
+.qyerHeadSearchDropList .item .pic {
+	float: left;
+	margin: 3px 0 0 -40px
+}
+.qyerHeadSearchDropList .item .face {
+	border-radius: 50%
+}
+.qyerHeadSearchDropList .item .title {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+.qyerHeadSearchDropList .item .info {
+	color: #636363
+}
+.qyerHeadSearchDropList .item2 a {
+	padding: 0 10px;
+	line-height: 32px;
+	font-weight: bold
+}
+.qyerHeadSearchDropList .item2 .related {
+	font-weight: normal
+}
+.qyer_head_login {
+	float: right;
+	width: 195px;
+	padding-top: 4px
+}
+.qyer_head_loginList {
+	padding-top: 7px;
+	height: 16px;
+	line-height: 16px;
+	color: #fff
+}
+.qyer_head_loginList .entry_tit,
+.qyer_head_loginList .entry_box {
+	float: right;
+	margin-left: 10px
+}
+.qyer_head_loginList .entry_tit .entry {
+	color: #fff;
+	line-height: 22px\9\0
+}
+.qyer_head_loginList .entry_tit .entry:hover {
+	color: #e0f1df;
+	text-decoration: none
+}
+.qyer_head_loginList .entry_box>.taobao {
+	display: block;
+	width: 17px;
+	height: 16px;
+	background-position: 0 2px
+}
+.qyer_head_loginList .entry_box>.weibo {
+	display: block;
+	width: 20px;
+	height: 16px;
+	background-position: 0 -19px
+}
+.qyer_head_loginList .entry_box>.qq {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-position: 0 -42px
+}
+.qyer_head_login_entry {
+	padding-top: 7px;
+	height: 16px;
+	line-height: 16px;
+	color: #fff
+}
+.qyer_head_login_entry li {
+	float: right;
+	margin-left: 10px
+}
+.qyer_head_login_entry li img {
+	display: block
+}
+.qyer_head_login_entry a {
+	color: #fff
+}
+.qyer_head_login_entry a:hover {
+	color: #e0f1df;
+	text-decoration: none
+}
+.qyer_head_users {
+	position: relative;
+	*z-index: 999;
+	float: left;
+	width: 125px;
+	padding: 5px 0
+}
+.qyer_head_username {
+	position: relative;
+	float: right;
+	padding-right: 14px;
+	line-height: 20px;
+	color: #e0f1df !important
+}
+.qyer_head_username:hover {
+	color: #fff !important;
+	text-decoration: none !important
+}
+.qyer_head_username .arrow {
+	position: absolute;
+	top: 7px;
+	right: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 4px solid transparent;
+	border-top-color: #e0f1df;
+	border-bottom-width: 0
+}
+.qyer_head_userlayer {
+	position: absolute;
+	z-index: 999;
+	right: -70px;
+	top: 30px;
+	float: left;
+	width: 240px
+}
+.qyer_head_userlayer .arrow {
+	position: absolute;
+	right: 90px;
+	top: -6px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 6px solid transparent;
+	border-bottom-color: #5fa678;
+	border-top-width: 0
+}
+.qyer_head_userlayer .infos {
+	width: 158px;
+	overflow: hidden;
+	padding: 10px 10px 10px 72px;
+	background: #5fa678
+}
+.qyer_head_userlayer .infos a {
+	color: #fff
+}
+.qyer_head_userlayer .infos a:hover {
+	text-decoration: none
+}
+.qyer_head_userlayer .infos .face {
+	float: left;
+	margin-left: -62px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	overflow: hidden
+}
+.qyer_head_userlayer .infos .face img {
+	display: block;
+	border-radius: 50%
+}
+.qyer_head_userlayer .infos .name {
+	font-size: 14px;
+	line-height: 28px
+}
+.qyer_head_userlayer .infos .txt {
+	padding: 3px 0 0;
+	border: 0;
+	background: none;
+	height: auto
+}
+.qyer_head_userlayer .infos .txt a {
+	margin-right: 20px
+}
+.qyer_head_userlayer .list {
+	border: 1px solid #c0c0c0;
+	border-top: none;
+	background: #fff
+}
+.qyer_head_userlayer .list li {
+	position: relative;
+	height: 34px;
+	border-top: 1px solid #d7d7d7;
+	line-height: 34px
+}
+.qyer_head_userlayer .list li:first-child {
+	border-top: none
+}
+.qyer_head_userlayer .list .link {
+	display: block;
+	width: 218px;
+	padding: 0 10px;
+	font-size: 14px;
+	color: #323232
+}
+.qyer_head_userlayer .list .link:hover {
+	background: #e0f1df;
+	text-decoration: none
+}
+.qyer_head_userlayer .list .sublink {
+	position: absolute;
+	right: 10px;
+	top: 0
+}
+.qyer_head_userlayer .list .btm {
+	padding: 0 10px;
+	background: #f5f5f5
+}
+.qyer_head_userlayer .list .quit {
+	color: #323232
+}
+.qyer_head_userlayer .list .set {
+	position: absolute;
+	float: right;
+	top: 8px;
+	right: 10px;
+	height: 18px;
+	line-height: 18px;
+	padding-right: 16px;
+	background: url(http://static.qyer.com/models/basic/images/headfoot.png?v=2) no-repeat 13px -301px
+}
+.qyer_head_userlayer .list .set span {
+	display: none;
+	color: #323232
+}
+.qyer_head_userlayer .list .set:hover {
+	background-position: 13px -325px;
+	text-decoration: none
+}
+.qyer_head_userlayer .list .set:hover span {
+	display: inline-block;
+	padding-right: 6px
+}
+.qyer_head_msgs {
+	position: relative;
+	*z-index: 999;
+	float: left;
+	width: 70px
+}
+.qyer_head_msg {
+	float: right;
+	margin-top: 3px;
+	line-height: 24px;
+	color: #e0f1df;
+	cursor: default
+}
+.qyer_head_msg em {
+	float: left
+}
+.qyer_head_msg .num {
+	float: left;
+	width: 28px;
+	padding-left: 4px;
+	height: 24px;
+	background: url(http://static.qyer.com/models/basic/images/headfoot.png?v=2) no-repeat -85px -975px;
+	text-align: center;
+	color: #fff
+}
+.qyer_head_msg:hover {
+	color: #fff
+}
+.qyer_head_msglayer {
+	position: absolute;
+	z-index: 999;
+	right: 0;
+	top: 30px;
+	width: 298px;
+	border: 1px solid #c0c0c0;
+	background: #fff
+}
+.qyer_head_msglayer .tabs {
+	width: 100%;
+	height: 35px
+}
+.qyer_head_msglayer .tabs li {
+	float: left;
+	width: 149px;
+	background: #f5f5f5;
+	font-size: 14px;
+	line-height: 34px;
+	text-align: center;
+	cursor: pointer
+}
+.qyer_head_msglayer .tabs li:first-child {
+	width: 148px;
+	border-right: 1px solid #d7d7d7
+}
+.qyer_head_msglayer .tabs span {
+	display: block;
+	border-bottom: 1px solid #d7d7d7
+}
+.qyer_head_msglayer .tabs .arrow1 {
+	position: absolute;
+	right: 6px;
+	top: -7px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 6px solid transparent;
+	border-bottom-color: #d7d7d7;
+	border-top-width: 0
+}
+.qyer_head_msglayer .tabs .arrow2 {
+	position: absolute;
+	right: 6px;
+	top: -6px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 6px solid transparent;
+	border-bottom-color: #f5f5f5;
+	border-top-width: 0
+}
+.qyer_head_msglayer .tabs .current {
+	background: #fff;
+	cursor: default
+}
+.qyer_head_msglayer .tabs .current span {
+	border-bottom: none
+}
+.qyer_head_msglayer .tabs .current .arrow2 {
+	border-bottom-color: #fff
+}
+.qyer_head_msglayer .list {}.qyer_head_msglayer .list li {
+	padding: 7px 15px;
+	border-bottom: 1px solid #d7d7d7;
+	word-break: break-all;
+	word-wrap: break-word
+}
+.qyer_head_msglayer .list li a {
+	display: block;
+	max-height: 36px;
+	overflow: hidden
+}
+.qyer_head_msglayer .list .tit {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+.qyer_head_msglayer .list .datetime {
+	color: #959595
+}
+.qyer_head_msglayer .list .looked {
+	color: #959595
+}
+.qyer_head_msglayer .list .looked a {
+	color: #959595
+}
+.qyer_head_msglayer .lists .all {
+	padding: 7px 10px;
+	background: #f5f5f5;
+	text-align: right
+}
+.qyer_head_msglayer .lists .all a {
+	color: #323232
+}
+.qyer_head_msglayer .lists .noinfo {
+	line-height: 80px;
+	text-align: center;
+	color: #959595;
+	border-bottom: 1px solid #d7d7d7
+}
+.qyer_head_crumbg {
+	width: 100%;
+	min-width: 960px;
+	font-size: 12px;
+	line-height: 14px;
+	margin: 20px 0;
+	text-align: left
+}
+.qyer_head_crumb {
+	width: 960px;
+	height: 14px;
+	margin: 0 auto;
+	color: #636363
+}
+.qyer_head_crumb .text {
+	float: left;
+	display: inline;
+	position: relative
+}
+.qyer_head_crumb .space {
+	float: left;
+	display: inline;
+	padding: 0 7px;
+	font-family: \5b8b\4f53, sans-serif
+}
+.qyer_head_crumb .drop {
+	padding-right: 12px
+}
+.qyer_head_crumb em.arrow {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	height: 9px;
+	width: 9px;
+	background: url(http://static.qyer.com/images/common/head/crumb_arrow.png) no-repeat 0 0
+}
+.qyer_head_crumb em.hover {
+	background-position: 0 -14px
+}
+.qyer_head_crumb .current {
+	display: inline;
+	font-weight: normal
+}
+.qyer_head_crumb a {
+	font-weight: bold;
+	color: #0073b6;
+	text-decoration: none
+}
+.qyer_head_crumb a:hover {
+	color: #0073b6;
+	text-decoration: underline
+}
+.qyer_head_crumb_pulldown {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 320px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #c2c2c2
+}
+.qyer_head_crumb_pulldown ul {
+	float: left;
+	width: 160px
+}
+.qyer_head_crumb_pulldown ul li {
+	line-height: 24px
+}
+.qyer_head_crumb_pulldown ul a {
+	display: block;
+	padding: 0 5px;
+	width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #636363;
+	font-weight: normal
+}
+.qyer_head_crumb_pulldown ul a:hover {
+	text-decoration: none;
+	background-color: #ececec;
+	color: #0073b6
+}
+.qyer_head_crumb_pulldown .more {
+	display: block;
+	padding-right: 5px;
+	line-height: 24px;
+	text-align: right
+}
+.qyer_footer {
+	width: 100%;
+	min-width: 980px;
+	text-align: left;
+	background: #363636;
+	font: 12px/1.5 helvetica, arial, "hiragino sans gb", "\5b8b\4f53", sans-serif;
+	color: #959595;
+	clear: both
+}
+.qyer_footer a {
+	text-decoration: none;
+	color: #959595
+}
+.qyer_footer a:hover {
+	text-decoration: underline;
+	color: #959595
+}
+.qyer_footerBox {
+	width: 980px;
+	margin: 0 auto;
+	padding: 20px 0;
+	overflow: hidden
+}
+.qyer_footer_about {
+	float: left;
+	padding-top: 3px
+}
+.qyer_footer_about li {
+	float: left;
+	width: 140px;
+	line-height: 24px
+}
+.qyer_footer_about li dt {
+	font-weight: bold;
+	color: #c2c2c2
+}
+.qyer_footer_attention {
+	width: 90px;
+	overflow: hidden
+}
+.qyer_footer_attention dt {
+	padding-bottom: 7px
+}
+.qyer_footer_attention dd {
+	float: left;
+	margin: 0 10px 10px 0
+}
+.qyer_footer_attention a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	line-height: 100px;
+	background: url(/models/basic/images/headfoot.png) no-repeat
+}
+.qyer_footer_attention a.weibo {
+	background-position: 0 -1080px
+}
+.qyer_footer_attention a.flickr {
+	background-position: -30px -1080px
+}
+.qyer_footer_attention a.renren {
+	background-position: -60px -1080px
+}
+.qyer_footer_attention a.douban {
+	background-position: 0 -1110px
+}
+.qyer_footer_attention a.facebook {
+	background-position: -30px -1110px
+}
+.qyer_footer_attention a.twitter {
+	background-position: -60px -1110px
+}
+.qyer_footer_attention a.instagram {
+	background-position: -90px -1080px
+}
+.qyer_footer_attention a.weico {
+	background-position: -90px -1110px
+}
+.qyer_footer_appStore {
+	float: right;
+	padding-top: 10px
+}
+.qyer_footer_appStore .btn_appstore {
+	display: block;
+	width: 135px;
+	height: 40px;
+	background-position: 0 -74px
+}
+.qyer_footer_copyright {
+	box-sizing: border-box;
+	clear: left;
+	width: 100%;
+	padding: 20px 0 0 110px;
+	overflow: hidden;
+	_zoom: 1
+}
+.qyer_footer_copyright .btn_copyright {
+	float: left;
+	width: 100px;
+	height: 30px;
+	margin: 3px 0 0 -110px;
+	background-position: 0 -135px
+}
+.qyer_footer_links {
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0 0
+}
+.qyer_footer_links dt {
+	float: left;
+	font-weight: 700;
+	margin-right: 5px;
+	color: #c2c2c2
+}
+.qyer_footer_links dd {
+	float: left;
+	margin-right: 5px
+}
+.qyer_footer_links a {
+	white-space: nowrap
+}
+body,
+textarea,
+input,
+select,
+button {
+	-webkit-font-smoothing: antialiased;
+	smoothing: antialiased
+}
+.fl {
+	float: left !important;
+	_display: inline
+}
+.fr {
+	float: right !important;
+	_display: inline
+}
+.vm {
+	vertical-align: middle
+}
+a {
+	color: #3f9f5f
+}
+a:hover {
+	color: #5dbd7d;
+	text-decoration: none
+}
+.qui-tip {
+	top: 40% !important
+}
+.qui-popup-account .qui-popup-box-content {
+	padding: 0 35px
+}
+.qui-popup-account .qui-popup-box-bottom {
+	display: none
+}
+.qui-account-container {
+	width: 330px;
+	margin: 0 auto;
+	padding: 30px 0;
+	font-size: 14px;
+	line-height: 22px;
+	color: #636363
+}
+.qui-account-container .title {
+	padding-bottom: 20px;
+	font-size: 20px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	font-weight: normal;
+	color: #323232
+}
+.qui-account-container ul {
+	padding-left: 20px;
+	list-style-type: disc
+}
+.qui-account-container .btns {
+	margin-left: -20px;
+	padding-top: 20px;
+	*zoom: 1
+}
+.qui-account-container .btns:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0
+}
+.qui-account-container .btns .btn {
+	float: left;
+	margin-left: 20px;
+	width: 155px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #FFF;
+	border-radius: 3px;
+	font-size: 16px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	background: #3f9f5f
+}
+.qui-account-container .btns .btn:hover {
+	background: #5cad77;
+	text-decoration: none
+}
+.qui-account-container .links {
+	text-align: right;
+	padding-top: 10px
+}
+.qui-account-container .links a {
+	color: #959595
+}
+.login-container {
+	width: 100%;
+	height: 100%;
+	min-width: 960px;
+	min-height: 760px;
+	background: url('http://static.qyer.com/models/project/user/images/web_login_bg.jpg') no-repeat top center;
+	background-size: cover;
+	filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.qyer.com/models/project/user/images/web_login_bg.jpg', sizingMethod='scale')
+}
+.login-container .wrapper {
+	margin: 0 auto;
+	padding: 60px 0;
+	width: 400px
+}
+.login-container .wrapper .login-logo {
+	text-align: center
+}
+.login-container .wrapper .login-logo img {
+	border: 0;
+	vertical-align: top;
+	
+	height: 46px;
+	vertical-align: middle
+}
+.login-container .wrapper .login-logo .title {
+	font-size: 24px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	color: #FFF;
+	vertical-align: bottom;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 0.3)
+}
+.login-container .wrapper .section {
+	margin-top: 45px;
+	padding: 10px 0 40px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	background: #f1f1f2;
+	background: rgba(255, 255, 255, 0.95)
+}
+.user-accounts .accounts-head {
+	padding: 25px 0 18px;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #d7d7d7
+}
+.user-accounts .accounts-head h2 {
+	font-size: 22px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif
+}
+.user-accounts .accounts-body {
+	padding-top: 54px;
+	padding-bottom: 100px
+}
+.appeal-wrap * {
+	vertical-align: middle
+}
+.appeal-wrap i.icon {
+	display: inline-block;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	background: url('http://static.qyer.com/models/project/user/images/icon_other_s.png') no-repeat
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+	.appeal-wrap i.icon {
+		background: url('http://static.qyer.com/models/project/user/images/icon_other.png') no-repeat;
+		background-size: 80px 20px
+	}
+}
+.appeal-wrap i.icon.weibo {
+	background-position: 0 0
+}
+.appeal-wrap i.icon.weixin {
+	background-position: -20px 0
+}
+.appeal-wrap i.icon.qq {
+	background-position: -40px 0
+}
+.appeal-wrap i.icon.taobao {
+	background-position: -60px 0
+}
+.qui-login-section {
+	position: relative;
+	margin: 0 auto;
+	font-size: 14px;
+	width: 330px;
+	color: #959595
+}
+.qui-login-section.show {
+	display: block
+}
+.qui-login-section .qui-login-tabs {
+	border-bottom: 1px solid #e8e8e8;
+	height: 59px;
+	line-height: 59px
+}
+.qui-login-section .qui-login-tabs a {
+	float: left;
+	width: 50%;
+	height: 59px;
+	font-size: 16px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	text-align: center;
+	color: #959595;
+	cursor: pointer;
+}
+.qui-login-section .qui-login-tabs a.current {
+	border-bottom: 2px solid #10b041;
+	height: 58px;
+	color: #3f9f5f
+}
+.qui-login-section .qui-login-form {
+	padding-top: 30px
+}
+.qui-login-section .qui-login-input {
+	height: 70px
+}
+.qui-login-section .qui-login-input .ui3_input {
+	width: 100%;
+	height: 40px;
+	border-color: #d7d7d7
+}
+.qui-login-section .qui-login-input .ui3_input.input_error {
+	border-color: #ff654c
+}
+.qui-login-section .qui-login-input .ui3_input.input_success {
+	padding-right: 32px;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/right.png') #fff right center no-repeat
+}
+.qui-login-section .qui-login-input .ui3_input.input_clear {
+	padding-right: 32px;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/clear_s.png') no-repeat
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+	.qui-login-section .qui-login-input .ui3_input.input_clear {
+		background: url('http://static.qyer.com/models/common/component/loginDialog/clear.png') no-repeat;
+		background-size: 20px 40px
+	}
+}
+.qui-login-section .qui-login-input .ui3_input.input_phone_code {
+	width: 248px
+}
+.qui-login-section .qui-login-input .ui3_input.input_check_code {
+	width: 200px
+}
+.qui-login-section .qui-login-input textarea.ui3_input {
+	float: left;
+	height: 130px;
+	line-height: 25px;
+	overflow-y: auto
+}
+.qui-login-section .qui-login-input.qui-login-textarea {
+	height: 160px
+}
+.qui-login-section .qui-login-input .qui-select {
+	width: 77px;
+	height: 38px
+}
+.qui-login-section .qui-login-input .qui-select .titles {
+	width: 60px;
+	line-height: 38px;
+	font-weight: normal;
+	color: #959595
+}
+.qui-login-section .qui-login-input .qui-select .contents {
+	margin-top: 5px;
+	max-height: 224px
+}
+.qui-login-section .qui-login-input .qui-select .contents ul li {
+	border: 0;
+	line-height: 32px
+}
+.qui-login-section .qui-login-input .qui-select .contents ul li a {
+	color: #959595
+}
+.qui-login-section .qui-login-input .ui_button {
+	width: 100%;
+	height: 36px;
+	line-height: 36px
+}
+.qui-login-section .qui-login-input .ui_button_disabled {
+	color: #c0c0c0
+}
+.qui-login-section .qui-login-input .ui_button_disabled:hover {
+	color: #c0c0c0
+}
+.qui-login-section .qui-login-input .button_code {
+	padding: 0 15px;
+	width: 95px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif
+}
+.qui-login-section .qui-login-input .btn_submit {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif
+}
+.qui-login-section .qui-login-input .check_code {
+	width: 100px;
+	height: 40px
+}
+.qui-login-section .qui-login-input .check_code img {
+	vertical-align: top;
+	width: 100%;
+	height: 100%
+}
+.qui-login-section .qui-login-input .message-box {
+	clear: both;
+	line-height: 30px;
+	font-size: 12px
+}
+.qui-login-section .qui-login-input .message-box .checkerror {
+	float: left;
+	margin-top: 6px;
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	color: #ff654c;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/error.png') no-repeat
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .bar {
+	float: left !important;
+	_display: inline;
+	margin-top: 14px;
+	margin-right: 10px;
+	height: 3px
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .bar span {
+	float: left !important;
+	_display: inline;
+	width: 50px;
+	height: 3px;
+	margin-right: 2px;
+	background: #98cb4c
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .bar span.level-1 {
+	background: #98cb4c
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .bar span.level-2 {
+	background: #3f9f5f
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .bar span.level-3 {
+	background: #147850
+}
+.qui-login-section .qui-login-input .message-box .pwd-strong .text {
+	float: left !important;
+	_display: inline
+}
+.qui-login-section .qui-login-input .icon-clear {
+	display: none
+}
+.qui-login-section .qui-login-input.input-clear-wrap {
+	position: relative
+}
+.qui-login-section .qui-login-input.input-clear-wrap .icon-clear {
+	display: block;
+	position: absolute;
+	right: 7px;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/clear_s.png') no-repeat
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+	.qui-login-section .qui-login-input.input-clear-wrap .icon-clear {
+		background: url('http://static.qyer.com/models/common/component/loginDialog/clear.png') no-repeat;
+		background-size: 20px 40px
+	}
+}
+.qui-login-section .qui-login-input.input-clear-wrap .icon-clear:hover {
+	background-position: 0 -20px
+}
+.qui-login-section .qui-login-btn .message-box {
+	margin-top: 6px;
+	font-size: 14px
+}
+.qui-login-section .qui-login-otherlogin {
+	padding: 20px 0;
+	text-align: center
+}
+.qui-login-section .qui-login-otherlogin .text {
+	font-size: 12px
+}
+.qui-login-section .qui-login-otherlogin .otherlogin {
+	padding: 15px 0 10px;
+	font-size: 0
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a {
+	display: inline-block;
+	margin: 0 21px;
+	width: 40px;
+	height: 40px;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/icon-otherlogin_s.png') no-repeat
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (max-moz-device-pixel-ratio: 2) {
+	.qui-login-section .qui-login-otherlogin .otherlogin a {
+		background: url('http://static.qyer.com/models/common/component/loginDialog/icon-otherlogin.png') no-repeat;
+		background-size: 160px 80px
+	}
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-qq {
+	background-position: 0 0
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-qq:hover {
+	background-position: 0 -40px
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-weibo {
+	background-position: -40px 0
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-weibo:hover {
+	background-position: -40px -40px
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-taobao {
+	background-position: -80px 0
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-taobao:hover {
+	background-position: -80px -40px
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-weixin {
+	background-position: -120px 0
+}
+.qui-login-section .qui-login-otherlogin .otherlogin a.otherlogin-weixin:hover {
+	background-position: -120px -40px
+}
+.qui-login-section .section-message-box {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	white-space: nowrap;
+	clear: both;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px
+}
+.qui-login-section .section-message-box .checkerror {
+	display: inline-block;
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	color: #ff654c;
+	background: url('http://static.qyer.com/models/common/component/loginDialog/error.png') no-repeat
+}
+.qui-login-wrap {
+	line-height: 25px;
+	color: #959595
+}
+.qui-login-wrap p {
+	padding-bottom: 10px
+}
+.qui-login-wrap em {
+	font-weight: normal;
+	font-style: normal;
+	color: #636363
+}
+.section-bg:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%
+}
+.qui-popup-appeal-success .qui-popup-box-content {
+	padding: 0 35px
+}
+.qui-popup-appeal-success .qui-appeal-head {
+	padding: 30px 0 15px;
+	font-size: 20px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", \9ED1\4F53, \5b8b\4f53, sans-serif;
+	text-align: center
+}
+.qui-popup-appeal-success .qui-appeal-head i.icon-success {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	background: url('http://static.qyer.com/models/project/user/images/icon_success.png') no-repeat
+}
+.qui-popup-appeal-success .qui-appeal-head span {
+	vertical-align: middle
+}
+.qui-popup-appeal-success .qui-appeal-body {
+	font-size: 14px;
+	line-height: 24px
+}
+.qui-popup-appeal-success .qui-popup-box-bottom {
+	text-align: center;
+	padding: 0;
+	height: 80px
+}
+.qui-popup-appeal-success .qui-popup-box-bottom .qui-popup-okBtn {
+	width: 155px;
+	height: 36px;
+	line-height: 36px
+}
+.reg-form{
+	display: none;
+}
+.verify_box a{
+	position: relative;
+	top: -10px;
+}
+.verify_box img{
+	width: 70px;
+	height: 30px;
+	
+}
+.col-sm-1 {
+		  border: 1px solid #ccc;
+		  color: #333;
+		  -moz-border-radius: 2px;
+		  -webkit-border-radius: 2px;
+		  border-radius: 2px;
+		  padding: 6px 0px;
+		  margin-bottom: 10px;
+		  outline: 0;
+		  box-shadow: 0px 1px 1px 0px #eaeaea inset;
+		  width: 46%;
+		  margin-right: 0px;
+		}
+.col-sm-1:nth-child(event){
+	float: right;
+}
+.tel-de{
+	padding-bottom: 20px;
+}

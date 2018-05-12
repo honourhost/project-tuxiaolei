@@ -1,0 +1,94 @@
+
+.bonus-bgfff{
+	background: #fff;
+}
+.color-f88{
+	color: #f88101;
+}
+.color-8c{
+	color: #8c8c8c;
+}
+.block{
+	display: block;
+	width: 100%;
+}
+.bonus-logo{
+	width: 100%;
+	text-align: center;
+}
+.bonus-logo img{
+	width: 115px;
+	height: 115px;
+	border-radius: 110px;
+	margin-top: 35px;
+}
+.bonus-more{
+	text-align: center;
+	font-size: 17px;
+	margin-top: 15px;
+}
+.bonus-price{
+	text-align: center;
+	font-size: 36px;
+	margin-top: 5px;
+}
+.bonus-number{
+	text-align: center;
+	font-size: 15px;
+	margin-top: 5px;
+}					
+.bonus-line{
+	width: 100%;
+	margin-top: 10px;
+}
+.bonus-line img{
+	width: 100%;
+}
+.bonus-xiaoxi{
+	width: 100%;
+	text-align: right;
+	height: 30px;
+	padding-top: 5px;
+}
+
+.bonus-xiaoxi img{
+	height: 30px;
+}
+.bonus-ft{
+	width: 90%;
+	margin: 0px auto;
+}
+.bonus-num{
+	padding-top: 10px;
+}
+.bonus-shouyi{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.bonus-shouyi img{
+	height: 50px;
+}
+.bonus-shouyi span{
+	font-size: 15px;
+	color: #b6b6b6;
+	margin-top: 10px;
+	height: 20px;
+	overflow: hidden;
+}
+.bonus-shouyi h3{
+	font-size: 28px;
+	color: #ff7800;
+	margin-top: 5px;
+}
+.back-index{
+	width: 100%;
+	background: #05d395;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 20px;
+	margin: 20px 0px 10px 0px;
+}

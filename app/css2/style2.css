@@ -1,0 +1,578 @@
+
+@charset "utf-8";
+
+/* 引入其他模块需要写相对路径，会涉及到 css 编译，务必注意 ！！！ */
+
+@charset "utf-8";
+
+/* base reset */
+body {color:#323232;background:#fff;text-align:left;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0;padding:0;outline:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+audio,canvas,video {display:inline-block;*display:inline;*zoom:1;}
+body,button,input,select,textarea {font:12px/1.5 "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB",\5b8b\4f53,sans-serif;}
+input,button,select,textarea {font-size:100%;color:#636363;outline:none;}
+textarea {resize:none;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+iframe {display:block;}
+abbr,acronym {border:0;font-variant:normal;}
+del {text-decoration:line-through;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:500;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+q:before,q:after {content:"";}
+sub,sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+a {text-decoration:none;color:#0073b6;}
+a:hover {text-decoration:underline;}
+
+/* reset outline */
+a:focus, input:focus {outline:none;}
+input::-moz-focus-inner,button::-moz-focus-inner{outline:none;} /*for mozilla*/
+
+/* reset firefox input width */
+input::-moz-focus-inner,button::-moz-focus-inner {border:0;padding:0;}
+
+/* reset placeholder */
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#959595 !important;}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#959595 !important;} /* Firefox 18- */
+input::-moz-placeholder,textarea::-moz-placeholder{color:#959595 !important;} /* Firefox 19+ */
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#959595 !important;}
+
+/* position */
+.cb {clear:both;}
+.clear {clear:both;height:0;overflow:hidden;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+.fr{float: right;}
+.fl{float: left;}
+
+
+/* font family */
+.fontTahoma {font-family:tahoma,\5b8b\4f53,sans-serif;}
+.fontArial {font-family:helvetica,arial,\5b8b\4f53,sans-serif;}
+.fontSong {font-family:\5b8b\4f53,sans-serif;}
+.fontYaHei {font-family:"Hiragino Sans GB","Microsoft YaHei",\9ED1\4F53,\5b8b\4f53,sans-serif;}
+
+/* color */
+.cBlack {color:#323232;}
+.cGray {color:#636363;}
+.cLightgray {color:#959595;}
+.cWhite {color:#fff;}
+.cRed {color:#790000;}
+.cBlue {color:#0073b6;}
+.cGreen {color:#077345;}
+.cRed_caution {color:#ed1c24;}
+
+/* qyer layout*/
+.qyWrap { width:980px; margin-left:auto; margin-right:auto;}
+.qySide { width:270px;}
+.qyMain { width:680px;}
+
+/* ui_input */
+.ui2_input { height:24px; overflow:hidden; padding:3px 7px; border:1px solid #c0c0c0; font-size:14px; line-height:24px;}
+.ui2_textarea {background-color: #FFFFFF; border: 1px solid #CCCCCC; font-family: Helvetica,Arial,"Hiragino Sans GB",宋体,sans-serif; padding: 2px 5px;}
+.ui2_input:focus, .ui2_textarea:focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui2_focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui2_error { border-color:#cb0900; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+
+.ui3_input { height:32px; line-height:32px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; overflow:hidden; padding:3px 7px; border:1px solid #c0c0c0; font-size:14px; }
+.ui3_input:focus{ border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+.ui3_input_icon_ok,.ui3_input_icon_error,.ui3_input_icon_loading{
+	background-image: url('http://fed.static.qyer.com/core/web/common/images/input_icons.png');
+	background-repeat: no-repeat;
+	background-position: right 3px;
+	padding-right: 28px;
+}
+.ui3_input_icon_ok{background-position: right -143px; }
+.ui3_input_icon_error{
+	background-position: right -218px; 
+	border-color:#bc0003 !important;
+}
+.ui3_input_icon_loading{
+	background-image: url('http://fed.static.qyer.com/core/web/common/images/wait_16_2.gif');
+	background-position: right center;
+}
+.ui3_input_disabled[disabled="disabled"],.ui3_textarea[disabled="disabled"]{
+	border-color: #cecece;
+	background-color: #e7e7e7;
+}
+
+
+.ui3_textarea {background-color: #FFFFFF; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border: 1px solid #CCCCCC; font-family: Helvetica,Arial,"Hiragino Sans GB",宋体,sans-serif; padding: 2px 5px;}
+.ui3_textarea:focus { border-color:#5fa678; box-shadow:0 2px 2px 0 rgba(0,0,0,0.05) inset;}
+
+
+
+/* ui_button */
+.ui_button,
+.ui_buttonA,
+.ui_buttonB,
+.ui_buttonC,
+.ui_button_warning,
+.ui_button_disabled,
+.ui_button_load,
+.ui_button_cancel {
+	display:inline-block;
+	height:28px;
+	padding:0 15px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:14px;
+	line-height:28px;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+.ui_button { background-color:#3f9f5f;}
+.ui_button:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_button:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_buttonA { background-color:#1995dd;}
+.ui_buttonA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_buttonA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_buttonC { background-color:#f26622;}
+.ui_buttonC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_buttonC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_button_warning { background-color:#cb0900;}
+.ui_button_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_button_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+
+.ui_button_cancel { height:26px; line-height:26px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 14px; color:#323232;}
+.ui_button_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_button_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_button_disabled { height:26px; line-height:26px; border:1px solid #d7d7d7; padding:0 14px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_button_disabled:hover { text-decoration:none;}
+
+.ui_button_load { 
+	height:26px; 
+	padding:0 28px; 
+	line-height:26px; 
+	border:1px solid #d7d7d7; 
+	background:#fff url('http://fed.static.qyer.com/core/web/common/images/wait_16.gif') no-repeat center center; 
+	color:#999; 
+	text-indent:-200px; 
+	cursor:default;
+}
+.ui_button_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+input.ui_button_load,
+input.ui_button_cancel,
+input.ui_button_disabled,
+button.ui_button_load,
+button.ui_button_cancel,
+button.ui_button_disabled
+{ height:28px; line-height:normal;}
+
+/* ui_btn_big */
+.ui_btn_big,
+.ui_btn_bigA,
+.ui_btn_bigC,
+.ui_btn_big_warning,
+.ui_btn_big_disabled,
+.ui_btn_big_load,
+.ui_btn_big_cancel {
+	display:inline-block;
+	height:36px;
+	padding:0 25px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:18px;
+	line-height:36px;
+	font-family:"Hiragino Sans GB","Microsoft YaHei",\9ED1\4F53,\5b8b\4f53,sans-serif;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+
+.ui_btn_big { background-color:#3f9f5f;}
+.ui_btn_big:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_btn_big:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_bigA { background-color:#1995dd;}
+.ui_btn_bigA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_btn_bigA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_bigC { background-color:#f26622;}
+.ui_btn_bigC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_btn_bigC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_big_warning  { background-color:#cb0900;}
+.ui_btn_big_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_btn_big_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+
+.ui_btn_big_cancel { height:34px; line-height:34px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 24px; color:#323232;}
+.ui_btn_big_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_btn_big_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_big_disabled { height:34px; line-height:34px; border:1px solid #d7d7d7; padding:0 24px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_btn_big_disabled:hover { text-decoration:none;}
+
+.ui_btn_big_load { height:34px; padding:0 42px; line-height:34px; border:1px solid #ccc; background:#fff url('http://fed.static.qyer.com/core/web/common/images/wait_16.gif') no-repeat center center; color:#999; text-indent:-200px; cursor:default;}
+.ui_btn_big_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+input.ui_btn_big_load,
+input.ui_btn_big_cancel,
+input.ui_btn_big_disabled,
+button.ui_btn_big_load,
+button.ui_btn_big_cancel,
+button.ui_btn_big_disabled 
+{ height:36px; line-height:normal;}
+
+/* ui_btn_small */
+.ui_btn_small,
+.ui_btn_smallA,
+.ui_btn_smallB,
+.ui_btn_smallC,
+.ui_btn_small_warning,
+.ui_btn_small_disabled,
+.ui_btn_small_load,
+.ui_btn_small_cancel {
+	display:inline-block;
+	height:24px;
+	padding:0 13px;
+	border:none;
+	border-radius:3px;
+	overflow:visible;
+	font-size:12px;
+	line-height:24px;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+.ui_btn_small { background-color:#3f9f5f;}
+.ui_btn_small:hover { background-color:#5cad77; color:#fff; text-decoration:none;}
+.ui_btn_small:active { background-color:#3f9f5f; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_smallA { background-color:#1995dd;}
+.ui_btn_smallA:hover { background-color:#3ba5e2; color:#fff; text-decoration:none;}
+.ui_btn_smallA:active { background-color:#1995dd; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_smallC { background-color:#f26622;}
+.ui_btn_smallC:hover { background-color:#f5802d; color:#fff; text-decoration:none;}
+.ui_btn_smallC:active { background-color:#f26622; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_warning { background-color:#cb0900;}
+.ui_btn_small_warning:hover { background-color:#e50e04; color:#fff; text-decoration:none;}
+.ui_btn_small_warning:active { background-color:#b90800; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_cancel { height:22px; line-height:22px; background-color:#f5f5f5; border:1px solid #c0c0c0; padding:0 12px; color:#323232;}
+.ui_btn_small_cancel:hover { background-color:#ffffff; border-color:#959595; text-decoration:none; color:#323232;}
+.ui_btn_small_cancel:active { background-color:#f5f5f5; border-color:#959595; box-shadow:inset 0 2px 3px rgba(0,0,0,0.2);}
+
+.ui_btn_small_disabled { height:22px; line-height:22px; border:1px solid #d7d7d7; padding:0 12px;  background-color:#eaeaea; text-decoration:none; cursor:default; color:#c0c0c0;}
+.ui_btn_small_disabled:hover { text-decoration:none;}
+
+.ui_btn_small_load { height:22px; padding:0 24px; line-height:22px; border:1px solid #d7d7d7; background:#fff url('http://fed.static.qyer.com/core/web/common/images/wait_16.gif') no-repeat center center; color:#999; text-indent:-200px; cursor:default;}
+.ui_btn_small_load:hover { text-decoration:none; color:#999; cursor:default;}
+
+
+
+
+input.ui_btn_small_load,
+input.ui_btn_small_cancel,
+input.ui_btn_small_disabled,
+button.ui_btn_small_load,
+button.ui_btn_small_cancel,
+button.ui_btn_small_disabled
+{ height:24px; line-height:normal;}
+
+
+
+.borderbox{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+
+
+
+
+html,body {
+	height:100%;
+}
+.qyer_header_fixed {
+	position:fixed;
+	width:100%;
+	z-index:999;
+}
+#fullpage {
+	margin:0 auto;
+	height:100%;
+}
+.pages {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+.pages-inner {
+	max-width:980px;
+	min-width:980px;
+	margin:0 auto;
+	position:relative;
+	height:100%;
+}
+.pages1 {
+	background-image:url(../img2/page-1-bg.jpg);
+}
+.pages2 {
+	background-image:url(../img2/page-2-bg.jpg);
+}
+.pages3 {
+	background-image:url(../img2/page-3-bg.jpg);
+}
+.pages4 {
+	background-image:url(../img2/page-4-bg.jpg);
+}
+.pages5 {
+	background-image:url(../img2/page-5-bg.jpg);
+}
+.pages1 .view-img {
+	display:block;
+	position:absolute;
+	top:15%;
+	left::0;
+}
+.pages1 .view-text {
+	position:absolute;
+	right:0;
+	top:15%;
+}
+.btn-wrap {
+	position:absolute;
+	top:46%;
+	right:60px;
+	width:360px;
+}
+.btn-wrap .btn-1 {
+	display:block;
+	width:178px;
+	height:60px;
+	background:url(../img2/page-1-btn-1.png) no-repeat;
+}
+.btn-wrap .btn-1:hover {
+	background-position:0 -60px;
+}
+.btn-wrap .btn-2 {
+	margin-top:20px;
+	display:block;
+	width:178px;
+	height:60px;
+	background:url(../img2/page-1-btn-2.png) no-repeat;
+}
+.btn-wrap .btn-2:hover {
+	background-position:0 -60px;
+}
+.btn-wrap .btn-3 {
+	margin-top:20px;
+	display:block;
+	width:178px;
+	height:60px;
+	position:relative;
+	background:url(../img2/page-1-btn-3.png) no-repeat;
+}
+.btn-wrap .btn-3:hover {
+	background-position:0 -60px;
+}
+.btn-wrap .btn-3-inner {
+	display:none;
+	position:absolute;
+	width:164px;
+	height:102px;
+	top:60px;
+	left:7px;
+	padding-top:5px;
+}
+.btn-wrap .btn-3:hover .btn-3-inner {
+	display:block;
+}
+.btn-wrap .btn-4,.btn-wrap .btn-5 {
+	text-align:center;
+	display:block;
+	width:164px;
+	height:50px;
+	line-height:50px;
+	filter:alpha(opacity=20);
+	background-color:rgba(255,255,255,0.2);
+}
+.btn-wrap .btn-4:hover,.btn-wrap .btn-5:hover {
+	filter:alpha(opacity=100);
+	background-color:rgba(69,216,161,1);
+}
+
+.btn-wrap .btn-5 .btn-img {
+	background-position:0 -69px;
+}
+.btn-wrap .btn-5 {
+	margin-top:2px;
+}
+.btn-wrap .img-sao {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.pages2 .view-text {
+	position:absolute;
+	left:50%;
+	top:7.8%;
+	margin-left:-389px;
+}
+.pages2 .view-img {
+	position:absolute;
+	left:50%;
+	top:27%;
+	margin-left:-384px;
+}
+.pages3 .text-wrap {
+	position:absolute;
+	top:26%;
+	left:0;
+}
+.pages3 .view-text {
+	display:block;
+	margin:0 auto;
+}
+.pages3 .view-ico {
+	display:block;
+	margin:60px auto 0 auto;
+}
+.pages3 .view-img {
+	position:absolute;
+	top:7.5%;
+	right:0;
+}
+.pages4 .view-img {
+	position:absolute;
+	top:16.7%;
+	left:0;
+}
+.pages4 .text-wrap {
+	position:absolute;
+	top:25%;
+	right:0;
+}
+.pages4 .view-text {
+	display:block;
+	margin:0 auto;
+}
+.pages4 .view-ico {
+	display:block;
+	margin:60px auto 0 auto;
+}
+.pages5 .view-text {
+	position:absolute;
+	top:24.5%;
+	left:50%;
+	margin-left:-349px;
+}
+.pages5 .btn-wrap {
+	top:42%;
+	left:50%;
+	margin-left:-180px;
+}
+#menu {
+	position:fixed;
+	top:41.5%;
+	right:48px;
+	z-index:1000;
+	margin-top:-40px;
+	text-align:center;
+}
+#menu .menu-cell {
+	display:block;
+	width:16px;
+	height:16px;
+	margin-top:40px;
+	cursor:pointer;
+	text-align:center;
+}
+#menu .menu-cell a {
+	display:inline-block;
+	width:8px;
+	height:8px;
+	background:#ffffff;
+	border-radius:50%;
+	vertical-align:middle;
+	-webkit-box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+	box-shadow:0px 0px 0px rgba(0,0,0,0.2);
+}
+#menu .menu-cell a:hover {
+	width:16px;
+	height:16px;
+}
+#menu .menu-cell.active a {
+	width:16px;
+	height:16px;
+}
+.footer-fixed{
+	width: 100%;
+	height: 71px;
+	background: #000000;
+	opacity: 0.9;
+	position: fixed;
+	z-index: 100000000;
+	left: 0;
+	bottom: 0;
+	line-height: 78px;
+	display: none;
+}
+.footer-fixed-main{
+	width: 1000px;
+	margin: 0px auto;
+}
+.footer-fixed-btn{
+	display: inline-block;
+	font-size: 15px;
+	font-family: "microsoft yahei";
+	color: #fff;
+}
+.footer-fixed-btn a{
+	cursor: pointer;
+}
+.footer-fixed-main .lf{
+	float: left;
+	height: 71px;
+}
+.footer-fixed-login{
+	margin-left: 50px;
+	color: #d7d7d7;
+	margin-right: 10px;
+	text-decoration:underline;
+}
+.footer-fixed-login:hover{
+	color: #fff;
+}
+.footer-fixed-register{
+	margin-left: 10px;
+	background: #007345;
+	padding: 5px 15px;
+	border-radius: 2px;
+	color: #fff;
+	opacity: 1;
+}
+.footer-fixed-register:hover{
+	background: #06C1AE;
+	text-decoration: none;
+}
+.footer-fixed-close{
+	float: right;
+	background: url(../img2/qyer_layer_close.png);
+	width: 30px;
+	height: 30px;
+	background-position:-62px 0px;
+	position: relative;
+	top: 20px;
+	right: -50px;
+}
+.footer-fixed-close:hover{
+	background-position:0px 0px;
+}

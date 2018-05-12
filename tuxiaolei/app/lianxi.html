@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" style="background: #003f93">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>兔小蕾测评</title>
+    <meta content="telephone=no" name="format-detection" />
+    <link href="https://www.dayutang.cn/commonPage/card/css/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//static.dayutang.cn/js/jquery-1.12.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!--<img src="img/highlingths.jpeg" style="width: 100%;" alt="">-->
+        <img src="" style="width: 100%;" alt="">
+    </div>
+</body>
+<script type="text/javascript" src="//static.dayutang.cn/js/weui.js"></script>
+<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="//static.dayutang.cn/js/jqmd5.js"></script>
+<script type="text/javascript" src="//static.dayutang.cn/js/sha1.js"></script>
+<script type="text/javascript" src="//static.dayutang.cn/js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../../common/js/ui.js"></script>
+<script type="text/javascript" src="../../common/js/main.js"></script>
+<script type="text/javascript" src="../../common/js/tools.js"></script>
+<script>
+    var wxTitle,wxDesc,wxPic,wxUserid
+    $(function() {
+        //模块名 方法名 参数
+        var params = {
+            userId: userID,
+            fromUserId: getQuery("fromUserId").length > 0 ? getQuery("fromUserId") : "",
+            invitationActivityId: getQuery("invitationActivityId")
+        };
+        request("InvitationActivity", "shareInvitationActivity", params, function(data) {
+            $('.wrap img').attr('src',data.invitationDetail.displayInvitationFilePath)
+            $('html').css({
+                background: data.invitationDetail.backGroundColor
+            })
+            console.log(data)
+            wxTitle = data.invitationDetail.invitationTheme;
+            wxDesc = data.invitationDetail.recommend;
+            wxPic = data.invitationDetail.wxAccountIcon;
+            wxUserid = data.invitationDetail.invitationActivityId;
+            //addLockFans_new("yaoqingka");
+            console.log(1)
+            onWXReady()
+        })
+    })
+
+    function onWXReady(){
+        wxShowShare()
+    }
+
+    //分享朋友圈
+    function wxShowShare(){
+        var linkURL = "https://www.dayutang.cn/commonPage/card/index.html?invitationActivityId="+ wxUserid +"&fromUserId=" + userID;
+        // var stitle = "新东方开学摇大奖，100%中奖";
+        // var sdes = "护肤套装、手环、书架、各种明星课程送送送";
+        // var sharePic = "https://www.dayutang.cn/activity/teacherActivity/img/fenxiang2.png";
+
+        var stitle = wxTitle;
+        var sdes = wxDesc;
+        var sharePic = wxPic;
+        console.log(stitle)
+        console.log(sdes)
+        console.log(sharePic)
+        weiXinTools.showFavoriteMenu();
+        weiXinTools.showTimeLineMenu(stitle,linkURL,sharePic,function () {
+            tjTools.trackEvent("俞敏洪老师豪送开学大礼", "俞敏洪老师豪送开学大礼-分享朋友圈", 0,0);
+        });
+        weiXinTools.showAppMessageMenu(stitle,sdes,linkURL,sharePic,function () {
+            tjTools.trackEvent("俞敏洪老师豪送开学大礼", "俞敏洪老师豪送开学大礼-发送给朋友", 0,0);
+        });
+    }
+</script>
+
+</html>
