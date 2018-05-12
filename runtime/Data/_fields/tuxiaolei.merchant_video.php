@@ -1,1 +1,0 @@
-<?php	return array ( 0 => 'id', 1 => 'mer_id', 2 => 'video_name', 3 => 'video_url', 4 => 'create_time', 5 => 'sort', 6 => 'status', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(13)', 'mer_id' => 'int(13)', 'video_name' => 'varchar(255)', 'video_url' => 'varchar(255)', 'create_time' => 'int(13)', 'sort' => 'int(13)', 'status' => 'int(1)', ), );?>

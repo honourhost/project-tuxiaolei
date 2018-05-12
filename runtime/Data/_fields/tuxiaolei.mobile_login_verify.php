@@ -1,1 +1,0 @@
-<?php	return array ( 0 => 'id', 1 => 'mobile', 2 => 'verify_code', 3 => 'status', 4 => 'create_time', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(13)', 'mobile' => 'varchar(15)', 'verify_code' => 'varchar(6)', 'status' => 'tinyint(1)', 'create_time' => 'int(13)', ), );?>
