@@ -1,0 +1,15 @@
+
+
+允许上传的视频大小
+
+
+
+PHP.INI 配置（查找php程序目录：  ps -ef |  grep  /php  ）
+upload_max_filesize = 102400M
+post_max_size = 102400M
+
+
+修改nginx的站点配置（查找nginx程序位置 ：  ps -ef |  grep  /nginx  ）
+server {
+    client_max_body_size 102400m;
+}

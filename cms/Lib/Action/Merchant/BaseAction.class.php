@@ -124,6 +124,23 @@ class BaseAction extends Action
             $value["style_class"] = $tmp_class;
         }
 
+        // 加入多媒体管理菜单
+        $merchant_menu['37'] =array (
+            'id' => '37',
+            'fid' => '0',
+            'name' => '多媒体',
+            'module' => 'Article',
+            'action' => 'index',
+            'select_module' => 'Media',
+            'select_action' => 'index,one,multi',
+            'icon' => 'fa-file-excel-o',
+            'sort' => '0',
+            'show' => '1',
+            'status' => '1',
+            'url' => '/merchant.php?g=Merchant&c=Media&a=index',
+            'style_class' => '',
+        );
+
         $this->assign("merchant_menu", $merchant_menu);
         $this->token = $this->merchant_session["mer_id"];
         $this->static_path = "./tpl/Merchant/static/";

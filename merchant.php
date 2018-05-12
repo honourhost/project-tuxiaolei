@@ -1,6 +1,8 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 
+set_time_limit(0);
+
 if(get_magic_quotes_gpc()){
 	function stripslashes_deep($value){
 		$value = is_array($value) ? array_map('stripslashes_deep',$value) : stripslashes($value);

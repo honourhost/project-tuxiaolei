@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>xnd_o2ocms</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>4873501938936083583</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeACllwaWdjbXNfaWTSHh8t
+			Ll8QD05TTXV0YWJsZVN0cmluZ6MtLyNYTlNTdHJpbmfSHh8xMl5O
+			U011dGFibGVBcnJheaMxMyNXTlNBcnJhedIeHyI1oiIjXxAPTlNL
+			ZXllZEFyY2hpdmVy0Tg5VGRhdGGAAQAIABEAGgAjAC0AMgA3AEUA
+			SwBSAFoAZQBsAHAAcgB0AHYAegB8AH4AgACCAIcAjACRALoAwQDC
+			AMMAxQDKANUA3gD0APgBBQEOARMBFQEXARkBHgEoASoBNAE5AUsB
+			TwFYAV0BbAFwAXgBfQGAAZIBlQGaAAAAAAAAAgEAAAAAAAAAOgAA
+			AAAAAAAAAAAAAAAAAZw=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1018.5, 670}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+
+INSERT INTO `pigcms_merchant_menu` (`fid`, `name`, `module`, `action`, `select_module`, `select_action`, `icon`, `sort`, `show`, `status`)
+VALUES
+	( 37, '音频视频', 'Weixin', 'images', 'Weixin', 'images,ONE,multi', '', 0, 0, 0);
+
+
+
+
+CREATE TABLE `pigcms_source_material` (
+  `pigcms_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `it_ids` VARCHAR(500) NOT NULL COMMENT '图文表id集合',
+  `mer_id` INT(10) UNSIGNED NOT NULL,
+  `dateline` INT(10) UNSIGNED NOT NULL,
+  `type` TINYINT(1) UNSIGNED NOT NULL COMMENT '图文类型（0：单图文，1：多图文）',
+  PRIMARY KEY (`pigcms_id`),
+  KEY `mer_id` (`mer_id`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;</string>
+			<key>table</key>
+			<string>pigcms_source_material</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>312.5</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>INSERT INTO `pigcms_merchant_menu` (`fid`, `name`, `module`, `action`, `select_module`, `select_action`, `icon`, `sort`, `show`, `status`)
+VALUES
+	( 37, '音频视频', 'Weixin', 'images', 'Weixin', 'images,ONE,multi', '', 0, 0, 0)</string>
+		<string>SELECT  * FROM  school_middle_school  WHERE   `name`  LIKE  '%?%'</string>
+		<string>UPDATE `school_middle_school` SET `name` = REPLACE(NAME, '?', '' )      WHERE   `name`  LIKE  '%?%'</string>
+		<string>SELECT  *  FROM  school_middle_school   WHERE   id  =  168</string>
+		<string>UPDATE `school_middle_school` SET `name` = REPLACE(NAME, '?', '' )   WHERE   id  =  168</string>
+		<string>SELECT  *  FROM  school_middle_school   WHERE    id  &gt; 13241</string>
+		<string>UPDATE school_middle_school   SET       kind  =3   WHERE    id  &gt; 13241</string>
+		<string>UPDATE   `school_middle_school`  SET   short_name   =    '北师大附中,师大附中' WHERE   `short_name`   LIKE   '%北师大附中%'</string>
+		<string>UPDATE   `school_middle_school`  SET   short_name   =    '北师大附中' WHERE   `name`   LIKE   '%北京师范%'</string>
+		<string>SELECT  *  FROM   `school_middle_school`   WHERE      `name`   LIKE   '%北京师范%'</string>
+		<string>SELECT  *  FROM   `school_middle_school`   WHERE      `name `   LIKE   '%北京师范%'</string>
+		<string>SELECT   		`name`  ,  `grade `  FROM   `school_function`</string>
+		<string>UPDATE      `school_major`      SET   cname   =   ename</string>
+		<string>SELECT   sid  ,  cname ,  next_major   AS   tmp  ,    CONCAT(   ' ,' ,   (   SELECT   `ename`  FROM   `school_major_scheme`    WHERE   id   IN   (  112092,112093,112094,112095,112096  )   )     )    AS   NEXT    FROM  school_major_scheme     WHERE  sid  = 375</string>
+		<string>SELECT   `ename`  FROM   `school_major_scheme`    WHERE   id  IN   (  112092,112093,112094,112095,112096  )</string>
+		<string>SELECT  *  FROM   `school_major_scheme`  WHERE   sid  =  375</string>
+		<string>INSERT INTO `school_scheme` ( `function_name`, `degree_type`, `sid`, `tution_pre`, `tuition`, `tution_per`, `life_pre`, `life`, `life_per`, `const_desc`, `desc_cn`, `desc_en`, `ielts_require`, `toefl_require`, `alevel_score_require`, `gpa_score_require`, `ib_score_require`, `ib_score_require_desc`) VALUES ( 1, 1, 768, , , , , , ,' ',' ', '', '{"total":"","ilisten":"","say":"","read":"","write":""}',' {"total":"","tlisten":"","say":"","read":","write":"}', ' ',' ' , ' ', ' ')</string>
+		<string>INSERT INTO `school_scheme` ( `function_name`, `degree_type`, `sid`, `tution_pre`, `tuition`, `tution_per`, `life_pre`, `life`, `life_per`, `const_desc`, `desc_cn`, `desc_en`, `ielts_require`, `toefl_require`, `alevel_score_require`, `gpa_score_require`, `ib_score_require`, `ib_score_require_desc`) VALUES ( 1, 1, 768, , , , , , ,' ',' ', '', '{"total":"","ilisten":"","say":"","read":"","write":""}',' {"total":"","tlisten":"","say":"","read":"","write":""}', '',' ' , '', '')</string>
+		<string>/* 19:22:23 hooli-study-test hooli_study */ UPDATE `school_scheme` SET `gpa_score_require` = '[{\"section\":\"高三\",\"score\":\"85\"}]' WHERE `id` = '322'</string>
+		<string>UPDATE `school_scheme` SET `gpa_score_require` = '[{\"section\":\"大一\",\"score\":\"75\"}]' WHERE `id` = '345'</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
