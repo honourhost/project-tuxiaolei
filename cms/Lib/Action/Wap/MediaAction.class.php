@@ -88,10 +88,11 @@ class MediaAction extends Action
     }
 
 
-    public function index2()
+    public function index1()
+
     {
         $cat_url = strval($_GET["cat_id"]);
-        if (empty($cat_url)) {
+        if (empty($cat_url) || !$cat_url) {
             $cat_url = "all";
         }
         if ($_GET["platform"] == "app") {

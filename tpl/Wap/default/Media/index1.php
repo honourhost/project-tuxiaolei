@@ -106,7 +106,7 @@
                             <h2>{pigcms{$onepage.title}</h2>
                             <div class="date">
                                 <label class="time"><?php echo date("y-m-d H:i:s", $onepage["dateline"]); ?></label>
-                                <label class="view"><?php echo $onepage['count'] * 21; ?></label>
+                                <label class="view"><?php echo $onepage['count'] * 11; ?></label>
                             </div>
                         </div>
                     </a>

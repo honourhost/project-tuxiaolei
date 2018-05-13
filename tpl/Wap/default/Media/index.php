@@ -83,13 +83,13 @@
     <ul class="evaluation">
 
 
-        <volist name="lists" id="item">
+        <volist name="content" id="item">
             <li>
-                <a href="{pigcms{:U('Toutiao/index',array('cat_id'=>$item['cat_url']))}">
+                <a href="{pigcms{:U('Article/index',array('imid'=>$item['pigcms_id']))}">
                     <div class="eva-pic">
-                        <img src="{pigcms{$item.cover_pic}"/>
+                        <img src="{pigcms{$item.cover_pic}" style="height: 276px;"/>
                         <label>{pigcms{$item.count *11}
-                            <small>看了</small>
+                            <small></small>
                         </label>
                     </div>
                     <div class="eva-text">
