@@ -11,6 +11,7 @@ class MediaAction extends BaseAction
 
         foreach ($list as &$l) {
             $l['dateline'] = date('Y-m-d H:i:s', $l['dateline']);
+            $l['title']  =$l['title'] . '<span style="color: #c0c1c2">['. ($l['type'] ?  '音频':'视频') .']</span>'  ;
         }
         $this->assign('list', $list);
         $this->assign('page', $p->show());
@@ -44,7 +45,7 @@ class MediaAction extends BaseAction
             $pigcms_id = isset($_POST['pigcms_id']) ? intval($_POST['pigcms_id']) : 0;
             //$thisid = isset($_POST['thisid']) ? intval($_POST['thisid']) : 0;
             $data['content'] = isset($_POST['content']) ? fulltext_filter($_POST['content']) : '';
-            $data['title'] = isset($_POST['title']) ? htmlspecialchars_decode($_POST['title']) : '';
+            $data['title'] = isset($_POST['title']) ? trim($_POST['title']) : '';
             $data['author'] = isset($_POST['author']) ? htmlspecialchars($_POST['author']) : '';
             $data['url'] = isset($_POST['url']) ? ($_POST['url']) : '';
             $data['url_title'] = isset($_POST['url_title']) ? htmlspecialchars($_POST['url_title']) : '';
@@ -77,19 +78,19 @@ class MediaAction extends BaseAction
             $data['mer_id'] = $this->merchant_session['mer_id'];
             $data['dateline'] = time();
             if ($pigcms_id) {
-                D('Source_media')->where(array('pigcms_id' => $pigcms_id))->data($data)->save($data);
+                D('SourceMedia')->where(array('pigcms_id' => $pigcms_id))->data($data)->save();
                 $this->success('编辑成功！');
             } else {
-                D('Source_media')->data($data)->add();
+                D('SourceMedia')->data($data)->add();
                 $this->success('新增成功！');
 
             }
 
         } else {
             $pigcms_id = isset($_GET['pigcms_id']) ? intval($_GET['pigcms_id']) : 0;
-            $data = D('Source_media')->where(array('pigcms_id' => $pigcms_id, 'mer_id' => $this->merchant_session['mer_id']))->find();
+            $data = D('SourceMedia')->where(array('pigcms_id' => $pigcms_id, 'mer_id' => $this->merchant_session['mer_id']))->find();
             //查询分类
-            $categories = M("Source_media_category")->select();
+            $categories = D("SourceMediaCategory")->select();
             $this->assign("categories", $categories);
             $this->assign('pigcms_id', $pigcms_id);
             $this->assign('data', $data);

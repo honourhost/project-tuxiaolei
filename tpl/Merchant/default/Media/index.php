@@ -7,7 +7,7 @@
 				<i class="ace-icon fa fa-file-excel-o"></i>
 				<a href="{pigcms{:U('Media/index')}">多媒体管理</a>
 			</li>
-			<li>素材列表</li>
+			<li>文件列表</li>
 		</ul>
 	</div>
 	<!-- 内容头部 -->
@@ -34,16 +34,16 @@
 										<tr class="<if condition="$i%2 eq 0">odd<else/>even</if>">
 											<td>
 
-											<p style="color:blue;cursor:pointer;" href="{pigcms{$config['site_url']}/wap.php?c=Media&a=index&imid={pigcms{$row['pigcms_id']}"  class="see_article_qrcode">{pigcms{$vo.title}</p>
+											<p>{pigcms{$vo.title}</p>
 
 											</td>
 											<td>{pigcms{$vo.dateline}</td>
 											<td class="button-column" nowrap="nowrap">
-												<if condition="empty($vo['type'])">
+
 												<a title="修改" class="green" style="padding-right:8px;" href="{pigcms{:U('Media/one',array('pigcms_id'=>$vo['pigcms_id']))}">
 													<i class="ace-icon fa fa-pencil bigger-130"></i>
 												</a>
-												</if>
+
 												<a title="删除" class="red" style="padding-right:8px;" href="{pigcms{:U('Media/del_image',array('pigcms_id'=>$vo['pigcms_id']))}">
 													<i class="ace-icon fa fa-trash-o bigger-130"></i>
 												</a>

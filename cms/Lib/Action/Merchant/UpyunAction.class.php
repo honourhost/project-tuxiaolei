@@ -803,7 +803,7 @@ class UpyunAction extends BaseAction
             }
         } elseif ($this->upload_type == 'local') {
             $return = $this->localUpload();
-            file_put_contents("adam22222222.txt", json_encode($return), FILE_APPEND);
+            //file_put_contents("adam22222222.txt", json_encode($return), FILE_APPEND);
             if ($return['error']) {
                 $this->alert($return['msg']);
             } else {

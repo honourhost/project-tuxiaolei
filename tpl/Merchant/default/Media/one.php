@@ -26,8 +26,9 @@
                                 <div class="form-group">
                                     <label class="col-sm-1"><label for="contact_name"><span class="required"
                                                                                             style="color:red;">*</span>标题</label></label>
-                                    <input type="hidden" value="{pigcms{$pigcms_id}" name="pigcms_id"/>
-                                    <input type="hidden" value="{pigcms{$data['pigcms_id']}" name="thisid"/>
+                                    <input type="hidden" value="{pigcms{$data['pigcms_id']}" name="pigcms_id"/>
+                                    <!--<input type="hidden" value="{pigcms{$data['thisid']}" name="thisid"/>-->
+                                    <input type="hidden" value="{pigcms{$data['type']}" name="type"/>
                                     <input type="text" class="col-sm-3" id="title" name="title"
                                            value="{pigcms{$data['title']}"/>
                                 </div>
@@ -36,6 +37,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-1">视频</label>
                                     <a href="javascript:void(0)" class="btn btn-sm btn-success" id="J_selectVideo">从我的电脑上传视频</a>
+                                    &nbsp;&nbsp;&nbsp;支持的格式：mp4
                                 </div>
 
                                 <div class="form-group">

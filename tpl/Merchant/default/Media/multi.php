@@ -1,593 +1,351 @@
 <include file="Public:header"/>
 <div class="main-content">
-	<!-- 内容头部 -->
-	<div class="breadcrumbs" id="breadcrumbs">
-		<ul class="breadcrumb">
-			<li>
-				<i class="ace-icon fa fa-file-excel-o"></i> 
-				<a href="{pigcms{:U('Article/index')}">素材管理</a>
-			</li>
-			<li>创建多图文</li>
-		</ul>
-	</div>
-	<!-- 内容头部 -->
-	<div class="page-content">
-		<div class="page-content-area">
-			<style>
-				.ace-file-input a {display:none;}
-			</style>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="tab-content">
-						<div class="grid-view">
-							<form enctype="multipart/form-data" class="form-horizontal" method="post">
-								<table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
-									<tbody>
-									
-										<tr>
-											<th valign="top"><label for="keyword">图文消息</label></th>
-											<td>
-												<a href="###" onclick="addImgMessage()" class="a_choose">添加图文消息</a>&nbsp;&nbsp;<a href="###" onclick="clearMessage()" class="a_clear">清空重选</a>
-												<div class="chatPanel" style="width:280px;" id="singlenews">
-													<div un="item_1741035" class="chatItem you"> 
-														<a target="ddd" href="javascript:void(0);">
-														<div class="media mediaFullText" id="titledom">
-															<div class="mediaPanel">
-																<div class="mediaHead"><span class="title" id="zbt">图文消息标题</span><span class="time"><?php echo date('Y-m-d',time());?></span>
-																	<div class="clr"></div>
-																</div>
-																<div class="mediaImg"><img id="suicaipic1" src="/tpl/Static/default/images/oid.jpg"></div>
-																<div class="mediaContent mediaContentP">
-																	<p id="zinfo">消息简介</p>
-																</div>
-																<div class="mediaFooter">
-																	<span class="mesgIcon right"></span><span style="line-height:50px;" class="left">查看全文</span>
-																	<div class="clr"></div>
-																</div>
-															</div>
-														</div>
-														</a>
-													</div>
-												</div>  
-												<div style="clear:both"></div>
-												<input type="hidden" class="px" id="imgids" value="" name="imgids" style="width:300px" >  <br>
-												<div class="media_preview_area" id="multinews" style="display:none">
-													<div class="appmsg multi editing">
-														<div id="js_appmsg_preview" class="appmsg_content">
-															<div id="appmsgItem1" data-fileid="" data-id="1" class="js_appmsg_item ">
-																<div class="appmsg_info">
-																	<em class="appmsg_date"></em>
-																</div>
-																<div class="cover_appmsg_item" id="multione"></div>
-															</div>
-														</div>
-													</div>
-												</div>		  
-											</td>
-											<td>&nbsp;</td>
-										</tr>
-										<tr>
-											<th></th>
-											<td><button type="submit" class="btn btn-info">保存</button>　<a href="javascript:history.go(-1);" class="btnGray vm">取消</a></td>
-										</tr>
-									</tbody>
-								</table>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- 内容头部 -->
+    <div class="breadcrumbs" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-file-excel-o"></i>
+                <a href="{pigcms{:U('Media/index')}">多媒体管理</a>
+            </li>
+            <li>上传音频</li>
+        </ul>
+    </div>
+    <!-- 内容头部 -->
+    <div class="page-content">
+        <div class="page-content-area">
+            <style>
+                .ace-file-input a {
+                    display: none;
+                }
+            </style>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="tab-content">
+                        <div class="grid-view">
+                            <form enctype="multipart/form-data" class="form-horizontal" method="post">
+                                <div class="form-group">
+                                    <label class="col-sm-1"><label for="contact_name">
+                                            <span class="required"  style="color:red;">*</span>标题</label></label>
+                                    <input type="hidden" value="{pigcms{$data['pigcms_id']}" name="pigcms_id"/>
+                                    <input type="hidden" value="{pigcms{$data['type']}" name="type"/>
+                                   <!-- <input type="hidden" value="{pigcms{$data['pigcms_id']}" name="thisid"/>-->
+                                    <input type="text" class="col-sm-3" id="title" name="title"
+                                           value="{pigcms{$data['title']}"/>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-1">音频</label>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-success" id="J_selectVideo">从我的电脑上传音频</a>
+                                    &nbsp;&nbsp;&nbsp;支持的格式：mp3
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-1">音频试听</label>
+                                    <input type="hidden" name="video_url" id="video_url"
+                                           value="{pigcms{$data['video_url']}"/>
+                                    <div id="upload_video_box">
+                                        <ul id="upload_video_ul">
+                                            <if condition="$data['video_url']">
+                                                <li class="upload_pic_li">
+
+                                                    <audio controls>
+                                                        <source src="{pigcms{$data['video_url']}" type="audio/mp3">
+                                                        您的浏览器不支持Video标签。
+                                                    </audio>
+
+                                                    <br/>
+                                                    <a href="#"
+                                                       onclick="deleteImage('{pigcms{$data['video_url']}',this);return false;">[
+                                                        删除 ]</a>
+                                                </li>
+                                            </if>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--<div class="form-group">
+                                    <label class="col-sm-1"><label for="sort">腾讯视频vid</label></label>
+                                    <input class="col-sm-3" name="video_url" id="video_url" type="text"
+                                           value="{pigcms{$data['video_url']}"/>请填写腾讯视频的vid</br></br>　
+                                    腾讯视频vid示例：<img width="50%" height="100%"
+                                                   src="http://www.xiaonongding.com/upload/merchant/no/tenvideo.jpg">
+                                </div>-->
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-1"><label for="contact_name">作者</label></label>
+                                    <input type="text" class="col-sm-3" name="author" value="{pigcms{$data['author']}"/>
+                                </div>
+                                <if condition="$categories">
+                                    <div class="form-group">
+                                        <label class="col-sm-1"><label for="text_cat">分类</label></label>
+                                        <select name="cat_id">
+                                            <volist name="categories" id="cat">
+                                                <if condition="$cat['id'] eq $data['cat_id']">
+                                                    <option value="{pigcms{$cat.id}" selected>{pigcms{$cat.name}
+                                                    </option>
+                                                    <else/>
+                                                    <option value="{pigcms{$cat.id}">{pigcms{$cat.name}</option>
+                                                </if>
+                                            </volist>
+                                        </select>
+                                    </div>
+                                </if>
+
+                                <div class="form-group">
+                                    <label class="col-sm-1">封面图</label>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-success"
+                                       id="J_selectImage">上传图片</a>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-1">封面图预览</label>
+                                    <input type="hidden" name="cover_pic" id="cover_pic"
+                                           value="{pigcms{$data['cover_pic']}"/>
+                                    <div id="upload_pic_box">
+                                        <ul id="upload_pic_ul">
+                                            <if condition="$data['cover_pic']">
+                                                <li class="upload_pic_li">
+                                                    <img src="{pigcms{$data['cover_pic']}"/><br/>
+                                                    <a href="#"
+                                                       onclick="deleteImage('{pigcms{$data['cover_pic']}',this);return false;">[
+                                                        删除 ]</a>
+                                                </li>
+                                            </if>
+                                        </ul>
+                                        <if condition="$data['cover_pic']">
+                                            <label>
+                                                <input name="is_show" value="1" type="checkbox" class="ace"
+                                                <if condition="$data['is_show']">checked</if>
+                                                >
+                                                <span class="lbl" style="z-index: 1">封面图片显示在正文中</span>
+                                            </label>
+                                        </if>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-1"><label for="info">摘要</label></label>
+                                    <textarea class="col-sm-3" id="digest" name="digest" style="height:125px">{pigcms{$data['digest']}</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-1"><label for="sort"><span class="required" style="color:red;">*</span>内容</label></label>
+                                    <textarea class="col-sm-3" id="content" name="content"
+                                              style="width: 680px; height: 400px; display: none;">{pigcms{$data['content']}</textarea>
+                                </div>
+
+                                <!--<div class="form-group">
+                                    <label class="col-sm-1"><label for="sort">外链</label></label>
+                                    <input class="col-sm-3" name="url" id="url" type="text" value="{pigcms{$data['url']}"/>　
+                                    <a href="#modal-table" class="btn btn-sm btn-success" onclick="addLink('url',0)" data-toggle="modal">从功能库选择</a>
+                                </div>-->
+
+
+                                <!--<div class="form-group">
+                                    <label class="col-sm-1"><label for="sort">所属类别</label></label>
+                                    <input class="col-sm-1" name="classname" id="classname" type="text" value="{pigcms{$data['classname']}"/>　
+                                    <input class="col-sm-1" name="classid" id="classid" type="hidden" value="{pigcms{$data['classid']}"/>
+                                    <a href="javascript:void(0);" onclick="editClass('classid','classname',0)" class="btn btn-sm btn-success">选择所属分类</a>　
+                                </div>-->
+
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button class="btn btn-info" type="submit">
+                                            <i class="ace-icon fa fa-check bigger-110"></i>
+                                            保存
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<script>
-function addImgMessage(){
-	art.dialog.data('titledom', 'titledom');
-	art.dialog.data('imgids', 'imgids');
-	art.dialog.data('multinews', 'multinews');
-	art.dialog.data('singlenews', 'singlenews');
-	
-	art.dialog.data('js_appmsg_preview', 'js_appmsg_preview');
-	art.dialog.data('multione', 'multione');
-	art.dialog.open('?g=Merchant&c=Article&a=select_img',{lock:true,title:'选择图文消息',width:600,height:400,yesText:'关闭',background: '#000',opacity: 0.45});
-}
- function clearMessage(){
- 	document.getElementById('titledom').innerHTML='';
- 	document.getElementById('imgids').value='';
- 	document.getElementById('js_appmsg_preview').innerHTML='<div class="appmsg_info"><em class="appmsg_date"></em></div><div class="cover_appmsg_item" id="multione"></div>';
- 	document.getElementById('multinews').style.display='none';
- 	document.getElementById('singlenews').style.display='';
-}
-</script> 
-		  
-	
 <style>
-  html, body {
-	color:#222;
-	font-family:Microsoft YaHei, Helvitica, Verdana, Tohoma, Arial, san-serif;
-	background-color:#ffffff;
-	margin:0;
-	padding: 0;
-	text-decoration: none;
-}
-body >.tips {
-	position:fixed;
-	display:none;
-	top:50%;
-	left:50%;
-	z-index:100;
-	text-align:center;
-	padding:20px;
-	width:200px;
-}
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
-	margin:0;
-	padding:0;
-}
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-.text img {
-	max-width: 100%;
-}
-fieldset, img {
-	border:0;
-}
-address, caption, cite, code, dfn, em, th, var {
-	font-style:normal;
-	font-weight:normal;
-}
-ol, ul {
-	list-style: none outside none;
-	margin:0;
-	padding: 0;
-}
-caption, th {
-	text-align:left;
-}
-h1, h2, h3, h5, h6 {
-	font-size:100%;
-	font-weight:normal;
-}
-a {
-	color:#000000;
-	text-decoration: none;
-}
-.left {
-	float:left
-}
-.right {
-	float:right
-}
-#activity-detail {
-	padding:15px 15px 0;
-	background:#EFEFEF;
-}
-.clr {
-	display:block;
-	clear:both;
-	height:1px;
-	overflow:hidden;
-}
-/*文本*/
-#iphone {
-	background:url(../images/iPhone-render.png) no-repeat 0 0;
-	height: 743px;
-	position:relative;
-	margin: 0 auto;
-	overflow:hidden;
-	width: 380px;
-}
-#iphone #activity-detail {
-	height: 414px;
-	left: 33px;
-	overflow: auto;
-	padding: 0;
-	position: absolute;
-	top: 197px;
-	width: 319px;
-	background:#EFEFEF;
-}
-#iphone .nickname {
-	color: #CCCCCC;
-	display: block;
-	font-weight: bold;
-	line-height: 45px;
-	position: absolute;
-	text-align: center;
-	text-shadow: 0 1px 3px #000000;
-	top: 152px;
-	left: 33px;
-	width: 320px;
-}
-#news-render {
-}
-#news-text { 
-}
-.keywordtext {
-	background-color: #F3F1DA;
-	height: 366px;
-	overflow: auto;
-	padding: 0;
-	width: 319px;
-	left: 33px;
-	top: 197px;
-	position: absolute;
-}
-.keywordtext .me {
-	margin-top:30px
-}
-.you {
-	float:left;
-	width:100%; /*ie6 hack*/
-	_background:none;
-	_border:none;
-}
-.me {
-	float:right;
-	width:100%;
-}
-.chatItemContent {
-	cursor:pointer;
-}
-.cloudPannel {
-	position: relative;
-	_position:static;
-}
-.chatItem {
-	padding:4px 0px 10px 0px;
-	_background:none;
-	_border:none;
-}
-.chatItem .avatar {
-	width:38px;
-	height:38px;
-	border:1px solid #ccc\9;
-	border: 1px solid #CCCCCC;
-	box-shadow: 0 1px 3px #D3D4D5;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-}
-.chatItem .cloud {
-	max-width:240px; /*border-radius:11px; border-width:1px; border-style:solid; */
-	cursor:default;
-	position: static;
-}
-.chatItem .cloud {/*for ie*/
-	/*position: relative;*/
-		padding: 0px;
-	margin: 0px;
-}
-.me .avatar {
-	float:right;
-}
-.me .cloud { /*position:relative;*/
-	float:right;
-	min-width:50px;
-	max-width:200px;
-	margin:0 15px 0 0;
-}
-.chatItem .cloudContent { /* position:relative;for ie*/
-	text-align:left; /*padding:2px; line-height:1.2; */
-	font-weight:normal;
-	font-size:16px;
-	min-height:20px;
-	word-wrap:break-word;
-}
-.me .cloudText .cloudBody {
-	-moz-border-top-colors:none;
-	-moz-border-right-colors:none;
-	-moz-border-bottom-colors:none;
-	-moz-border-left-colors:none;
-	border-color:transparent;
-	border:1px solid #AFAFAF;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	box-shadow: 0px 1px 3px #D5D5D5;
-	border:1px solid #9f9f9f\9;
-	background:#ECECEC\9;
-	border-radius:6px\9;
-	margin-left:8px;
-}
-.me .cloudContent {
-	border:1px solid #eee\9;
-	border-top:1px solid #FFF;
-	border-bottom:1px solid #F2F2F2;
-	padding:13px\9;
-	border-radius:13px\9;
-	border-radius:4px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	overflow:hidden;
-	color:#000;
-	text-shadow:none;
-	background-color:#ECECEC;
-	background:-webkit-gradient(linear,  left top, left bottom,  from(#F4F4F4), to(#E5E5E5),  color-stop(0.1, #F3F3F3), color-stop(0.3, #F1F1F1), color-stop(0.5, #ECECEC), color-stop(0.7, #E9E9E9), color-stop(0.9, #E6E6E6), color-stop(1.0, #E5E5E5));
-	background-image:-moz-linear-gradient(top, #F3F3F3 10%, #F1F1F1 30%, #ECECEC 50%, #E9E9E9 70%, #E6E6E6 90%, #E5E5E5 100%);
-}/*.cloudText*/
-.me .cloudText .cloudArrow {
-	position: absolute;
-	right: -10px;
-	top: 11px;
-	width: 13px;
-	height: 24px;
-	background: url(../images/bubble_right.png) no-repeat;
-}
-.me .cloudText .cloudContent {
-	background-color:#E5E5E5;
-	vertical-align: top;
-	padding:7px 10px;
-	background-color:#ECECEC\9;
-}
-.you .avatar {
-	float:left;
-}
-.you .cloud { /*position:relative;8.3*/
-	float:left;
-	min-width:50px;
-	max-width:200px;
-	margin:0 0 0 15px;
-}
-.you .cloudText .cloudBody {
-	-moz-border-top-colors:none;
-	-moz-border-right-colors:none;
-	-moz-border-bottom-colors:none;
-	-moz-border-left-colors:none;
-	border-color:transparent;
-	border: 1px solid #7AA23F;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	box-shadow: 0px 1px 3px #8DA254;
-	border:1px solid #73972a\9;
-	border-radius:6px\9;
-		background-color: #AEDC43;
-}
-.you .cloudText .cloudContent {
-	padding:5px 13px\9;
-	border-radius:13px\9;
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	padding:7px 10px;
-	text-shadow:none;
-	color:#030303;
-	border-top: 1px solid #DCE6C8;
-	border-bottom: 1px solid #B9CF8B;
-	border-right: 1px solid #CCDEA3;
-}
-.you .cloudText .cloudArrow {
-	position: absolute;
-	left: -6px;
-	top: 11px;
-	width: 13px;
-	height: 24px;
-	background: url(../images/bubble_left.png) no-repeat;
-}
-/*单条多条图文*/
-.chatPanel .media a {
-	display:block;
-}
-.chatPanel .media {
-	border:1px solid #cdcdcd;
-	box-shadow:0 3px 6px #999999;
-	-webkit-border-radius:12px;
-	-moz-border-radius:12px;
-	border-radius:12px;
-	width:285px;
-	background-color:#FFFFFF;
-	background:-webkit-gradient(linear,  left top, left bottom,  from(#FFFFFF), to(#FFFFFF));
-	background-image:-moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
-	margin:0px auto;
-}
-.chatPanel .media .mediaPanel {
-	padding:0px;
-	margin:0px;
-}
-.chatPanel .media .mediaImg {
-	margin: 25px 15px 15px;
-	width: 255px;
-	position: relative;
-}
-.chatPanel .media .mediaImg .mediaImgPanel {
-	position:relative;
-	padding:0px;
-	margin:0px;
-	max-height:164px;
-	overflow:hidden;
-}
-.chatPanel .media .mediaImg img {
-		width:255px;
-}
-.chatPanel .media .mediaImg .mediaImgFooter {
-	position: absolute;
-	bottom: 0;
-	height:29px;
-	background-color:#000;
-	background-color:rgba(0, 0, 0, 0.4);
-	text-shadow:none;
-	color:#FFF;
-	text-align:left;
-	padding:0px 11px;
-	line-height:29px;
-	width:233px;
-}
-.chatPanel .media .mediaImg .mediaImgFooter a:hover p {
-	color:#B8B3B3;
-}
-.chatPanel .media .mediaImg .mediaImgFooter .mesgTitleTitle {
-	line-height:28px;
-	color:#FFF;
-	max-width:240px;
-	height:26px;
-	white-space:nowrap;
-	text-overflow:ellipsis;
-	-o-text-overflow:ellipsis;
-	overflow:hidden;
-	width: 240px;
-}
-.chatPanel .media .mesgIcon {
-	display:inline-block;
-	height:19px;
-	width:13px;
-	margin:8px 0px -2px 4px;
-	/*background:url(../images/mesgIcon.png) no-repeat;*/
-}
-.chatPanel .media .mediaContent {
-	margin:0px;
-	padding:0px;
-}
-.chatPanel .media .mediaContent .mediaMesg {
-	border-top:1px solid #D7D7D7;
-	padding:10px;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgDot {
-	display: block;
-	position:relative;
-	top: -3px;
-	left:20px;
-	height:6px;
-	width:6px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgTitle:hover p {
-	color:#1A1717;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgTitle a {
-	color:#707577;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgTitle a:hover p {
-	color:#444440;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgIcon {
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgTitle p {
-	line-height:1.5em;
-	max-height: 45px;
-	max-width: 220px;
-	min-width:176px;
-	margin-top:2px;
-	color:#5D6265;
-	text-overflow:ellipsis;
-	-o-text-overflow:ellipsis;
-	overflow:hidden;
-	text-align: left;
-	text-overflow:ellipsis;
-}
-.chatPanel .media .mediaContent .mediaMesg .mediaMesgIcon img {
-	height:45px;
-	width:45px;
-}
-/*media mesg detail*/
-	.chatPanel .media .mediaHead {
-	/*height:48px;*/
-		padding:0px 15px 4px;
-	border-bottom:0px solid #D3D8DC;
-	color:#000000;
-	font-size:20px;
-}
-.chatPanel .media .mediaHead .title {
-	line-height:1.2em;
-	margin-top: 22px;
-	display:block;
-	max-width:312px;
-	text-align: left;/*height:25px;
-		white-space:nowrap;
-		text-overflow:ellipsis;
-		-o-text-overflow:ellipsis;
-		overflow:hidden;*/
-	}
-.chatPanel .mediaFullText .mediaImg {
-	width:255px;
-	padding:0;
-	margin:0 15px;
-	overflow:hidden;
-	max-height:164px;
-}
-.chatPanel .mediaFullText .mediaContent {
-	padding:0 0 15px;
-	font-size:16px;
-	line-height: 1.5em;
-	text-align:left;
-	color:#222222;
-}
-.chatPanel .mediaFullText .mediaContentP {
-	margin:12px 15px 0px;
-	border-bottom:1px solid #D3D8DC;
-}
-.chatPanel .media .mediaHead .time {
-	margin:0px;
-	margin-top: 21px;
-	color:#8C8C8C;
-	background:none;
-	width:auto;
-	font-size:12px;
-}
-.chatPanel .media .mediaFooter {
-	-webkit-border-radius:0px 0px 12px 12px;
-	-moz-border-radius:0px 0px 12px 12px;
-	border-radius:0px 0px 12px 12px;
-	padding: 0 15px;
-}
-.chatPanel .media .mediaFooter a {
-	color:#222222;
-	font-size:16px;
-	padding:0;
-}
-.chatPanel .media .mediaFooter .mesgIcon {
-	margin:15px 3px 0px 0px;
-}
-.chatPanel .media a:hover {
-	cursor: pointer;
-}
-.chatPanel .media a:hover .mesgIcon {
-}
-.mediaContent a:hover {
-	background-color: #F6F6F6;
-}
-.mediaContent .last:hover {
-	-webkit-border-radius:0px 0px 12px 12px;
-	-moz-border-radius:0px 0px 12px 12px;
-	border-radius:0px 0px 12px 12px;
-	background-color: #F6F6F6;
-}
-.mediaFullText:hover {
-	background-color: #F6F6F6;
-	background:-webkit-gradient(linear,  left top, left bottom,  from(#F6F6F6), to(#F6F6F6));
-	background-image:-moz-linear-gradient(top, #F6F6F6 0%, #F6F6F6 100%);
-}
-.a_choose {
-  background-image: none !important;
-  border: none !important;
-  text-shadow: none !important;
-  margin-left: 5px;
-  padding: 2px 8px !important;
-  cursor: pointer !important;
-  display: inline-block !important;
-  overflow: visible !important;
-  border-radius: 2px !important;
-  -moz-border-radius: 2px !important;
-  -webkit-border-radius: 2px !important;
-  background-color: #44b549 !important;
-  color: #fff !important;
-  font-size: 14px !important;
-  /* line-height: 1.5 !important; */
-}
-a:hover{
-text-decoration:none;
-}
-.appmsg{position:relative;overflow:hidden;margin-bottom:20px;border:1px solid #d3d3d3;background-color:#fff;box-shadow:0 1px 0 rgba(0,0,0,0.1);-moz-box-shadow:0 1px 0 rgba(0,0,0,0.1);-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.1);border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px}.appmsg_info{font-size:13px;line-height:20px;padding-bottom:6px}.appmsg_date{font-weight:400;font-style:normal}.appmsg_content{padding:0 14px;border-bottom:1px solid #d3d3d3;position:relative;*zoom:1}.appmsg_title{font-weight:400;font-style:normal;font-size:16px;padding-top:6px;line-height:28px;max-height:56px;overflow:hidden;white-space:pre-wrap;word-wrap:normal;word-break:normal}.appmsg_title a{display:block;color:#222}.appmsg_thumb_wrp{height:160px;overflow:hidden}.appmsg_thumb{width:100%}.appmsg_desc{padding:5px 0 10px;white-space:pre-wrap;word-wrap:normal;word-break:normal}.appmsg_opr{background-color:#f4f4f4}.appmsg_opr ul{overflow:hidden;*zoom:1}.appmsg_opr_item{float:left;line-height:44px;height:44px}.appmsg_opr_item a{display:block;border-right:1px solid #d3d3d3;box-shadow:1px 0 0 0 #fff;-moz-box-shadow:1px 0 0 0 #fff;-webkit-box-shadow:1px 0 0 0 #fff;text-align:center;line-height:20px;margin-top:12px}.appmsg_opr_item a.no_extra{border-right-width:0}.appmsg_item{*zoom:1;position:relative;padding:12px 14px;border-top:1px solid #d3d3d3}.appmsg_item:after{content:" ";display:block;height:0;clear:both}.appmsg_item .appmsg_title{line-height:24px;max-height:48px;overflow:hidden;*zoom:1;margin-top:14px}.appmsg_item .appmsg_thumb{float:right;width:78px;height:78px;margin-left:14px}.multi .appmsg_info{padding-top:4px;padding-left:14px;padding-right:14px}.multi .appmsg_content{padding:0}.multi .appmsg_title{font-size:14px;padding-top:0}.cover_appmsg_item{position:relative;margin:0 14px 14px}.cover_appmsg_item .appmsg_title{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.6)!important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endcolorstr = '#99000000')}.cover_appmsg_item .appmsg_title a{padding:0 4px;color:#fff}.appmsg_mask{display:none;position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;filter:alpha(opacity = 60);-moz-opacity:.6;-khtml-opacity:.6;opacity:.6;z-index:1}.appmsg .icon_appmsg_selected{display:none;position:absolute;top:50%;left:50%;margin-top:-30px;margin-left:-33px;line-height:999em;overflow:hidden;z-index:1}.dialog_wrp .appmsg:hover{cursor:pointer}.appmsg:hover .appmsg_mask{display:block}.appmsg.selected .appmsg_mask{display:block}.appmsg.selected .icon_appmsg_selected{display:inline-block}.icon_appmsg_selected{background:transparent url(/mpres/htmledition/images/icon/media/icon_appmsg_selected1ccaec.png) no-repeat 0 0;width:75px;height:60px;vertical-align:middle;display:inline-block}.appmsg_thumb.default{display:block;color:#c0c0c0;text-align:center;line-height:160px;font-weight:400;font-style:normal;background-color:#ececec;font-size:22px}.appmsg_item .appmsg_thumb.default{line-height:78px;font-size:16px}.appmsg_edit_mask{display:none;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(229,229,229,0.85)!important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d9e5e5e5',endcolorstr = '#d9e5e5e5');text-align:center}.appmsg_item .appmsg_edit_mask{line-height:102px}.cover_appmsg_item .appmsg_edit_mask{line-height:160px}.appmsg_edit_mask a{margin-left:8px;margin-right:8px}.editing .cover_appmsg_item:hover .appmsg_edit_mask,.editing .appmsg_item:hover .appmsg_edit_mask{display:block}.editing .appmsg_thumb{display:none}.editing .appmsg_thumb.default{display:block}.editing .has_thumb .appmsg_thumb{display:block}.editing .has_thumb .appmsg_thumb.default{display:none}.editing .appmsg_content{box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-bottom-width:0}.editing.multi .appmsg_content{border-bottom-width:1px}.appmsg_add{text-align:center;padding:12px 14px;line-height:72px}.appmsg_add a{display:block;font-size:0;text-decoration:none;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border:3px dotted #b8b8b8;height:72px}.appmsg_add a i{*vertical-align:baseline}.tab_content .appmsg{width:320px}.appmsg_list{text-align:justify;text-justify:distribute-all-lines;text-align-last:justify;font-size:0;padding-top:38px;margin:0 46px;letter-spacing:-4px}.appmsg_list:after{display:inline-block;width:100%;height:0;font-size:0;margin:0;padding:0;overflow:hidden;content:"."}.appmsg_col{display:inline-block;*display:inline;*zoom:1;vertical-align:top;width:48%;font-size:14px;text-align:left;font-size:14px;letter-spacing:normal}.media_dialog.appmsg_list{position:relative;padding:28px 140px;height:340px;margin-bottom:0;overflow-y:scroll}.page_appmsg_edit .tool_area{clear:both;margin:0;padding:20px 0}.page_appmsg_edit .tool_bar{margin-left:0;margin-right:0}.page_appmsg_edit .appmsg{min-height:180px}.page_appmsg_edit .upload_file_box{top:22px;left:-12px;width:377px;border-color:#d3d3d3;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0}.page_appmsg_edit .upload_preview img{max-width:100px;max-height:100px}.media_preview_area{float:left;width:320px;margin-right:14px}.media_edit_area{display:table-cell;vertical-align:top;float:none;width:auto;*display:block;*zoom:1}.media_edit_area:after{content:" . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";visibility:hidden;clear:both;height:0!important;display:block;line-height:0}.edui_editor_wrp{position:relative;z-index:0}.appmsg_edit_item{padding-bottom:1em}.editor_extra_info{text-align:right;padding-top:6px}.editor_extra_info a{color:#a3a3a3}.editor_extra_info a:hover{color:#2e7dc6}
+    input.ke-input-text {
+        background-color: #FFFFFF;
+        background-color: #FFFFFF !important;
+        font-family: "sans serif", tahoma, verdana, helvetica;
+        font-size: 12px;
+        line-height: 24px;
+        height: 24px;
+        padding: 2px 4px;
+        border-color: #848484 #E0E0E0 #E0E0E0 #848484;
+        border-style: solid;
+        border-width: 1px;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        zoom: 1;
+    }
+
+    .form-group > label {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    #upload_pic_box {
+        margin-top: 20px;
+        height: 60px;
+    }
+
+    #upload_pic_box .upload_pic_li {
+        width: 130px;
+        float: left;
+        list-style: none;
+    }
+
+    #upload_pic_box img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .small_btn {
+        margin-left: 10px;
+        padding: 6px 8px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        letter-spacing: 2px;
+        /* font-family: Tahoma, Arial/9 !important;*/
+        width: auto;
+        overflow: visible;
+        color: #333;
+        border: solid 1px #999;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #DDD;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DDDDDD');
+        background: linear-gradient(top, #FFF, #DDD);
+        background: -moz-linear-gradient(top, #FFF, #DDD);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#DDD));
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0 -1px 0 rgba(0, 0, 0, .09);
+        -moz-transition: -moz-box-shadow linear .2s;
+        -webkit-transition: -webkit-box-shadow linear .2s;
+        transition: box-shadow linear .2s;
+        outline: 0;
+    }
+
+    .small_btn:active {
+        border-color: #1c6a9e;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bbee', endColorstr='#2288cc');
+        background: linear-gradient(top, #33bbee, #2288cc);
+        background: -moz-linear-gradient(top, #33bbee, #2288cc);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#33bbee), to(#2288cc));
+    }
 </style>
-<link rel="stylesheet" href="{pigcms{$static_public}kindeditor/themes/default/default.css">
-<script src="{pigcms{$static_public}kindeditor/kindeditor.js"></script>
-<script src="{pigcms{$static_public}kindeditor/lang/zh_CN.js"></script>
+<link rel="stylesheet" href="{pigcms{$static_public}kindeditor2/themes/default/default.css">
+<script src="{pigcms{$static_public}kindeditor2/kindeditor-all-min.js"></script>
+<script src="{pigcms{$static_public}kindeditor2/lang/zh-CN.js"></script>
 <script type="text/javascript" src="./static/js/artdialog/jquery.artDialog.js"></script>
 <script type="text/javascript" src="./static/js/artdialog/iframeTools.js"></script>
 <script type="text/javascript" src="./static/js/upyun.js"></script>
+
+<script type="text/javascript">
+    var diyTool = "{pigcms{:U('Article/diytool')}";
+
+
+    KindEditor.ready(function (K) {
+
+        editor = K.create('#content', {
+            cssData: 'body {font-family: "微软雅黑"; font-size: 16px; color: #666666; }',
+            resizeType: 1,
+            allowPreviewEmoticons: false,
+            allowImageUpload: true,
+            uploadJson: '/merchant.php?g=Merchant&c=Upyun&a=kindedtiropic',
+            items: ['source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+                'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+                'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+                'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+                'anchor', 'link', 'unlink'
+            ]
+        });
+
+        K('#J_selectImage').click(function () {
+            if ($('.upload_pic_li').size() >= 10) {
+                alert('最多上传10个图片！');
+                return false;
+            }
+            /*    editor.uploadJson = "222{pigcms{:U('Config/ajax_upload_pic')}";*/
+            editor.loadPlugin('image', function () {
+                editor.plugin.imageDialog({
+                    showRemote: false,
+                    imageUrl: K('#course_pic').val(),
+                    clickFn: function (url, title, width, height, border, align) {
+                        $('#upload_pic_ul').html('<li class="upload_pic_li"><img src="' + url + '"/><br/><a href="#" onclick="deleteImage(\'' + title + '\',this);return false;">[ 删除 ]</a></li>');
+// 					$('#show_cover_pic').attr('src', url);
+                        $('#upload_pic_box').find('label').remove();
+                        $('#upload_pic_box').append('<label><input name="is_show" value="1" type="checkbox" class="ace"><span class="lbl" style="z-index: 1">封面图片显示在正文中</span></label>');
+                        $('#cover_pic').val(url);
+                        $('input[name="cover_pic"]').val(url);
+                        editor.hideDialog();
+                    }
+                });
+            });
+        });
+
+
+        K('#J_selectVideo').click(function () {
+            if ($('.upload_video_li').size() >= 1) {
+                alert('最多上传1个图片！');
+                return false;
+            }
+
+            editor.loadPlugin('media', function () {
+                editor.plugin.fileDialog({
+                    showRemote: false,
+                    imageUrl: K('#video_url').val(),
+                    clickFn: function (url, title, width, height, border, align) {
+
+                        $('#upload_video_ul').html('<li class="upload_pic_li"><audio  controls> <source src="' + url + '"  type="audio/mp3"> 您的浏览器不支持Video标签。 </audio><br/><a href="#" onclick="deleteImage(\'' + title + '\',this);return false;">[ 删除 ]</a></li>');
+                        $('#video_url').val(url);
+                        $('input[name="video_url"]').val(url);
+                        editor.hideDialog();
+                    }
+                });
+            });
+        });
+
+
+    });
+
+
+    function deleteImage(path, obj) {
+        $.post("{pigcms{:U('Config/ajax_del_pic')}", {path: path});
+        $(obj).closest('.upload_pic_li').remove();
+        $('#upload_pic_box').find('label').remove();
+    }
+</script>
+
+<style>
+    .paixu2 {
+        position: fixed;
+        width: 650px;
+        top: 0;
+        z-index: 10000;
+    }
+</style>
+<script>
+    $(window).bind("scroll",
+        function () {
+            var st = $(document).scrollTop();//往下滚的高度
+            if (st > 600) {
+                $('.ke-toolbar').addClass('paixu2')
+            } else {
+                $('.ke-toolbar').attr("class", "ke-toolbar");
+            }
+        });
+</script>
 
 <include file="Public:footer"/>
