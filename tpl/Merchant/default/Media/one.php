@@ -114,14 +114,7 @@
                                                 </li>
                                             </if>
                                         </ul>
-                                        <if condition="$data['cover_pic']">
-                                            <label>
-                                                <input name="is_show" value="1" type="checkbox" class="ace"
-                                                <if condition="$data['is_show']">checked</if>
-                                                >
-                                                <span class="lbl" style="z-index: 1">封面图片显示在正文中</span>
-                                            </label>
-                                        </if>
+
                                     </div>
                                 </div>
 

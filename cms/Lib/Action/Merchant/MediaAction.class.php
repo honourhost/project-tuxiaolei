@@ -90,7 +90,7 @@ class MediaAction extends BaseAction
             $pigcms_id = isset($_GET['pigcms_id']) ? intval($_GET['pigcms_id']) : 0;
             $data = D('SourceMedia')->where(array('pigcms_id' => $pigcms_id, 'mer_id' => $this->merchant_session['mer_id']))->find();
             //查询分类
-            $categories = D("SourceMediaCategory")->select();
+            $categories = D("ImageText")->select();
             $this->assign("categories", $categories);
             $this->assign('pigcms_id', $pigcms_id);
             $this->assign('data', $data);
@@ -138,5 +138,50 @@ class MediaAction extends BaseAction
     public function diytool()
     {
         $this->display();
+    }
+
+
+    function excute(){
+        $mod = new Model();
+        $sql = "CREATE TABLE `pigcms_source_media_category` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `mer_id` int(10) unsigned NOT NULL,
+  `name` varchar(64) NOT NULL COMMENT '标题',
+  PRIMARY KEY (`id`),
+  KEY `mer_id` (`mer_id`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;";
+        $res = $mod->execute($sql);
+
+        if(!$res){
+            echo  '创建文章分类成功';
+        }
+
+
+        $sql =  'CREATE TABLE `pigcms_source_media` (
+  `pigcms_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `mer_id` int(10) unsigned NOT NULL,
+  `type` tinyint(1) unsigned NOT NULL COMMENT \'图文类型（0：视频，1：音频）\',
+  `title` varchar(100) NOT NULL DEFAULT \'\' COMMENT \'标题\',
+  `author` varchar(50) NOT NULL COMMENT \'作者\',
+  `cover_pic` varchar(200) NOT NULL COMMENT \'封面图\',
+  `is_show` tinyint(1) unsigned NOT NULL COMMENT \'封面图是否显示正文（0:不显示，1：显示）\',
+  `digest` varchar(300) NOT NULL COMMENT \'介绍\',
+  `content` mediumtext NOT NULL COMMENT \'内容\',
+  `video_url` varchar(255) NOT NULL COMMENT \'视频url\',
+  `url` varchar(200) NOT NULL COMMENT \'外链\',
+  `dateline` int(10) unsigned NOT NULL COMMENT \'创建时间\',
+  `url_title` varchar(300) NOT NULL COMMENT \'外链名称\',
+  `cat_id` int(10) unsigned NOT NULL COMMENT \'分类id\',
+  `cat_name` varchar(60) NOT NULL DEFAULT \'\',
+  `count` int(13) NOT NULL DEFAULT \'0\' COMMENT \'点击数\',
+  PRIMARY KEY (`pigcms_id`),
+  KEY `mer_id` (`mer_id`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;';
+
+        $res = $mod->execute($sql);
+
+        if(!$res){
+            echo  '创建文章表成功';
+        }
     }
 }

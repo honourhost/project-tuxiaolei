@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title></title>
+    <title>兔小蕾课堂</title>
     <link href="/tpl/Wap/default/Media/css/mui.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/tpl/Wap/default/Media/css/style.css" type="text/css"/>
+
     <script type="text/javascript">
         !function (J) {
             function H() {
@@ -53,7 +54,7 @@
             </li>
         </div>
         <div class="mui-col-sm-6 mui-col-xs-6">
-            <li class="mui-table-view-cell ">
+            <li class="mui-table-view-cell">
                 <a href="/wap.php?g=Wap&c=Media&a=index1">家长课堂</a>
             </li>
         </div>
@@ -63,7 +64,6 @@
     <!--图片轮播-->
     <div id="slider" class="mui-slider">
         <div class="mui-slider-group mui-slider-loop">
-
             <volist name="lunbo" id="lun">
                 <div class="mui-slider-item">
                     <a href="{pigcms{$lun.url}">
@@ -71,7 +71,6 @@
                     </a>
                 </div>
             </volist>
-
         </div>
         <div class="mui-slider-indicator">
             <div class="mui-indicator mui-active"></div>
@@ -80,40 +79,25 @@
             <div class="mui-indicator"></div>
         </div>
     </div>
-    <!--资讯列表-->
-    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-        <div class="mui-scroll">
-            <a href="" class="mui-control-item mui-active">全部</a>
-            <volist name="lists" id="item">
-
-                <a href="{pigcms{:U('Toutiao/index',array('cat_id'=>$item['cat_url']))}" class="mui-control-item">{pigcms{$item.name}</a>
-            </volist>
+    <!--列表-->
+    <ul class="evaluation">
 
 
-        </div>
-    </div>
-    <ul class="news">
-
-
-
-        <volist name="content" id="onepage">
-
-
-
-
-        <volist name="content" id="onepage">
-        <li>
-            <a href="{pigcms{:U('Article/index',array('imid'=>$onepage['pigcms_id']))}">
-                <div class="news-pic"><img src="{pigcms{$onepage.cover_pic}"></div>
-                <div class="news-text">
-                    <h2>{pigcms{$onepage.title}</h2>
-                    <div class="date">
-                        <label class="time"><?php echo date("y-m-d H:i:s",$onepage["dateline"]); ?></label>
-                        <label class="view"><?php echo  $onepage['count']*21; ?></label>
+        <volist name="lists" id="item">
+            <li>
+                <a href="{pigcms{:U('Toutiao/index',array('cat_id'=>$item['cat_url']))}">
+                    <div class="eva-pic">
+                        <img src="{pigcms{$item.cover_pic}"/>
+                        <label>{pigcms{$item.count *11}
+                            <small>看了</small>
+                        </label>
                     </div>
-                </div>
-            </a>
-        </li>
+                    <div class="eva-text">
+                        <h2>{pigcms{$item.name}</h2>
+                        <p>{pigcms{$item.name}。{pigcms{$item.digest}</p>
+                    </div>
+                </a>
+            </li>
         </volist>
 
 
@@ -122,29 +106,33 @@
     <div class="clear-both"></div>
     <p class="click-more" style="line-height: 80px; text-align: center">点击查看更多</p>
 
-    <div class="h60">
-        <p style="line-height: 40px; text-align: center">兔小蕾线上教育平台</p>
-    </div>
 
+    <div class="h60">
+        <p style="line-height: 40px;">兔小蕾线上教育平台</p>
+    </div>
     <div class="eva-adv" style="display: none">
-        <a href=""><img src="images/adv.png"/></a>
-        <div class="close"><img src="images/close-white.png"/></div>
+        <a href=""><img src="/tpl/Wap/default/Media/images/adv.png"/></a>
+        <div class="close"><img src="/tpl/Wap/default/Media/images/close-white.png"/></div>
     </div>
 </div>
-<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="js/mui.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/mui.min.js"></script>
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/app.js"></script>
 
 <script>
     $(".click-more").click(
         function () {
             var lastPageIndex = $('input[name=pageIndex]:last').val();
 
-            $.post("{pigcms{:U('Toutiao/nextpage')}",{pageIndex:lastPageIndex,cat_id:'{pigcms{$nowcat}'},function (data) {
-                if(data){
+            $.post("{pigcms{:U('Toutiao/nextpage')}", {
+                pageIndex: lastPageIndex,
+                cat_id: '{pigcms{$nowcat}'
+            }, function (data) {
+                if (data) {
                     $(".news-list").append(data);
 
-                }else{
+                } else {
                     alert("没有内容啦");
                     $(".click-more").text("没有更多内容了");
                 }

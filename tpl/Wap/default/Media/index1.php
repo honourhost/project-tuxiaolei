@@ -48,7 +48,7 @@
 <div class="eva-header">
     <div class="mui-row">
         <div class="mui-col-sm-6 mui-col-xs-6">
-            <li class="mui-table-view-cell ">
+            <li class="mui-table-view-cell">
                 <a href="/wap.php?g=Wap&c=Media&a=index">今日推荐</a>
             </li>
         </div>
@@ -95,10 +95,7 @@
     <ul class="news">
 
 
-
         <volist name="content" id="onepage">
-
-
 
 
             <volist name="content" id="onepage">
@@ -108,8 +105,8 @@
                         <div class="news-text">
                             <h2>{pigcms{$onepage.title}</h2>
                             <div class="date">
-                                <label class="time"><?php echo date("y-m-d H:i:s",$onepage["dateline"]); ?></label>
-                                <label class="view"><?php echo  $onepage['count']*21; ?></label>
+                                <label class="time"><?php echo date("y-m-d H:i:s", $onepage["dateline"]); ?></label>
+                                <label class="view"><?php echo $onepage['count'] * 21; ?></label>
                             </div>
                         </div>
                     </a>
@@ -127,24 +124,27 @@
     </div>
 
     <div class="eva-adv" style="display: none">
-        <a href=""><img src="images/adv.png"/></a>
-        <div class="close"><img src="images/close-white.png"/></div>
+        <a href=""><img src="/tpl/Wap/default/Media/images/adv.png"/></a>
+        <div class="close"><img src="/tpl/Wap/default/Media/images/close-white.png"/></div>
     </div>
 </div>
-<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="js/mui.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/mui.min.js"></script>
+<script type="text/javascript" src="/tpl/Wap/default/Media/js/app.js"></script>
 
 <script>
     $(".click-more").click(
         function () {
             var lastPageIndex = $('input[name=pageIndex]:last').val();
 
-            $.post("{pigcms{:U('Toutiao/nextpage')}",{pageIndex:lastPageIndex,cat_id:'{pigcms{$nowcat}'},function (data) {
-                if(data){
+            $.post("{pigcms{:U('Toutiao/nextpage')}", {
+                pageIndex: lastPageIndex,
+                cat_id: '{pigcms{$nowcat}'
+            }, function (data) {
+                if (data) {
                     $(".news-list").append(data);
 
-                }else{
+                } else {
                     alert("没有内容啦");
                     $(".click-more").text("没有更多内容了");
                 }
