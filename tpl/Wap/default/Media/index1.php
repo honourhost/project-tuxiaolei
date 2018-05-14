@@ -64,20 +64,40 @@
     <div id="slider" class="mui-slider">
         <div class="mui-slider-group mui-slider-loop">
 
-            <volist name="lunbo" id="lun">
-                <div class="mui-slider-item">
-                    <a href="{pigcms{$lun.url}">
-                        <img src="{pigcms{$lun.pic}">
-                    </a>
-                </div>
-            </volist>
 
-        </div>
-        <div class="mui-slider-indicator">
-            <div class="mui-indicator mui-active"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl001.jpg">>
+                </a>
+
+            </div>
+            <div class="mui-slider-item">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl001.jpg">
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl002.jpg">
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl003.jpg">
+                </a>
+            </div>
+            <div class="mui-slider-item">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl004.jpg">
+                </a>
+            </div>
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
+                    <img src="/tpl/Wap/default/Media/images/txl004.jpg">>
+                </a>
+
+            </div>
+
         </div>
     </div>
     <!--资讯列表-->
@@ -86,7 +106,7 @@
             <a href="" class="mui-control-item mui-active">全部</a>
             <volist name="lists" id="item">
 
-                <a href="{pigcms{:U('Toutiao/index',array('cat_id'=>$item['cat_url']))}" class="mui-control-item">{pigcms{$item.name}</a>
+                <a href="{pigcms{:U('Media/index',array('cat_id'=>$item['cat_url']))}" class="mui-control-item">{pigcms{$item.name}</a>
             </volist>
 
 
@@ -101,7 +121,12 @@
             <volist name="content" id="onepage">
                 <li>
                     <a href="{pigcms{:U('Article/index',array('imid'=>$onepage['pigcms_id']))}">
-                        <div class="news-pic"><img src="{pigcms{$onepage.cover_pic}"></div>
+                        <div class="news-pic">
+
+                            <?php  if($onepage['cover_pic']){ ?>
+                                <img src="{pigcms{$onepage.cover_pic}"/>
+                            <?php }  ?>
+                        </div>
                         <div class="news-text">
                             <h2>{pigcms{$onepage.title}</h2>
                             <div class="date">

@@ -64,41 +64,13 @@
     <!--图片轮播-->
     <div id="slider" class="mui-slider">
         <div class="mui-slider-group mui-slider-loop">
-
-
-            <div class="mui-slider-item mui-slider-item-duplicate">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl001.jpg">>
-                </a>
-
-            </div>
-            <div class="mui-slider-item">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl001.jpg">
-                </a>
-            </div>
-            <div class="mui-slider-item">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl002.jpg">
-                </a>
-            </div>
-            <div class="mui-slider-item">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl003.jpg">
-                </a>
-            </div>
-            <div class="mui-slider-item">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl004.jpg">
-                </a>
-            </div>
-            <div class="mui-slider-item mui-slider-item-duplicate">
-                <a href="http://www.tuxiaolei.cn/wap.php?g=Wap&c=Article&a=index&imid=2808">
-                    <img src="/tpl/Wap/default/Media/images/txl004.jpg">>
-                </a>
-
-            </div>
-
+            <volist name="lunbo" id="lun">
+                <div class="mui-slider-item">
+                    <a href="{pigcms{$lun.url}">
+                        <img src="{pigcms{$lun.pic}">
+                    </a>
+                </div>
+            </volist>
         </div>
         <div class="mui-slider-indicator">
             <div class="mui-indicator mui-active"></div>
@@ -108,82 +80,40 @@
         </div>
     </div>
     <!--列表-->
-
-
-    <if condition="$nowcat eq 'all'">
-        <!--灰色背景  独家、热门 -->
-        <div class="dujia" style="display: none">
-            <ul>
-                <volist name="toptuijian" id="tuijian">
-                    <li>
-                        <a href="{pigcms{$tuijian.url}">
-                            <i>推荐</i>
-                            <h3>{pigcms{$tuijian.name}</h3>
-                            <?php  if($tuijian['pic']){ ?>
-                                <div class="dujia-img" style="background-image: url({pigcms{$tuijian.pic});"></div>
-                            <?php }  ?>
-
-                            <div class="clear-both"></div>
-                        </a>
-                    </li>
-                </volist>
-
-
-            </ul>
-        </div>
-    </if>
-
-
-    <!-- 带新闻图片 -->
-
-
     <ul class="evaluation">
 
 
-        <volist name="content" id="onepage">
-
+        <volist name="content" id="item">
             <li>
-
-
-                <a href="{pigcms{$onepage.url}">
+                <a href="{pigcms{:U('Article/index',array('imid'=>$item['pigcms_id']))}">
                     <div class="eva-pic">
-
-                        <?php  if($onepage['cover_pic']){ ?>
-                            <img src="{pigcms{$onepage.cover_pic}"/>
-                        <?php }  ?>
-
-                        <label>
-                            <small>热荐</small>
+                        <img src="{pigcms{$item.cover_pic}" style="height: 276px;"/>
+                        <label>{pigcms{$item.count *11}
+                            <small></small>
                         </label>
-
                     </div>
                     <div class="eva-text">
-                        <h2>{pigcms{$onepage.title}</h2>
-                        <p>{pigcms{$onepage.digest}</p>
+                        <h2>{pigcms{$item.name}</h2>
+                        <p>{pigcms{$item.name}。{pigcms{$item.digest}</p>
                     </div>
                 </a>
             </li>
-
         </volist>
 
 
-        <input name="pageIndex" value="1" style="display: none;">
     </ul>
 
-</div>
+    <div class="clear-both"></div>
+    <p class="click-more" style="line-height: 80px; text-align: center">点击查看更多</p>
 
 
-<div class="clear-both"></div>
-<a class="click-more" style=" line-height: 60px; display: none; text-align: center">点击查看更多</a>
-
-
-<div class="h60" style="display: none">
-    <p style="line-height: 40px;">兔小蕾线上教育平台</p>
-</div>
-<div class="eva-adv" style="display: none">
-    <a href=""><img src="/tpl/Wap/default/Media/images/adv.png"/></a>
-    <div class="close"><img src="/tpl/Wap/default/Media/images/close-white.png"/></div>
-</div>
+    <div class="h60">
+        <p style="line-height: 40px;">兔小蕾线上教育平台</p>
+    </div>
+    <div class="eva-adv" style="display: none">
+        <a href=""><img src="/tpl/Wap/default/Media/images/adv.png"/></a>
+        <div class="close"><img src="/tpl/Wap/default/Media/images/close-white.png"/></div>
+    </div>
 </div>
 
 <script type="text/javascript" src="/tpl/Wap/default/Media/js/jquery-1.10.1.min.js"></script>
