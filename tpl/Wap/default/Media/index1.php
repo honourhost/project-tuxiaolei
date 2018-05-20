@@ -120,7 +120,7 @@
 
             <volist name="content" id="onepage">
                 <li>
-                    <a href="{pigcms{:U('Article/index',array('imid'=>$onepage['pigcms_id']))}">
+                    <a href="{pigcms{:U('Media/detail',array('imid'=>$onepage['pigcms_id']))}">
                         <div class="news-pic">
 
                             <?php  if($onepage['cover_pic']){ ?>

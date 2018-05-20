@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
-    <link href="{pigcms{$static_path}css/mp_news.css" rel="stylesheet"/>
+    <link href="/tpl/Wap/default/static/css/mp_news.css" rel="stylesheet"/>
     <style>
         img {
             -webkit-tap-highlight-color: transparent;
@@ -18,7 +18,7 @@
 
         .header-top {
             width: 100%;
-            background: url({pigcms{$static_path}/images/footer-bg.png);
+            background: url(/tpl/Wap/default/static/images/footer-bg.png);
             padding: 8px 0px 5px 0px;
             position: fixed;
             bottom: 0;
@@ -69,8 +69,8 @@
 
         @font-face {
             font-family: "iconfont";
-            src: url('{pigcms{$static_path}css/iconfont.eot'); /* IE9*/
-            src: url('{pigcms{$static_path}css/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('{pigcms{$static_path}css/iconfont.woff') format('woff'), /* chrome, firefox */ url('{pigcms{$static_path}css/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('{pigcms{$static_path}css/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+            src: url('/tpl/Wap/default/static/css/iconfont.eot'); /* IE9*/
+            src: url('/tpl/Wap/default/static/css/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/tpl/Wap/default/static/css/iconfont.woff') format('woff'), /* chrome, firefox */ url('/tpl/Wap/default/static/css/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('/tpl/Wap/default/static/css/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
         }
 
         .iconfont {
@@ -317,7 +317,7 @@
         }
 
         .audio_play_area .icon_audio_default {
-            background: transparent url({pigcms{$static_path}/img/iconloop.png) no-repeat 0 0;
+            background: transparent url(/tpl/Wap/default/static/img/iconloop.png) no-repeat 0 0;
             width: 18px;
             height: 25px;
             vertical-align: middle;
@@ -328,7 +328,7 @@
         }
 
         .audio_play_area .icon_audio_playing {
-            background: transparent url({pigcms{$static_path}/img/iconloop.png) no-repeat 0 0;
+            background: transparent url(/tpl/Wap/default/static/img/iconloop.png) no-repeat 0 0;
             width: 18px;
             height: 25px;
             vertical-align: middle;
@@ -427,7 +427,7 @@
 
         <div class="rich_media_meta_list">
             <em id="post-date" class="rich_media_meta text" style="font-size: 16px;"><a
-                        href="{pigcms{$config.site_url}/wap.php" class="rich_media_xnd">兔小蕾</a>{pigcms{$nowImage['now']}</em>
+                    href="{pigcms{$config.site_url}/wap.php" class="rich_media_xnd">兔小蕾</a>{pigcms{$nowImage['now']}</em>
             <em class="rich_media_meta text" style="font-size: 16px;"></em>
             <a href="{pigcms{$config.site_url}/wap.php?g=Wap&c=Index&a=index&token={pigcms{$nowImage['mer_id']}"
                class="rich_media_meta link nickname js-no-follow js-open-follow" style="font-size: 16px;"
@@ -435,8 +435,39 @@
 
 
         </div>
-        <div><img src="{pigcms{$static_path}images/tuxiaoleitopad.jpg" style="width: 100%;"></div>
+        <div><img src="/tpl/Wap/default/static/images/tuxiaoleitopad.jpg" style="width: 100%;"></div>
 
+
+        <div>
+            <p class="weixinAudio">
+                <audio src="" id="media" width="1" height="1" preload></audio>
+                <span id="audio_area" class="db audio_area">
+	<span class="audio_wrp db">
+	<span class="audio_play_area">
+		<i class="icon_audio_default"></i>
+		<i class="icon_audio_playing"></i>
+	</span>
+	<span id="audio_length" class="audio_length tips_global">3:07</span>
+	<span class="db audio_info_area">
+		<strong class="db audio_title">Title/标题</strong>
+		<span class="audio_source tips_global">From/来源</span>
+	</span>
+	<span id="audio_progress" class="progress_bar" style="width: 0%;"></span>
+	</span>
+	</span>
+            </p>
+
+            <script type="text/javascript" src="/tpl/Wap/default/static//js/jquery.min.js"></script>
+            <script src="/tpl/Wap/default/static//js/weixinAudio.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $('.weixinAudio').weixinAudio({
+                    autoplay: true,
+                    src: '/tpl/Wap/default/static//sound/sound.mp3',
+                });
+            </script>
+
+
+        </div>
 
         <div id="page-content" class="content">
             <div id="img-content">
@@ -487,7 +518,7 @@
                             });
                         </script>
 
-                        <img src="{pigcms{$static_path}images/public-footer-img.png">
+                        <img src="/tpl/Wap/default/static/images/public-footer-img.png">
 
                     </div>
                 </div>
@@ -521,7 +552,7 @@
     <a href="{pigcms{$config.article_bottom_url}">
         <span class="header-gz">进入</span>
         <div class="header-logo">
-            <img src="{pigcms{$static_path}images/logo.png"/>
+            <img src="/tpl/Wap/default/static/images/logo.png"/>
         </div>
         <h3 style="font-size: 14px; color: #fff;">{pigcms{$config.article_bottom_title}<br/>{pigcms{$config.article_bottom_digest}
         </h3>
@@ -531,17 +562,22 @@
 <div style="display:none;">{pigcms{$config.wap_site_footer}</div>
 <script src="{pigcms{:C('JQUERY_FILE')}"></script>
 <script type="text/javascript">
-    var shareData = {imgUrl: "{pigcms{$config.site_url}{pigcms{$nowImage['cover_pic']}",
+    var shareData = {
+            imgUrl: "{pigcms{$config.site_url}{pigcms{$nowImage['cover_pic']}",
         <if condition = "$_SESSION['distribution_id']" >
-        link: "{pigcms{$config.site_url}{pigcms{:U('Article/index', array('imid' => $nowImage['pigcms_id'],'share_distribution_id'=>$_SESSION['distribution_id']))}",
-    <elseif  condition = "$_SESSION['share_distribution_id']" / >
-        link:
+        link:"{pigcms{$config.site_url}{pigcms{:U('Article/index', array('imid' => $nowImage['pigcms_id'],'share_distribution_id'=>$_SESSION['distribution_id']))}",
+    <
+    elseif
+    condition = "$_SESSION['share_distribution_id']" / >
+        link
+    :
     "{pigcms{$config.site_url}{pigcms{:U('Article/index', array('imid' => $nowImage['pigcms_id'],'share_distribution_id'=>$_SESSION['share_distribution_id']))}",
     <else/>
     link: "{pigcms{$config.site_url}{pigcms{:U('Article/index', array('imid' => $nowImage['pigcms_id']))}",
     </if>
     title: "{pigcms{$nowImage['title']}",
-        desc:
+        desc
+    :
     "{pigcms{$nowImage['digest']}"
     }
     ;
