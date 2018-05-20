@@ -145,7 +145,7 @@
             <li>
 
 
-                <a href="{pigcms{$onepage.url}">
+                <a href="/wap.php?g=Wap&c=Article&a=index&imid={pigcms{$onepage.pigcms_id}">
                     <div class="eva-pic">
 
                         <?php  if($onepage['cover_pic']){ ?>
